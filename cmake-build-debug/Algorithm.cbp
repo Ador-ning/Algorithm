@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Algorithm"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\Campus\;CMake Files\Leetcode\;CMake Files\Base\;CMake Files\Array\;CMake Files\String\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/ning/Project/Algorithm/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/ning/Project/Algorithm/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/ning/Project/Algorithm/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="main">
+				<Option output="/Users/ning/Project/Algorithm/cmake-build-debug/main" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ning/Project/Algorithm/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/../../../../../../include/c++/8.1.0"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/../../../../../../include/c++/8.1.0/x86_64-apple-darwin17.5.0"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/../../../../../../include/c++/8.1.0/backward"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/include"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 main"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="main/fast">
+				<Option output="/Users/ning/Project/Algorithm/cmake-build-debug/main" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ning/Project/Algorithm/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/../../../../../../include/c++/8.1.0"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/../../../../../../include/c++/8.1.0/x86_64-apple-darwin17.5.0"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/../../../../../../include/c++/8.1.0/backward"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/include"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 main/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="base">
+				<Option output="/Users/ning/Project/Algorithm/cmake-build-debug/Base/base" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ning/Project/Algorithm/cmake-build-debug/Base"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/../../../../../../include/c++/8.1.0"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/../../../../../../include/c++/8.1.0/x86_64-apple-darwin17.5.0"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/../../../../../../include/c++/8.1.0/backward"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/include"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/Base/Makefile&quot;  VERBOSE=1 base"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/Base/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/Base/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/Base/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="base/fast">
+				<Option output="/Users/ning/Project/Algorithm/cmake-build-debug/Base/base" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ning/Project/Algorithm/cmake-build-debug/Base"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/../../../../../../include/c++/8.1.0"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/../../../../../../include/c++/8.1.0/x86_64-apple-darwin17.5.0"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/../../../../../../include/c++/8.1.0/backward"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/include"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/Base/Makefile&quot;  VERBOSE=1 base/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/Base/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/Base/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/Base/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="array">
+				<Option output="/Users/ning/Project/Algorithm/cmake-build-debug/Array/array" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ning/Project/Algorithm/cmake-build-debug/Array"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/../../../../../../include/c++/8.1.0"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/../../../../../../include/c++/8.1.0/x86_64-apple-darwin17.5.0"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/../../../../../../include/c++/8.1.0/backward"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/include"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/Array/Makefile&quot;  VERBOSE=1 array"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/Array/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/Array/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/Array/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="array/fast">
+				<Option output="/Users/ning/Project/Algorithm/cmake-build-debug/Array/array" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ning/Project/Algorithm/cmake-build-debug/Array"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/../../../../../../include/c++/8.1.0"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/../../../../../../include/c++/8.1.0/x86_64-apple-darwin17.5.0"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/../../../../../../include/c++/8.1.0/backward"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/include"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/Array/Makefile&quot;  VERBOSE=1 array/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/Array/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/Array/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/Array/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="string">
+				<Option output="/Users/ning/Project/Algorithm/cmake-build-debug/String/string" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ning/Project/Algorithm/cmake-build-debug/String"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/../../../../../../include/c++/8.1.0"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/../../../../../../include/c++/8.1.0/x86_64-apple-darwin17.5.0"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/../../../../../../include/c++/8.1.0/backward"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/include"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/String/Makefile&quot;  VERBOSE=1 string"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/String/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/String/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/String/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="string/fast">
+				<Option output="/Users/ning/Project/Algorithm/cmake-build-debug/String/string" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ning/Project/Algorithm/cmake-build-debug/String"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/../../../../../../include/c++/8.1.0"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/../../../../../../include/c++/8.1.0/x86_64-apple-darwin17.5.0"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/../../../../../../include/c++/8.1.0/backward"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/include"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/String/Makefile&quot;  VERBOSE=1 string/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/String/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/String/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/String/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/ning/Project/Algorithm/Array/DupArrayNoEdit.cpp">
+			<Option target="array"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Array/DuplicationInArray.cpp">
+			<Option target="array"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Array/FindandSort.cpp">
+			<Option target="array"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Array/RotatedArray.cpp">
+			<Option target="array"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Array/SortedArray.cpp">
+			<Option target="array"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Array/sort.cpp">
+			<Option target="array"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Base/AVL.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Base/BST.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Base/Base.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Base/BinaryTree.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Base/BinaryTree.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Base/ComplexList.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Base/DFS.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Base/Graph.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Base/Graph.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Base/Heap.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Base/LinkList.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Base/LinkList.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Base/Queue.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Base/Tree.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/String/ReplaceBlank.cpp">
+			<Option target="string"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/String/StringUtils.h">
+			<Option target="string"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/main.cpp">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Campus/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\Campus\"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Leetcode/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\Leetcode\"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Base/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\Base\"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Array/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\Array\"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/String/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\String\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
