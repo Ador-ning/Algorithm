@@ -39,6 +39,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/Users/ning/Project/Algorithm/cmake-build-debug/Base/cmake_install.cmake")
   include("/Users/ning/Project/Algorithm/cmake-build-debug/Array/cmake_install.cmake")
   include("/Users/ning/Project/Algorithm/cmake-build-debug/String/cmake_install.cmake")
+  include("/Users/ning/Project/Algorithm/cmake-build-debug/DP/cmake_install.cmake")
 
 endif()
 

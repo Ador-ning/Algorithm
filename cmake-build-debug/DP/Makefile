@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles /Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles /Users/ning/Project/Algorithm/cmake-build-debug/DP/CMakeFiles/progress.marks
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 DP/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 DP/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,110 +97,87 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 DP/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 DP/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named main
+# Convenience name for target.
+DP/CMakeFiles/dp.dir/rule:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 DP/CMakeFiles/dp.dir/rule
+.PHONY : DP/CMakeFiles/dp.dir/rule
 
-# Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 main
-.PHONY : main
+# Convenience name for target.
+dp: DP/CMakeFiles/dp.dir/rule
 
-# fast build rule for target.
-main/fast:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
-
-#=============================================================================
-# Target rules for targets named base
-
-# Build rule for target.
-base: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 base
-.PHONY : base
-
-# fast build rule for target.
-base/fast:
-	$(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/build
-.PHONY : base/fast
-
-#=============================================================================
-# Target rules for targets named array
-
-# Build rule for target.
-array: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 array
-.PHONY : array
-
-# fast build rule for target.
-array/fast:
-	$(MAKE) -f Array/CMakeFiles/array.dir/build.make Array/CMakeFiles/array.dir/build
-.PHONY : array/fast
-
-#=============================================================================
-# Target rules for targets named string
-
-# Build rule for target.
-string: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 string
-.PHONY : string
-
-# fast build rule for target.
-string/fast:
-	$(MAKE) -f String/CMakeFiles/string.dir/build.make String/CMakeFiles/string.dir/build
-.PHONY : string/fast
-
-#=============================================================================
-# Target rules for targets named dp
-
-# Build rule for target.
-dp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 dp
 .PHONY : dp
 
 # fast build rule for target.
 dp/fast:
-	$(MAKE) -f DP/CMakeFiles/dp.dir/build.make DP/CMakeFiles/dp.dir/build
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f DP/CMakeFiles/dp.dir/build.make DP/CMakeFiles/dp.dir/build
 .PHONY : dp/fast
 
-main.o: main.cpp.o
+DynamicProgramming.o: DynamicProgramming.cpp.o
 
-.PHONY : main.o
+.PHONY : DynamicProgramming.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.o
-.PHONY : main.cpp.o
+DynamicProgramming.cpp.o:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f DP/CMakeFiles/dp.dir/build.make DP/CMakeFiles/dp.dir/DynamicProgramming.cpp.o
+.PHONY : DynamicProgramming.cpp.o
 
-main.i: main.cpp.i
+DynamicProgramming.i: DynamicProgramming.cpp.i
 
-.PHONY : main.i
+.PHONY : DynamicProgramming.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.i
-.PHONY : main.cpp.i
+DynamicProgramming.cpp.i:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f DP/CMakeFiles/dp.dir/build.make DP/CMakeFiles/dp.dir/DynamicProgramming.cpp.i
+.PHONY : DynamicProgramming.cpp.i
 
-main.s: main.cpp.s
+DynamicProgramming.s: DynamicProgramming.cpp.s
 
-.PHONY : main.s
+.PHONY : DynamicProgramming.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
-.PHONY : main.cpp.s
+DynamicProgramming.cpp.s:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f DP/CMakeFiles/dp.dir/build.make DP/CMakeFiles/dp.dir/DynamicProgramming.cpp.s
+.PHONY : DynamicProgramming.cpp.s
+
+Fibonacci.o: Fibonacci.cpp.o
+
+.PHONY : Fibonacci.o
+
+# target to build an object file
+Fibonacci.cpp.o:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f DP/CMakeFiles/dp.dir/build.make DP/CMakeFiles/dp.dir/Fibonacci.cpp.o
+.PHONY : Fibonacci.cpp.o
+
+Fibonacci.i: Fibonacci.cpp.i
+
+.PHONY : Fibonacci.i
+
+# target to preprocess a source file
+Fibonacci.cpp.i:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f DP/CMakeFiles/dp.dir/build.make DP/CMakeFiles/dp.dir/Fibonacci.cpp.i
+.PHONY : Fibonacci.cpp.i
+
+Fibonacci.s: Fibonacci.cpp.s
+
+.PHONY : Fibonacci.s
+
+# target to generate assembly for a file
+Fibonacci.cpp.s:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f DP/CMakeFiles/dp.dir/build.make DP/CMakeFiles/dp.dir/Fibonacci.cpp.s
+.PHONY : Fibonacci.cpp.s
 
 # Help Target
 help:
@@ -210,14 +187,13 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... main"
-	@echo "... base"
-	@echo "... array"
-	@echo "... string"
 	@echo "... dp"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... DynamicProgramming.o"
+	@echo "... DynamicProgramming.i"
+	@echo "... DynamicProgramming.s"
+	@echo "... Fibonacci.o"
+	@echo "... Fibonacci.i"
+	@echo "... Fibonacci.s"
 .PHONY : help
 
 
@@ -229,6 +205,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
