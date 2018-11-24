@@ -11,7 +11,7 @@ add_subdirectory(Array)         # Array problem , sort types implement
 add_subdirectory(String)        # String problem
 add_subdirectory(DP)            # Dynamic Programming problem
 
-set(SRC_MAIN main.cpp)
+set(SRC_MAIN main.cpp Base.h)
 
 # the project main
 add_executable(main ${SRC_MAIN})

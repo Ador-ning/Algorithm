@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/ning/Project/Algorithm/Base.h
+iostream
+-
+vector
+-
+string
+-
+list
+-
+typeinfo
+-
+
+/Users/ning/Project/Algorithm/main.cpp
+iostream
+-
+vector
+-
+string
+-
+Base.h
+/Users/ning/Project/Algorithm/Base.h
+

@@ -11,29 +11,6 @@
 
 using namespace std;
 namespace Campus {
-	vector<int> stringToIntVector(string &s) {
-		vector<int> res;
-		// vector<string> vs;
-		string str_tmp = "";
-		int index = 0;
-		while (true) {
-			index = s.find(",");
-			if (-1 == index) {
-				str_tmp = s.substr(0, s.length());
-				// vs.push_back(str_tmp);
-				int t = stoi(str_tmp);
-				res.push_back(t);
-				break;
-			}
-			str_tmp = s.substr(0, index);
-			// vs.push_back(str_tmp);
-			int t = stoi(str_tmp);
-			res.push_back(t);
-			s.erase(0, index + 1);
-		}
-
-		return res;
-	}
 
 	void test_tx1() {
 

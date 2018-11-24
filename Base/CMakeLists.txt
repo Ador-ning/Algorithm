@@ -5,7 +5,6 @@ project(Algorithm)
 set(CMAKE_CXX_STANDARD 17)
 
 set(SRC_BASE
-		Base.h   # processing the input
 		BinaryTree.h # Binary Tree
 		BinaryTree.cpp
 		Graph.h     # Graph
