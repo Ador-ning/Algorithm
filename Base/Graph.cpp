@@ -77,10 +77,11 @@ namespace Algorithm {
 	int test_Gang() {
 		int w;
 		cin >> n >> k;
+		string str1, str2;
 		for (int i = 0; i < n; i++) {
 			cin >> str1 >> str2 >> w;   // 端点 权值
-			int id1 = stringToInt(str1);
-			int id2 = stringToInt(str2);
+			int id1 = stringToInt[str1];
+			int id2 = stringToInt[str2];
 			weight[id1] += w;
 			weight[id2] += w;
 			G[id1][id2] = w;
@@ -93,7 +94,7 @@ namespace Algorithm {
 		map<string, int>::iterator it;
 
 		for (it = Gang.begin(); it != Gang.end(); it++) {
-			cout << it->first() << ' ' << it->second() << endl;
+			cout << it->first << ' ' << it->second << endl;
 		}
 
 		return 0;

@@ -17,6 +17,10 @@ list
 -
 typeinfo
 -
+algorithm
+-
+sstream
+-
 
 /Users/ning/Project/Algorithm/main.cpp
 iostream
