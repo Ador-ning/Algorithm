@@ -41,7 +41,11 @@ namespace Algorithm {
 
 	void in_order(const BinTreeNode *pRoot);
 
+	void in_order_iterate(const BinTreeNode *pRoot);
+
 	void post_order(const BinTreeNode *pRoot);
+
+	void post_order_iterate(const BinTreeNode *pRoot);
 
 	void PrintTreeTopBottom(const BinTreeNode *pRoot);
 

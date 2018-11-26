@@ -2,6 +2,7 @@
 // Created by ning on 2018/11/23.
 //
 
+#include <stack>
 #include "BinaryTree.h"
 #include "../Base.h"
 #include "../Base.cpp"
@@ -103,10 +104,22 @@ void Algorithm::pre_oder(const BinTreeNode *pRoot) {
 }
 
 void Algorithm::pre_order_iterate(const BinTreeNode *root) {
-	if (root != nullptr)
-		std::cout << root->val;
-}
+	if (root == nullptr)
+		return;
 
+	std::stack<BinTreeNode *> s;
+	s.push((BinTreeNode *) root);
+	while (!s.empty()) {
+		BinTreeNode *p = s.top();
+		s.pop();
+		std::cout << p->val << '\t';    // 根
+		// 左 右
+		if (p->right)
+			s.push(p->right);
+		if (p->left)
+			s.push(p->left);
+	}
+}
 
 // 中序  左-根-右
 void Algorithm::in_order(const BinTreeNode *pRoot) {
@@ -121,6 +134,24 @@ void Algorithm::in_order(const BinTreeNode *pRoot) {
 	}
 }
 
+void Algorithm::in_order_iterate(const Algorithm::BinTreeNode *pRoot) {
+	if (pRoot == nullptr)
+		return;
+	std::stack<BinTreeNode *> s;
+	BinTreeNode *p = (BinTreeNode *) pRoot;
+	while (p != nullptr || !s.empty()) {
+		if (p != nullptr) {
+			s.push(p);
+			p = p->left;        // 左
+		} else {
+			p = s.top();
+			s.pop();
+			std::cout << p->val << '\t'; // 根
+			p = p->right;  // 右
+		}
+	}
+}
+
 // 后序 左-右-根
 void Algorithm::post_order(const BinTreeNode *pRoot) {
 	if (pRoot != nullptr) {
@@ -132,6 +163,28 @@ void Algorithm::post_order(const BinTreeNode *pRoot) {
 
 		cout << pRoot->val << '\t';
 	}
+}
+
+void Algorithm::post_order_iterate(const Algorithm::BinTreeNode *pRoot) {
+	if (pRoot == nullptr)
+		return;
+	std::stack<BinTreeNode *> s;
+	std::vector<int> res;
+	s.push((BinTreeNode *) pRoot);
+	while (!s.empty()) {
+		BinTreeNode *p = s.top();
+		s.pop();
+		res.push_back(p->val);
+		if (p->left != nullptr)
+			s.push(p->left);
+		if (p->right != nullptr)
+			s.push(p->right);
+	}
+
+	// 根-右-左 reverse
+	reverse(res.begin(), res.end());
+	auto it = res.begin();
+	Print(it, res.end());
 }
 
 // 同层，按照从左到右顺序. 队列辅助实现
@@ -175,13 +228,19 @@ void Algorithm::test_stringToBinTreeNode() {
 	BinTreeNode *root = stringToBinTreeNode(s);
 	if (root != nullptr) {
 		PrintTreeTopBottom(root);
-		std::cout << std::endl;
+		Line();
 		pre_oder(root);
-		std::cout << std::endl;
+		Line();
+		pre_order_iterate(root);
+		Line();
 		in_order(root);
-		std::cout << std::endl;
+		Line();
+		in_order_iterate(root);
+		Line();
 		post_order(root);
-		std::cout << std::endl;
+		Line();
+		post_order_iterate(root);
+		Line();
 	}
 	DestroyTree(root);
 }
