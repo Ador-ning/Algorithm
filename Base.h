@@ -32,6 +32,7 @@
         std::cout << "Not this Type." << std::endl; \
         exit(1); } \
 
+#define Line() std::cout << std::endl
 
 
 namespace Algorithm {
