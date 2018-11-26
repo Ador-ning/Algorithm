@@ -7,54 +7,40 @@
 
 #include <iostream>
 #include <deque>
+#include <queue>
 #include <fstream>
+#include <vector>
+#include "../Base.h"
 
 using namespace std;
 
 namespace Algorithm {
-	struct BinaryTreeNode {
+	class TreeNode {
+	public:
+
+		TreeNode() : val(0), left(nullptr), right(nullptr) {}
+
+		TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+
+
+	public:
 		int val;
-		BinaryTreeNode *left;
-		BinaryTreeNode *right;
-
-		BinaryTreeNode() : val(0), left(nullptr), right(nullptr) {}
-
-		BinaryTreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+		TreeNode *left;
+		TreeNode *right;
 	};
 
-
-// 创建结点
-	BinaryTreeNode *CreateBinaryTreeNode(int val) {
-		BinaryTreeNode *pNode = new BinaryTreeNode();
-		pNode->val = val;
-		pNode->left = nullptr;
-		pNode->right = nullptr;
-
-		return pNode;
-	}
-
-// 二叉树结点的查找、修改 -- 在二叉树中找到所有数据域为给定数据域的结点，并将它们修改为给定的数据
-	void search(BinaryTreeNode *root, int x, int newdata) {
-		if (root == nullptr)
-			return; // base
-
-		if (root->val == x)
-			root->val = newdata; // 修改数据
-
-		search(root->left, x, newdata); // 修改左子树
-		search(root->right, x, newdata); // 修改右子树
-	}
-
-// 连接结点
-	void ConnectBinaryNodes(BinaryTreeNode *pParent, BinaryTreeNode *left, BinaryTreeNode *right) {
+	// 基本操作
+	// ----------------------------------------------------------------------------------------
+	// 连接结点
+	void ConnectBinaryNodes(TreeNode *pParent, TreeNode *left, TreeNode *right) {
 		if (pParent != nullptr) {
 			pParent->right = right;
 			pParent->left = left;
 		}
 	}
 
-// 打印结点
-	void PrintTreeNode(const BinaryTreeNode *pNode) {
+	// 打印结点
+	void PrintTreeNode(const TreeNode *pNode) {
 		if (pNode != nullptr) {
 			cout << "Value of its node is :" << pNode->val << "." << endl;
 
@@ -73,22 +59,57 @@ namespace Algorithm {
 		cout << endl;
 	}
 
-// 删除树
-	void DestroyTree(BinaryTreeNode *pRoot) {
-		if (pRoot != nullptr) {
-			BinaryTreeNode *left = pRoot->left;
-			BinaryTreeNode *right = pRoot->right;
+	// 层序生成完全二叉树
+	// 1 2 3 4 5 6 7 # 8 # # 9 10 # # # # # # # #
+	TreeNode *stringToTreeNode(std::string &input) {
+		if (input.size() <= 0)
+			return nullptr;
 
-			delete pRoot;
-			pRoot = nullptr;
+		std::vector<std::string> in_data = Algorithm::stringToStringVector(input);
 
-			DestroyTree(left);
-			DestroyTree(right);
+		if (DEBUG) {
+			std::cout << "Debug info: the input data convert to vector string is: ";
+			auto it = in_data.begin();
+			Print(it, in_data.end());
+			std::cout << std::endl;
 		}
+
+		if (in_data[0] == "#") {
+			std::cout << "The root value must not # !";
+			return nullptr;
+		}
+
+		std::vector<TreeNode *> vt;
+		for (int i = 0; i < in_data.size(); ++i) {
+			if (in_data[i] == "#")
+				vt.push_back(nullptr);
+			else
+				vt.push_back(new TreeNode(stoi(in_data[i])));
+		}
+
+		int i = 0;
+		while ((i + 1) * 2 < vt.size()) {
+			if (vt[i] == nullptr && (vt[(i + 1) * 2 - 1] != nullptr || vt[(i + 1) * 2] != nullptr)) {
+				std::cout << "The input sequence is not layer." << std::endl;
+				return nullptr;
+			}
+
+			if (vt[i] == nullptr && vt[(i + 1) * 2 - 1] == nullptr && vt[(i + 1) * 2] == nullptr) {
+				i += 1;
+				continue; // 继续向后检查
+			}
+
+			vt[i]->left = vt[(i + 1) * 2 - 1];
+			vt[i]->right = vt[(i + 1) * 2];
+			i += 1;
+		}
+
+		return vt[0];
 	}
 
-// 打印树 -- 先序  根-左-右
-	void pre_oder(const BinaryTreeNode *pRoot) {
+	// 树遍历 -- recursive version
+	// 打印树 -- 先序  根-左-右
+	void pre_oder(const TreeNode *pRoot) {
 		if (pRoot != nullptr) {
 
 			cout << pRoot->val << '\t';
@@ -101,8 +122,9 @@ namespace Algorithm {
 		}
 	}
 
-// 中序  左-根-右
-	void in_order(const BinaryTreeNode *pRoot) {
+
+	// 中序  左-根-右
+	void in_order(const TreeNode *pRoot) {
 		if (pRoot != nullptr) {
 			if (pRoot->left != nullptr)
 				in_order(pRoot->left);
@@ -114,8 +136,8 @@ namespace Algorithm {
 		}
 	}
 
-// 后序 左-右-根
-	void post_order(const BinaryTreeNode *pRoot) {
+	// 后序 左-右-根
+	void post_order(const TreeNode *pRoot) {
 		if (pRoot != nullptr) {
 			if (pRoot->left != nullptr)
 				post_order(pRoot->left);
@@ -127,19 +149,19 @@ namespace Algorithm {
 		}
 	}
 
-// 同层，按照从左到右顺序. 队列辅助实现
-	void PrintTreeTopBottom(const BinaryTreeNode *pRoot) {
+	// 同层，按照从左到右顺序. 队列辅助实现
+	void PrintTreeTopBottom(const TreeNode *pRoot) {
 		if (pRoot == nullptr)
 			return;
 
-		std::deque<const BinaryTreeNode *> dequeTreeNode;
+		std::deque<const TreeNode *> dequeTreeNode;
 		dequeTreeNode.push_back(pRoot);
 
 		while (dequeTreeNode.size()) {
-			const BinaryTreeNode *pNode = dequeTreeNode.front();
+			const TreeNode *pNode = dequeTreeNode.front();
 			dequeTreeNode.pop_front();
 
-			cout << "%d\t" << pNode->val;
+			cout << pNode->val << '\t';
 
 			if (pNode->left)
 				dequeTreeNode.push_back(pNode->left);
@@ -149,125 +171,37 @@ namespace Algorithm {
 		}
 	}
 
-// 二叉树所有 根->叶子 路径和为 sum
+	// 删除树
+	void DestroyTree(TreeNode *pRoot) {
+		if (pRoot != nullptr) {
+			TreeNode *left = pRoot->left;
+			TreeNode *right = pRoot->right;
 
-// 二叉树深度
-/*
- * 面试55：输入一棵二叉树的根结点，求该树的深度
- * 从根结点到叶结点一次经过的结点（含根、叶结点）形成树的一条路径，最长路径为其深度
- */
-	int TreeDepth(const BinaryTreeNode *pRoot) {
-		if (pRoot == nullptr)   // 空树 或者 叶结点
-			return 0;
+			delete pRoot;
+			pRoot = nullptr;
 
-		int nLeft = TreeDepth(pRoot->left);
-		int nRight = TreeDepth(pRoot->right);
-		return (nLeft > nRight) ? (nLeft + 1) : (nRight + 1);
-	}
-
-
-	void test_BinaryTree() {
-		BinaryTreeNode b1 = BinaryTreeNode(1);
-		BinaryTreeNode b2 = BinaryTreeNode(2);
-		BinaryTreeNode b3 = BinaryTreeNode(3);
-		BinaryTreeNode b4 = BinaryTreeNode(4);
-		BinaryTreeNode b5 = BinaryTreeNode(5);
-		BinaryTreeNode b6 = BinaryTreeNode(6);
-
-		ConnectBinaryNodes(&b1, &b2, &b3);
-		ConnectBinaryNodes(&b2, &b4, nullptr);
-		ConnectBinaryNodes(&b3, &b6, &b5);
-		pre_oder(&b1);
-		cout << endl;
-		in_order(&b1);
-		cout << endl;
-		post_order(&b1);
-	}
-
-// =====================================================================//
-// =====================================================================//
-
-
-// 序列化 / 反序列化 二叉树
-/*
- * 面试37：
- */
-	bool ReadStream(istream &stream, int *number) {
-		if (stream.eof())
-			return false;
-
-		char buffer[32];
-		buffer[0] = '\0';
-
-		char ch;
-		stream >> ch;
-		int i = 0;
-
-		while (!stream.eof() && ch != ',') {
-			buffer[i++] = ch;
-			stream >> ch;
-		}
-
-		bool isNumeric = false;
-
-		if (i > 0 && buffer[0] != '$') {
-			*number = stoi(buffer);
-			isNumeric = true;
-		}
-
-		return isNumeric;
-	}
-
-	void Serialize(const BinaryTreeNode *pRoot, ostream &stream) {
-		if (pRoot == nullptr) {
-			stream << "$,";
-			return;
-		}
-
-		stream << pRoot->val << ',';
-		Serialize(pRoot->left, stream);
-		Serialize(pRoot->right, stream);
-	}
-
-	void Deserialize(BinaryTreeNode **pRoot, istream &stream) {
-		int number;
-		if (ReadStream(stream, &number)) {
-			*pRoot = new BinaryTreeNode();
-			(*pRoot)->val = number;
-			(*pRoot)->left = nullptr;
-			(*pRoot)->right = nullptr;
-
-			Deserialize(&((*pRoot)->left), stream);
-			Deserialize(&((*pRoot)->right), stream);
+			DestroyTree(left);
+			DestroyTree(right);
 		}
 	}
 
-// BST树 -- 二叉搜索树的第K个结点
-/*
- * 面试54：给定一棵二叉搜索树，请找出其中的第K大结点
- * */
-	const BinaryTreeNode *KthNodeCore(const BinaryTreeNode *pRoot, unsigned int &k) {
-		const BinaryTreeNode *target = nullptr;
-
-		if (pRoot->left != nullptr)
-			target = KthNodeCore(pRoot->left, k);
-
-		if (target == nullptr) {
-			if (k == 1)
-				target = pRoot;
-			k--;
+	void test_stringTorTreeNode() {
+		std::string s = "1 2 3 4 5 6 7 # 8 # # 9 10 # # # # # # # #";
+		TreeNode *root = stringToTreeNode(s);
+		if (root != nullptr) {
+			PrintTreeTopBottom(root);
+			std::cout << std::endl;
+			pre_oder(root);
+			std::cout << std::endl;
+			in_order(root);
+			std::cout << std::endl;
+			post_order(root);
+			std::cout << std::endl;
 		}
-
-		if (target == nullptr && pRoot->right != nullptr)
-			target = KthNodeCore(pRoot->right, k);
-
-		return target;
+		DestroyTree(root);
 	}
 
-	const BinaryTreeNode *kthNode(const BinaryTreeNode *pRoot, unsigned int k) {
-		if (pRoot == nullptr || k == 0)
-			return nullptr;
-		return KthNodeCore(pRoot, k);
-	}
 }
+
+
 #endif //ALGORITHM_BINARYTREE_H
