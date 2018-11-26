@@ -9,8 +9,8 @@ using namespace std;
 using namespace Algorithm;
 
 /*
- *  链表內题目归纳总结要点：
- *      
+ *  链表题目总结：
+ *
  *
  *
  *

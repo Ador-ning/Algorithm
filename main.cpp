@@ -2,6 +2,7 @@
 #include <vector>
 #include <string>
 #include "Base.h"
+#include "./Base/BinaryTree.h"
 
 using namespace Algorithm;
 
@@ -34,7 +35,7 @@ void test_RemoveIgnore() {
 }
 
 int main(int argc, const char *argv[]) {
-	std::cout << "main: " << std::endl;
+	std::cout << "main test: " << std::endl;
 
-	test1D();
+	Algorithm::test_stringTorTreeNode();
 }

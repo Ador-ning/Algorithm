@@ -32,7 +32,7 @@ namespace Algorithm {
 		std::vector<int> list = Algorithm::stringToVector<int>(input);
 
 		if (DEBUG) {
-			std::cout << "the input data convert to vector int is: ";
+			std::cout << "Debug info: the input data convert to vector int is: ";
 			auto it = list.begin();
 			Print(it, list.end());
 			std::cout << std::endl;
