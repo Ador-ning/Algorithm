@@ -1,184 +1,187 @@
 //
 // Created by ning on 2018/11/23.
 //
+
 #include "BinaryTree.h"
+#include "../Base.h"
+#include "../Base.cpp"
 
 using namespace std;
 using namespace Algorithm;
 
-// 二叉树结点的查找、修改 -- 在二叉树中找到所有数据域为给定数据域的结点，并将它们修改为给定的数据
-void search(TreeNode *root, int x, int newdata) {
-	if (root == nullptr)
-		return; // base
-
-	if (root->val == x)
-		root->val = newdata; // 修改数据
-
-	search(root->left, x, newdata); // 修改左子树
-	search(root->right, x, newdata); // 修改右子树
+// 基本操作
+// ----------------------------------------------------------------------------------------
+// 连接结点
+void Algorithm::ConnectBinaryNodes(BinTreeNode *pParent, BinTreeNode *left, BinTreeNode *right) {
+	if (pParent != nullptr) {
+		pParent->right = right;
+		pParent->left = left;
+	}
 }
 
-// 二叉树所有 根->叶子 路径和为 sum
+// 打印结点
+void Algorithm::PrintBinTreeNode(const BinTreeNode *pNode) {
+	if (pNode != nullptr) {
+		cout << "Value of its node is :" << pNode->val << "." << endl;
 
-// 二叉树深度
-/*
- * 面试55：输入一棵二叉树的根结点，求该树的深度
- * 从根结点到叶结点一次经过的结点（含根、叶结点）形成树的一条路径，最长路径为其深度
- */
-int TreeDepth(const TreeNode *pRoot) {
-	if (pRoot == nullptr)   // 空树 或者 叶结点
-		return 0;
+		if (pNode->left != nullptr)
+			cout << "Value of its left child is :" << pNode->left->val << "." << endl;
+		else
+			cout << " No left child." << endl;
 
-	int nLeft = TreeDepth(pRoot->left);
-	int nRight = TreeDepth(pRoot->right);
-	return (nLeft > nRight) ? (nLeft + 1) : (nRight + 1);
-}
-
-
-void test_BinaryTree() {
-	TreeNode b1 = TreeNode(1);
-	TreeNode b2 = TreeNode(2);
-	TreeNode b3 = TreeNode(3);
-	TreeNode b4 = TreeNode(4);
-	TreeNode b5 = TreeNode(5);
-	TreeNode b6 = TreeNode(6);
-
-	ConnectBinaryNodes(&b1, &b2, &b3);
-	ConnectBinaryNodes(&b2, &b4, nullptr);
-	ConnectBinaryNodes(&b3, &b6, &b5);
-	pre_oder(&b1);
+		if (pNode->right != nullptr)
+			cout << "Value of its right child is :" << pNode->right->val << "." << endl;
+		else
+			cout << " No right child." << endl;
+	} else {
+		cout << "This node is nullptr." << endl;
+	}
 	cout << endl;
-	in_order(&b1);
-	cout << endl;
-	post_order(&b1);
 }
 
-// =====================================================================//
-// =====================================================================//
-
-
-// 序列化 / 反序列化 二叉树
-/*
- * 面试37：
- */
-bool ReadStream(istream &stream, int *number) {
-	if (stream.eof())
-		return false;
-
-	char buffer[32];
-	buffer[0] = '\0';
-
-	char ch;
-	stream >> ch;
-	int i = 0;
-
-	while (!stream.eof() && ch != ',') {
-		buffer[i++] = ch;
-		stream >> ch;
-	}
-
-	bool isNumeric = false;
-
-	if (i > 0 && buffer[0] != '$') {
-		*number = stoi(buffer);
-		isNumeric = true;
-	}
-
-	return isNumeric;
-}
-
-void Serialize(const TreeNode *pRoot, ostream &stream) {
-	if (pRoot == nullptr) {
-		stream << "$,";
-		return;
-	}
-
-	stream << pRoot->val << ',';
-	Serialize(pRoot->left, stream);
-	Serialize(pRoot->right, stream);
-}
-
-void Deserialize(TreeNode **pRoot, istream &stream) {
-	int number;
-	if (ReadStream(stream, &number)) {
-		*pRoot = new TreeNode();
-		(*pRoot)->val = number;
-		(*pRoot)->left = nullptr;
-		(*pRoot)->right = nullptr;
-
-		Deserialize(&((*pRoot)->left), stream);
-		Deserialize(&((*pRoot)->right), stream);
-	}
-}
-
-// BST树 -- 二叉搜索树的第K个结点
-/*
- * 面试54：给定一棵二叉搜索树，请找出其中的第K大结点
- * */
-const TreeNode *KthNodeCore(const TreeNode *pRoot, unsigned int &k) {
-	const TreeNode *target = nullptr;
-
-	if (pRoot->left != nullptr)
-		target = KthNodeCore(pRoot->left, k);
-
-	if (target == nullptr) {
-		if (k == 1)
-			target = pRoot;
-		k--;
-	}
-
-	if (target == nullptr && pRoot->right != nullptr)
-		target = KthNodeCore(pRoot->right, k);
-
-	return target;
-}
-
-const TreeNode *kthNode(const TreeNode *pRoot, unsigned int k) {
-	if (pRoot == nullptr || k == 0)
+// 层序生成完全二叉树
+// 1 2 3 4 5 6 7 # 8 # # 9 10 # # # # # # # #
+BinTreeNode *Algorithm::stringToBinTreeNode(std::string &input) {
+	if (input.size() <= 0)
 		return nullptr;
-	return KthNodeCore(pRoot, k);
-}
 
-// 树的子结构
-/*
- * 面试题26：输入两颗二叉树，判断B是不是A的子结构
- */
-bool Equal(double num1, double num2) {
-	if ((num1 - num2 > -0.0000001) && (num1 - num2 < 0.0000001))
-		return true;
-	else
-		return false;
-}
+	std::vector<std::string> in_data = Algorithm::stringToStringVector(input);
 
-bool T1HaveT2(TreeNode *pRoot1, TreeNode *pRoot2) {
-	if (pRoot2 == nullptr)
-		return true;
-	if (pRoot1 == nullptr)
-		return false;
-
-	if (!Equal(pRoot1->val, pRoot2->val))
-		return false;
-
-	return T1HaveT2(pRoot1->left, pRoot2->left) && T1HaveT2(
-			pRoot1->right, pRoot2->right);
-}
-
-bool HasSuTree(TreeNode *pRoot1, TreeNode *pRoot2) {
-	bool result = false;
-
-	if (pRoot1 != nullptr && pRoot2 != nullptr) {
-		if (Equal(pRoot1->val, pRoot2->val))
-			result = T1HaveT2(pRoot1, pRoot2);
-		if (!result)
-			result = HasSuTree(pRoot1->left, pRoot2);
-		if (!result)
-			result = HasSuTree(pRoot1->right, pRoot2);
+	if (DEBUG) {
+		std::cout << "Debug info: the input data convert to vector string is: ";
+		auto it = in_data.begin();
+		Print(it, in_data.end());
+		std::cout << std::endl;
 	}
-	return result;
+
+	if (in_data[0] == "#") {
+		std::cout << "The root value must not # !";
+		return nullptr;
+	}
+
+	std::vector<BinTreeNode *> vt;
+	for (int i = 0; i < in_data.size(); ++i) {
+		if (in_data[i] == "#")
+			vt.push_back(nullptr);
+		else
+			vt.push_back(new BinTreeNode(stoi(in_data[i])));
+	}
+
+	int i = 0;
+	while ((i + 1) * 2 < vt.size()) {
+		if (vt[i] == nullptr && (vt[(i + 1) * 2 - 1] != nullptr || vt[(i + 1) * 2] != nullptr)) {
+			std::cout << "The input sequence is not layer." << std::endl;
+			return nullptr;
+		}
+
+		if (vt[i] == nullptr && vt[(i + 1) * 2 - 1] == nullptr && vt[(i + 1) * 2] == nullptr) {
+			i += 1;
+			continue; // 继续向后检查
+		}
+
+		vt[i]->left = vt[(i + 1) * 2 - 1];
+		vt[i]->right = vt[(i + 1) * 2];
+		i += 1;
+	}
+
+	return vt[0];
+}
+
+// 树遍历 -- recursive version
+// 打印树 -- 先序  根-左-右
+void Algorithm::pre_oder(const BinTreeNode *pRoot) {
+	if (pRoot != nullptr) {
+
+		cout << pRoot->val << '\t';
+
+		if (pRoot->left != nullptr)
+			pre_oder(pRoot->left);
+
+		if (pRoot->right != nullptr)
+			pre_oder(pRoot->right);
+	}
+}
+
+void Algorithm::pre_order_iterate(const BinTreeNode *root) {
+	if (root != nullptr)
+		std::cout << root->val;
 }
 
 
-int main(int argc, const char *argv[]) {
-	std::cout << "BinaryTree test part: " << std::endl;
-	Algorithm::test_stringTorTreeNode();
+// 中序  左-根-右
+void Algorithm::in_order(const BinTreeNode *pRoot) {
+	if (pRoot != nullptr) {
+		if (pRoot->left != nullptr)
+			in_order(pRoot->left);
+
+		cout << pRoot->val << '\t';
+
+		if (pRoot->right != nullptr)
+			in_order(pRoot->right);
+	}
+}
+
+// 后序 左-右-根
+void Algorithm::post_order(const BinTreeNode *pRoot) {
+	if (pRoot != nullptr) {
+		if (pRoot->left != nullptr)
+			post_order(pRoot->left);
+
+		if (pRoot->right != nullptr)
+			post_order(pRoot->right);
+
+		cout << pRoot->val << '\t';
+	}
+}
+
+// 同层，按照从左到右顺序. 队列辅助实现
+void Algorithm::PrintTreeTopBottom(const BinTreeNode *pRoot) {
+	if (pRoot == nullptr)
+		return;
+
+	std::deque<const BinTreeNode *> dequeBinTreeNode;
+	dequeBinTreeNode.push_back(pRoot);
+
+	while (dequeBinTreeNode.size()) {
+		const BinTreeNode *pNode = dequeBinTreeNode.front();
+		dequeBinTreeNode.pop_front();
+
+		cout << pNode->val << '\t';
+
+		if (pNode->left)
+			dequeBinTreeNode.push_back(pNode->left);
+
+		if (pNode->right)
+			dequeBinTreeNode.push_back(pNode->right);
+	}
+}
+
+// 删除树
+void Algorithm::DestroyTree(BinTreeNode *pRoot) {
+	if (pRoot != nullptr) {
+		BinTreeNode *left = pRoot->left;
+		BinTreeNode *right = pRoot->right;
+
+		delete pRoot;
+		pRoot = nullptr;
+
+		DestroyTree(left);
+		DestroyTree(right);
+	}
+}
+
+void Algorithm::test_stringToBinTreeNode() {
+	std::string s = "1 2 3 4 # 6 7 # 8 # # 9 10 # # # # # # # #";
+	BinTreeNode *root = stringToBinTreeNode(s);
+	if (root != nullptr) {
+		PrintTreeTopBottom(root);
+		std::cout << std::endl;
+		pre_oder(root);
+		std::cout << std::endl;
+		in_order(root);
+		std::cout << std::endl;
+		post_order(root);
+		std::cout << std::endl;
+	}
+	DestroyTree(root);
 }

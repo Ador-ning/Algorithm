@@ -5,7 +5,12 @@
 #ifndef INTERVIEW_CPP_STRINGUTILS_H
 #define INTERVIEW_CPP_STRINGUTILS_H
 
+#include <stdio.h>
+#include <iostream>
+
 namespace Algorithm {
+	// 反转字符串
+	// reverse(s.begin(), s.end());
 	void Reverse(char *pBegin, char *pEnd) {
 		if (pBegin == nullptr || pEnd == nullptr)
 			return;
@@ -17,6 +22,36 @@ namespace Algorithm {
 			pBegin++;
 			pEnd--;
 		}
+	}
+
+	/*
+	 * 功能：upper to lower and remove other character
+	 * */
+	void removeIgnore(std::string &s) {
+		if (s.size() == 0)
+			return;
+		for (int i = 0; i < s.size();) {
+			// upper to lower
+			if (s[i] >= 'A' && s[i] <= 'Z') {
+				s[i] -= 'A' - 'a';
+				++i;
+			} else if (s[i] >= 'a' && s[i] <= 'z') {
+				++i;
+				continue;
+			} else {
+				// remove
+				s.erase(i, 1);
+			}
+		}
+	}
+
+	void test_RemoveIgnore() {
+		std::string s("A man, a plan, a canal: Panama");
+		std::string s1("race a car");
+		removeIgnore(s);
+		removeIgnore(s1);
+		std::cout << s << std::endl;
+		std::cout << s1 << std::endl;
 	}
 
 // 字符串排列    --- 递归

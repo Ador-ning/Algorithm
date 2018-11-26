@@ -152,6 +152,33 @@ BinaryTree.cpp.s:
 	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/BinaryTree.cpp.s
 .PHONY : BinaryTree.cpp.s
 
+BinaryTreeProblem.o: BinaryTreeProblem.cpp.o
+
+.PHONY : BinaryTreeProblem.o
+
+# target to build an object file
+BinaryTreeProblem.cpp.o:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/BinaryTreeProblem.cpp.o
+.PHONY : BinaryTreeProblem.cpp.o
+
+BinaryTreeProblem.i: BinaryTreeProblem.cpp.i
+
+.PHONY : BinaryTreeProblem.i
+
+# target to preprocess a source file
+BinaryTreeProblem.cpp.i:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/BinaryTreeProblem.cpp.i
+.PHONY : BinaryTreeProblem.cpp.i
+
+BinaryTreeProblem.s: BinaryTreeProblem.cpp.s
+
+.PHONY : BinaryTreeProblem.s
+
+# target to generate assembly for a file
+BinaryTreeProblem.cpp.s:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/BinaryTreeProblem.cpp.s
+.PHONY : BinaryTreeProblem.cpp.s
+
 Graph.o: Graph.cpp.o
 
 .PHONY : Graph.o
@@ -206,6 +233,60 @@ LinkList.cpp.s:
 	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/LinkList.cpp.s
 .PHONY : LinkList.cpp.s
 
+LinkListProblem.o: LinkListProblem.cpp.o
+
+.PHONY : LinkListProblem.o
+
+# target to build an object file
+LinkListProblem.cpp.o:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/LinkListProblem.cpp.o
+.PHONY : LinkListProblem.cpp.o
+
+LinkListProblem.i: LinkListProblem.cpp.i
+
+.PHONY : LinkListProblem.i
+
+# target to preprocess a source file
+LinkListProblem.cpp.i:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/LinkListProblem.cpp.i
+.PHONY : LinkListProblem.cpp.i
+
+LinkListProblem.s: LinkListProblem.cpp.s
+
+.PHONY : LinkListProblem.s
+
+# target to generate assembly for a file
+LinkListProblem.cpp.s:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/LinkListProblem.cpp.s
+.PHONY : LinkListProblem.cpp.s
+
+test_base.o: test_base.cpp.o
+
+.PHONY : test_base.o
+
+# target to build an object file
+test_base.cpp.o:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/test_base.cpp.o
+.PHONY : test_base.cpp.o
+
+test_base.i: test_base.cpp.i
+
+.PHONY : test_base.i
+
+# target to preprocess a source file
+test_base.cpp.i:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/test_base.cpp.i
+.PHONY : test_base.cpp.i
+
+test_base.s: test_base.cpp.s
+
+.PHONY : test_base.s
+
+# target to generate assembly for a file
+test_base.cpp.s:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/test_base.cpp.s
+.PHONY : test_base.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -218,12 +299,21 @@ help:
 	@echo "... BinaryTree.o"
 	@echo "... BinaryTree.i"
 	@echo "... BinaryTree.s"
+	@echo "... BinaryTreeProblem.o"
+	@echo "... BinaryTreeProblem.i"
+	@echo "... BinaryTreeProblem.s"
 	@echo "... Graph.o"
 	@echo "... Graph.i"
 	@echo "... Graph.s"
 	@echo "... LinkList.o"
 	@echo "... LinkList.i"
 	@echo "... LinkList.s"
+	@echo "... LinkListProblem.o"
+	@echo "... LinkListProblem.i"
+	@echo "... LinkListProblem.s"
+	@echo "... test_base.o"
+	@echo "... test_base.i"
+	@echo "... test_base.s"
 .PHONY : help
 
 

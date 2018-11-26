@@ -81,28 +81,28 @@ Base/CMakeFiles/base.dir/BinaryTree.cpp.o.provides: Base/CMakeFiles/base.dir/Bin
 Base/CMakeFiles/base.dir/BinaryTree.cpp.o.provides.build: Base/CMakeFiles/base.dir/BinaryTree.cpp.o
 
 
-Base/CMakeFiles/base.dir/Graph.cpp.o: Base/CMakeFiles/base.dir/flags.make
-Base/CMakeFiles/base.dir/Graph.cpp.o: ../Base/Graph.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object Base/CMakeFiles/base.dir/Graph.cpp.o"
-	cd /Users/ning/Project/Algorithm/cmake-build-debug/Base && /usr/local/Cellar/gcc/8.1.0/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/base.dir/Graph.cpp.o -c /Users/ning/Project/Algorithm/Base/Graph.cpp
+Base/CMakeFiles/base.dir/BinaryTreeProblem.cpp.o: Base/CMakeFiles/base.dir/flags.make
+Base/CMakeFiles/base.dir/BinaryTreeProblem.cpp.o: ../Base/BinaryTreeProblem.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object Base/CMakeFiles/base.dir/BinaryTreeProblem.cpp.o"
+	cd /Users/ning/Project/Algorithm/cmake-build-debug/Base && /usr/local/Cellar/gcc/8.1.0/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/base.dir/BinaryTreeProblem.cpp.o -c /Users/ning/Project/Algorithm/Base/BinaryTreeProblem.cpp
 
-Base/CMakeFiles/base.dir/Graph.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/base.dir/Graph.cpp.i"
-	cd /Users/ning/Project/Algorithm/cmake-build-debug/Base && /usr/local/Cellar/gcc/8.1.0/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ning/Project/Algorithm/Base/Graph.cpp > CMakeFiles/base.dir/Graph.cpp.i
+Base/CMakeFiles/base.dir/BinaryTreeProblem.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/base.dir/BinaryTreeProblem.cpp.i"
+	cd /Users/ning/Project/Algorithm/cmake-build-debug/Base && /usr/local/Cellar/gcc/8.1.0/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ning/Project/Algorithm/Base/BinaryTreeProblem.cpp > CMakeFiles/base.dir/BinaryTreeProblem.cpp.i
 
-Base/CMakeFiles/base.dir/Graph.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/base.dir/Graph.cpp.s"
-	cd /Users/ning/Project/Algorithm/cmake-build-debug/Base && /usr/local/Cellar/gcc/8.1.0/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ning/Project/Algorithm/Base/Graph.cpp -o CMakeFiles/base.dir/Graph.cpp.s
+Base/CMakeFiles/base.dir/BinaryTreeProblem.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/base.dir/BinaryTreeProblem.cpp.s"
+	cd /Users/ning/Project/Algorithm/cmake-build-debug/Base && /usr/local/Cellar/gcc/8.1.0/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ning/Project/Algorithm/Base/BinaryTreeProblem.cpp -o CMakeFiles/base.dir/BinaryTreeProblem.cpp.s
 
-Base/CMakeFiles/base.dir/Graph.cpp.o.requires:
+Base/CMakeFiles/base.dir/BinaryTreeProblem.cpp.o.requires:
 
-.PHONY : Base/CMakeFiles/base.dir/Graph.cpp.o.requires
+.PHONY : Base/CMakeFiles/base.dir/BinaryTreeProblem.cpp.o.requires
 
-Base/CMakeFiles/base.dir/Graph.cpp.o.provides: Base/CMakeFiles/base.dir/Graph.cpp.o.requires
-	$(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/Graph.cpp.o.provides.build
-.PHONY : Base/CMakeFiles/base.dir/Graph.cpp.o.provides
+Base/CMakeFiles/base.dir/BinaryTreeProblem.cpp.o.provides: Base/CMakeFiles/base.dir/BinaryTreeProblem.cpp.o.requires
+	$(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/BinaryTreeProblem.cpp.o.provides.build
+.PHONY : Base/CMakeFiles/base.dir/BinaryTreeProblem.cpp.o.provides
 
-Base/CMakeFiles/base.dir/Graph.cpp.o.provides.build: Base/CMakeFiles/base.dir/Graph.cpp.o
+Base/CMakeFiles/base.dir/BinaryTreeProblem.cpp.o.provides.build: Base/CMakeFiles/base.dir/BinaryTreeProblem.cpp.o
 
 
 Base/CMakeFiles/base.dir/LinkList.cpp.o: Base/CMakeFiles/base.dir/flags.make
@@ -129,21 +129,99 @@ Base/CMakeFiles/base.dir/LinkList.cpp.o.provides: Base/CMakeFiles/base.dir/LinkL
 Base/CMakeFiles/base.dir/LinkList.cpp.o.provides.build: Base/CMakeFiles/base.dir/LinkList.cpp.o
 
 
+Base/CMakeFiles/base.dir/LinkListProblem.cpp.o: Base/CMakeFiles/base.dir/flags.make
+Base/CMakeFiles/base.dir/LinkListProblem.cpp.o: ../Base/LinkListProblem.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object Base/CMakeFiles/base.dir/LinkListProblem.cpp.o"
+	cd /Users/ning/Project/Algorithm/cmake-build-debug/Base && /usr/local/Cellar/gcc/8.1.0/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/base.dir/LinkListProblem.cpp.o -c /Users/ning/Project/Algorithm/Base/LinkListProblem.cpp
+
+Base/CMakeFiles/base.dir/LinkListProblem.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/base.dir/LinkListProblem.cpp.i"
+	cd /Users/ning/Project/Algorithm/cmake-build-debug/Base && /usr/local/Cellar/gcc/8.1.0/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ning/Project/Algorithm/Base/LinkListProblem.cpp > CMakeFiles/base.dir/LinkListProblem.cpp.i
+
+Base/CMakeFiles/base.dir/LinkListProblem.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/base.dir/LinkListProblem.cpp.s"
+	cd /Users/ning/Project/Algorithm/cmake-build-debug/Base && /usr/local/Cellar/gcc/8.1.0/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ning/Project/Algorithm/Base/LinkListProblem.cpp -o CMakeFiles/base.dir/LinkListProblem.cpp.s
+
+Base/CMakeFiles/base.dir/LinkListProblem.cpp.o.requires:
+
+.PHONY : Base/CMakeFiles/base.dir/LinkListProblem.cpp.o.requires
+
+Base/CMakeFiles/base.dir/LinkListProblem.cpp.o.provides: Base/CMakeFiles/base.dir/LinkListProblem.cpp.o.requires
+	$(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/LinkListProblem.cpp.o.provides.build
+.PHONY : Base/CMakeFiles/base.dir/LinkListProblem.cpp.o.provides
+
+Base/CMakeFiles/base.dir/LinkListProblem.cpp.o.provides.build: Base/CMakeFiles/base.dir/LinkListProblem.cpp.o
+
+
+Base/CMakeFiles/base.dir/Graph.cpp.o: Base/CMakeFiles/base.dir/flags.make
+Base/CMakeFiles/base.dir/Graph.cpp.o: ../Base/Graph.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object Base/CMakeFiles/base.dir/Graph.cpp.o"
+	cd /Users/ning/Project/Algorithm/cmake-build-debug/Base && /usr/local/Cellar/gcc/8.1.0/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/base.dir/Graph.cpp.o -c /Users/ning/Project/Algorithm/Base/Graph.cpp
+
+Base/CMakeFiles/base.dir/Graph.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/base.dir/Graph.cpp.i"
+	cd /Users/ning/Project/Algorithm/cmake-build-debug/Base && /usr/local/Cellar/gcc/8.1.0/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ning/Project/Algorithm/Base/Graph.cpp > CMakeFiles/base.dir/Graph.cpp.i
+
+Base/CMakeFiles/base.dir/Graph.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/base.dir/Graph.cpp.s"
+	cd /Users/ning/Project/Algorithm/cmake-build-debug/Base && /usr/local/Cellar/gcc/8.1.0/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ning/Project/Algorithm/Base/Graph.cpp -o CMakeFiles/base.dir/Graph.cpp.s
+
+Base/CMakeFiles/base.dir/Graph.cpp.o.requires:
+
+.PHONY : Base/CMakeFiles/base.dir/Graph.cpp.o.requires
+
+Base/CMakeFiles/base.dir/Graph.cpp.o.provides: Base/CMakeFiles/base.dir/Graph.cpp.o.requires
+	$(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/Graph.cpp.o.provides.build
+.PHONY : Base/CMakeFiles/base.dir/Graph.cpp.o.provides
+
+Base/CMakeFiles/base.dir/Graph.cpp.o.provides.build: Base/CMakeFiles/base.dir/Graph.cpp.o
+
+
+Base/CMakeFiles/base.dir/test_base.cpp.o: Base/CMakeFiles/base.dir/flags.make
+Base/CMakeFiles/base.dir/test_base.cpp.o: ../Base/test_base.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object Base/CMakeFiles/base.dir/test_base.cpp.o"
+	cd /Users/ning/Project/Algorithm/cmake-build-debug/Base && /usr/local/Cellar/gcc/8.1.0/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/base.dir/test_base.cpp.o -c /Users/ning/Project/Algorithm/Base/test_base.cpp
+
+Base/CMakeFiles/base.dir/test_base.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/base.dir/test_base.cpp.i"
+	cd /Users/ning/Project/Algorithm/cmake-build-debug/Base && /usr/local/Cellar/gcc/8.1.0/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ning/Project/Algorithm/Base/test_base.cpp > CMakeFiles/base.dir/test_base.cpp.i
+
+Base/CMakeFiles/base.dir/test_base.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/base.dir/test_base.cpp.s"
+	cd /Users/ning/Project/Algorithm/cmake-build-debug/Base && /usr/local/Cellar/gcc/8.1.0/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ning/Project/Algorithm/Base/test_base.cpp -o CMakeFiles/base.dir/test_base.cpp.s
+
+Base/CMakeFiles/base.dir/test_base.cpp.o.requires:
+
+.PHONY : Base/CMakeFiles/base.dir/test_base.cpp.o.requires
+
+Base/CMakeFiles/base.dir/test_base.cpp.o.provides: Base/CMakeFiles/base.dir/test_base.cpp.o.requires
+	$(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/test_base.cpp.o.provides.build
+.PHONY : Base/CMakeFiles/base.dir/test_base.cpp.o.provides
+
+Base/CMakeFiles/base.dir/test_base.cpp.o.provides.build: Base/CMakeFiles/base.dir/test_base.cpp.o
+
+
 # Object files for target base
 base_OBJECTS = \
 "CMakeFiles/base.dir/BinaryTree.cpp.o" \
+"CMakeFiles/base.dir/BinaryTreeProblem.cpp.o" \
+"CMakeFiles/base.dir/LinkList.cpp.o" \
+"CMakeFiles/base.dir/LinkListProblem.cpp.o" \
 "CMakeFiles/base.dir/Graph.cpp.o" \
-"CMakeFiles/base.dir/LinkList.cpp.o"
+"CMakeFiles/base.dir/test_base.cpp.o"
 
 # External object files for target base
 base_EXTERNAL_OBJECTS =
 
 Base/base: Base/CMakeFiles/base.dir/BinaryTree.cpp.o
-Base/base: Base/CMakeFiles/base.dir/Graph.cpp.o
+Base/base: Base/CMakeFiles/base.dir/BinaryTreeProblem.cpp.o
 Base/base: Base/CMakeFiles/base.dir/LinkList.cpp.o
+Base/base: Base/CMakeFiles/base.dir/LinkListProblem.cpp.o
+Base/base: Base/CMakeFiles/base.dir/Graph.cpp.o
+Base/base: Base/CMakeFiles/base.dir/test_base.cpp.o
 Base/base: Base/CMakeFiles/base.dir/build.make
 Base/base: Base/CMakeFiles/base.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable base"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable base"
 	cd /Users/ning/Project/Algorithm/cmake-build-debug/Base && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/base.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -152,8 +230,11 @@ Base/CMakeFiles/base.dir/build: Base/base
 .PHONY : Base/CMakeFiles/base.dir/build
 
 Base/CMakeFiles/base.dir/requires: Base/CMakeFiles/base.dir/BinaryTree.cpp.o.requires
-Base/CMakeFiles/base.dir/requires: Base/CMakeFiles/base.dir/Graph.cpp.o.requires
+Base/CMakeFiles/base.dir/requires: Base/CMakeFiles/base.dir/BinaryTreeProblem.cpp.o.requires
 Base/CMakeFiles/base.dir/requires: Base/CMakeFiles/base.dir/LinkList.cpp.o.requires
+Base/CMakeFiles/base.dir/requires: Base/CMakeFiles/base.dir/LinkListProblem.cpp.o.requires
+Base/CMakeFiles/base.dir/requires: Base/CMakeFiles/base.dir/Graph.cpp.o.requires
+Base/CMakeFiles/base.dir/requires: Base/CMakeFiles/base.dir/test_base.cpp.o.requires
 
 .PHONY : Base/CMakeFiles/base.dir/requires
 

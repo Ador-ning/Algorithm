@@ -11,7 +11,7 @@
 namespace Algorithm {
 // =========================== base operation =========================== //
 // BST 中查找
-	void BST_search(BinaryTreeNode *pRoot, int x) {
+	void BST_search(BinTreeNode *pRoot, int x) {
 
 		if (pRoot == nullptr) { // 叶节点
 			cout << "Search failed\n";
@@ -27,9 +27,9 @@ namespace Algorithm {
 	}
 
 // BST 中插入结点
-	void BST_insert(BinaryTreeNode *&pRoot, int x) {
+	void BST_insert(BinTreeNode *&pRoot, int x) {
 		if (pRoot == nullptr) {
-			pRoot = CreateBinaryTreeNode(x);
+			pRoot = new BinTreeNode(x);
 			return;
 		}
 		if (x == pRoot->val)
@@ -41,8 +41,8 @@ namespace Algorithm {
 	}
 
 // 构造 BST
-	BinaryTreeNode *CreateBST(int data[], int n) {
-		BinaryTreeNode *pRoot = nullptr;
+	BinTreeNode *CreateBST(int data[], int n) {
+		BinTreeNode *pRoot = nullptr;
 
 		for (int i = 0; i < n; ++i)
 			BST_insert(pRoot, data[i]);
@@ -50,21 +50,21 @@ namespace Algorithm {
 	}
 
 // 查找到 BST 中最大权值的结点
-	BinaryTreeNode *BST_findMax(BinaryTreeNode *pRoot) {
+	BinTreeNode *BST_findMax(BinTreeNode *pRoot) {
 		while (pRoot->right != nullptr)
 			pRoot = pRoot->right;
 		return pRoot;
 	}
 
 // 查找到 BST 中最小权值的结点
-	BinaryTreeNode *BST_findMin(BinaryTreeNode *pRoot) {
+	BinTreeNode *BST_findMin(BinTreeNode *pRoot) {
 		while (pRoot->left != nullptr)
 			pRoot = pRoot->left;
 		return pRoot;
 	}
 
 // BST 删除结点
-	void BST_DeleteNode(BinaryTreeNode *&pRoot, int x) {
+	void BST_DeleteNode(BinTreeNode *&pRoot, int x) {
 		if (pRoot == nullptr)
 			return; // base
 
@@ -74,12 +74,12 @@ namespace Algorithm {
 				pRoot = nullptr; // 叶子结点
 			else if (pRoot->left != nullptr) { // 左子树不为空
 				// 左子树中找最大，顶替 pRoot
-				BinaryTreeNode *pre = BST_findMax(pRoot->left); // 找 pRoot 前缀
+				BinTreeNode *pre = BST_findMax(pRoot->left); // 找 pRoot 前缀
 				pRoot->val = pre->val; // 覆盖
 				BST_DeleteNode(pRoot->left, pre->val); // 删除该结点
 			} else { // 右子树不为空
 				// 左子树中找最小，顶替 pRoot
-				BinaryTreeNode *next = BST_findMin(pRoot->left); // 找 pRoot 前缀
+				BinTreeNode *next = BST_findMin(pRoot->left); // 找 pRoot 前缀
 				pRoot->val = next->val;
 				BST_DeleteNode(pRoot->right, next->val);
 			}
@@ -96,11 +96,11 @@ namespace Algorithm {
 
 // 输入一个二叉搜索树，将该 BST 转换成一个排序的双向链接
 // 要求：不能创建任何新的结点，只能调整树中的指针
-	void ConvertNode(BinaryTreeNode *pNode, BinaryTreeNode **pLastNodeList) {
+	void ConvertNode(BinTreeNode *pNode, BinTreeNode **pLastNodeList) {
 		if (pNode == nullptr)
 			return;
 
-		BinaryTreeNode *pCurrent = pNode;
+		BinTreeNode *pCurrent = pNode;
 
 		if (pCurrent->left != nullptr)
 			ConvertNode(pCurrent->left, pLastNodeList);
@@ -116,13 +116,13 @@ namespace Algorithm {
 			ConvertNode(pCurrent->right, pLastNodeList);
 	}
 
-	BinaryTreeNode *Convert(BinaryTreeNode *pRoot) {
-		BinaryTreeNode *pLastNodeList = nullptr;
+	BinTreeNode *Convert(BinTreeNode *pRoot) {
+		BinTreeNode *pLastNodeList = nullptr;
 		ConvertNode(pRoot, &pLastNodeList);
 
 		// pLastNodeList指向双链表的尾端
 		// 需要返回头节点
-		BinaryTreeNode *pHeadList = pLastNodeList;
+		BinTreeNode *pHeadList = pLastNodeList;
 		while (pHeadList != nullptr && pHeadList->left != nullptr) {
 			pHeadList = pHeadList->left;
 		}
@@ -131,8 +131,8 @@ namespace Algorithm {
 
 
 // ======================= 测试 ==============
-	void PrintDoubleLinkedList(BinaryTreeNode *pHeadOfList) {
-		BinaryTreeNode *pNode = pHeadOfList;
+	void PrintDoubleLinkedList(BinTreeNode *pHeadOfList) {
+		BinTreeNode *pNode = pHeadOfList;
 
 		printf("The nodes from left to right are:\n");
 		while (pNode != nullptr) {
@@ -155,36 +155,36 @@ namespace Algorithm {
 		printf("\n");
 	}
 
-	void DestroyList(BinaryTreeNode *pHeadOfList) {
-		BinaryTreeNode *pNode = pHeadOfList;
+	void DestroyList(BinTreeNode *pHeadOfList) {
+		BinTreeNode *pNode = pHeadOfList;
 		while (pNode != nullptr) {
-			BinaryTreeNode *pNext = pNode->right;
+			BinTreeNode *pNext = pNode->right;
 
 			delete pNode;
 			pNode = pNext;
 		}
 	}
 
-	void Test(char *testName, BinaryTreeNode *pRootOfTree) {
+	void Test(char *testName, BinTreeNode *pRootOfTree) {
 		if (testName != nullptr)
 			printf("%s begins:\n", testName);
 
 		pre_oder(pRootOfTree);
 
-		BinaryTreeNode *pHeadOfList = Convert(pRootOfTree);
+		BinTreeNode *pHeadOfList = Convert(pRootOfTree);
 
 		PrintDoubleLinkedList(pHeadOfList);
 	}
 
 
 	void Test1() {
-		BinaryTreeNode *pNode10 = CreateBinaryTreeNode(10);
-		BinaryTreeNode *pNode6 = CreateBinaryTreeNode(6);
-		BinaryTreeNode *pNode14 = CreateBinaryTreeNode(14);
-		BinaryTreeNode *pNode4 = CreateBinaryTreeNode(4);
-		BinaryTreeNode *pNode8 = CreateBinaryTreeNode(8);
-		BinaryTreeNode *pNode12 = CreateBinaryTreeNode(12);
-		BinaryTreeNode *pNode16 = CreateBinaryTreeNode(16);
+		BinTreeNode *pNode10 = new BinTreeNode(10);
+		BinTreeNode *pNode6 = new BinTreeNode(6);
+		BinTreeNode *pNode14 = new BinTreeNode(14);
+		BinTreeNode *pNode4 = new BinTreeNode(4);
+		BinTreeNode *pNode8 = new BinTreeNode(8);
+		BinTreeNode *pNode12 = new BinTreeNode(12);
+		BinTreeNode *pNode16 = new BinTreeNode(16);
 
 		ConnectBinaryNodes(pNode10, pNode6, pNode14);
 		ConnectBinaryNodes(pNode6, pNode4, pNode8);
@@ -197,11 +197,11 @@ namespace Algorithm {
 
 
 	void Test2() {
-		BinaryTreeNode *pNode5 = CreateBinaryTreeNode(5);
-		BinaryTreeNode *pNode4 = CreateBinaryTreeNode(4);
-		BinaryTreeNode *pNode3 = CreateBinaryTreeNode(3);
-		BinaryTreeNode *pNode2 = CreateBinaryTreeNode(2);
-		BinaryTreeNode *pNode1 = CreateBinaryTreeNode(1);
+		BinTreeNode *pNode5 = new BinTreeNode(5);
+		BinTreeNode *pNode4 = new BinTreeNode(4);
+		BinTreeNode *pNode3 = new BinTreeNode(3);
+		BinTreeNode *pNode2 = new BinTreeNode(2);
+		BinTreeNode *pNode1 = new BinTreeNode(1);
 
 		ConnectBinaryNodes(pNode5, pNode4, nullptr);
 		ConnectBinaryNodes(pNode4, pNode3, nullptr);
@@ -215,11 +215,11 @@ namespace Algorithm {
 
 
 	void Test3() {
-		BinaryTreeNode *pNode1 = CreateBinaryTreeNode(1);
-		BinaryTreeNode *pNode2 = CreateBinaryTreeNode(2);
-		BinaryTreeNode *pNode3 = CreateBinaryTreeNode(3);
-		BinaryTreeNode *pNode4 = CreateBinaryTreeNode(4);
-		BinaryTreeNode *pNode5 = CreateBinaryTreeNode(5);
+		BinTreeNode *pNode1 = new BinTreeNode(1);
+		BinTreeNode *pNode2 = new BinTreeNode(2);
+		BinTreeNode *pNode3 = new BinTreeNode(3);
+		BinTreeNode *pNode4 = new BinTreeNode(4);
+		BinTreeNode *pNode5 = new BinTreeNode(5);
 
 		ConnectBinaryNodes(pNode1, nullptr, pNode2);
 		ConnectBinaryNodes(pNode2, nullptr, pNode3);
@@ -233,7 +233,7 @@ namespace Algorithm {
 
 // 树中只有1个结点
 	void Test4() {
-		BinaryTreeNode *pNode1 = CreateBinaryTreeNode(1);
+		BinTreeNode *pNode1 = new BinTreeNode(1);
 		Test("Test4", pNode1);
 
 		DestroyList(pNode1);

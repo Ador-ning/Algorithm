@@ -19,7 +19,7 @@ namespace Algorithm {
 	TreeNode *CreateTreeNode(int value) {
 
 		TreeNode *pNode = new TreeNode();
-		pNode->value = valule;
+		pNode->value = value;
 
 		return pNode;
 	}
@@ -37,7 +37,7 @@ namespace Algorithm {
 			cout << "Its children is as following:" << endl;
 			std::vector<TreeNode *>::const_iterator i = pNode->Children.begin();
 			while (i < pNode->Children.end()) {
-				if (i != nullptr)
+				if (*i != nullptr)
 					cout << "%d\t" << (*i)->value;
 			}
 			cout << endl;

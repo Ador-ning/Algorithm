@@ -175,6 +175,33 @@ dp/fast:
 	$(MAKE) -f DP/CMakeFiles/dp.dir/build.make DP/CMakeFiles/dp.dir/build
 .PHONY : dp/fast
 
+Base.o: Base.cpp.o
+
+.PHONY : Base.o
+
+# target to build an object file
+Base.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Base.cpp.o
+.PHONY : Base.cpp.o
+
+Base.i: Base.cpp.i
+
+.PHONY : Base.i
+
+# target to preprocess a source file
+Base.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Base.cpp.i
+.PHONY : Base.cpp.i
+
+Base.s: Base.cpp.s
+
+.PHONY : Base.s
+
+# target to generate assembly for a file
+Base.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Base.cpp.s
+.PHONY : Base.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -215,6 +242,9 @@ help:
 	@echo "... array"
 	@echo "... string"
 	@echo "... dp"
+	@echo "... Base.o"
+	@echo "... Base.i"
+	@echo "... Base.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

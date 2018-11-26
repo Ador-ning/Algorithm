@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/Users/ning/Project/Algorithm/Base.cpp
+Base.h
+/Users/ning/Project/Algorithm/Base.h
+
 /Users/ning/Project/Algorithm/Base.h
 iostream
 -
@@ -25,6 +29,10 @@ sstream
 /Users/ning/Project/Algorithm/Base/BinaryTree.cpp
 BinaryTree.h
 /Users/ning/Project/Algorithm/Base/BinaryTree.h
+../Base.h
+/Users/ning/Project/Algorithm/Base.h
+../Base.cpp
+/Users/ning/Project/Algorithm/Base.cpp
 
 /Users/ning/Project/Algorithm/Base/BinaryTree.h
 iostream
@@ -40,6 +48,10 @@ vector
 ../Base.h
 /Users/ning/Project/Algorithm/Base.h
 
+/Users/ning/Project/Algorithm/Base/BinaryTreeProblem.cpp
+BinaryTree.h
+/Users/ning/Project/Algorithm/Base/BinaryTree.h
+
 /Users/ning/Project/Algorithm/Base/Graph.cpp
 map
 -
@@ -51,10 +63,12 @@ string
 /Users/ning/Project/Algorithm/Base/LinkList.cpp
 cstdio
 -
-LinkList.h
-/Users/ning/Project/Algorithm/Base/LinkList.h
 stack
 -
+LinkList.h
+/Users/ning/Project/Algorithm/Base/LinkList.h
+../Base.h
+/Users/ning/Project/Algorithm/Base.h
 
 /Users/ning/Project/Algorithm/Base/LinkList.h
 iostream
@@ -65,4 +79,14 @@ vector
 -
 ../Base.h
 /Users/ning/Project/Algorithm/Base.h
+
+/Users/ning/Project/Algorithm/Base/LinkListProblem.cpp
+LinkList.h
+/Users/ning/Project/Algorithm/Base/LinkList.h
+stack
+-
+
+/Users/ning/Project/Algorithm/Base/test_base.cpp
+BinaryTree.h
+/Users/ning/Project/Algorithm/Base/BinaryTree.h
 
