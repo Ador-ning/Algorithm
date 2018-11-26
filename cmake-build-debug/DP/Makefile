@@ -179,6 +179,33 @@ Fibonacci.cpp.s:
 	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f DP/CMakeFiles/dp.dir/build.make DP/CMakeFiles/dp.dir/Fibonacci.cpp.s
 .PHONY : Fibonacci.cpp.s
 
+test_dp.o: test_dp.cpp.o
+
+.PHONY : test_dp.o
+
+# target to build an object file
+test_dp.cpp.o:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f DP/CMakeFiles/dp.dir/build.make DP/CMakeFiles/dp.dir/test_dp.cpp.o
+.PHONY : test_dp.cpp.o
+
+test_dp.i: test_dp.cpp.i
+
+.PHONY : test_dp.i
+
+# target to preprocess a source file
+test_dp.cpp.i:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f DP/CMakeFiles/dp.dir/build.make DP/CMakeFiles/dp.dir/test_dp.cpp.i
+.PHONY : test_dp.cpp.i
+
+test_dp.s: test_dp.cpp.s
+
+.PHONY : test_dp.s
+
+# target to generate assembly for a file
+test_dp.cpp.s:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f DP/CMakeFiles/dp.dir/build.make DP/CMakeFiles/dp.dir/test_dp.cpp.s
+.PHONY : test_dp.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -194,6 +221,9 @@ help:
 	@echo "... Fibonacci.o"
 	@echo "... Fibonacci.i"
 	@echo "... Fibonacci.s"
+	@echo "... test_dp.o"
+	@echo "... test_dp.i"
+	@echo "... test_dp.s"
 .PHONY : help
 
 

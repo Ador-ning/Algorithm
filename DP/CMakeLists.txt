@@ -6,6 +6,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 set(SRC_DP
 		DynamicProgramming.cpp
-		Fibonacci.cpp)
+		Fibonacci.cpp
+		test_dp.cpp)
 
 add_executable(dp ${SRC_DP})

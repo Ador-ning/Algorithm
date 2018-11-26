@@ -152,6 +152,33 @@ ReplaceBlank.cpp.s:
 	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f String/CMakeFiles/string.dir/build.make String/CMakeFiles/string.dir/ReplaceBlank.cpp.s
 .PHONY : ReplaceBlank.cpp.s
 
+test_string.o: test_string.cpp.o
+
+.PHONY : test_string.o
+
+# target to build an object file
+test_string.cpp.o:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f String/CMakeFiles/string.dir/build.make String/CMakeFiles/string.dir/test_string.cpp.o
+.PHONY : test_string.cpp.o
+
+test_string.i: test_string.cpp.i
+
+.PHONY : test_string.i
+
+# target to preprocess a source file
+test_string.cpp.i:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f String/CMakeFiles/string.dir/build.make String/CMakeFiles/string.dir/test_string.cpp.i
+.PHONY : test_string.cpp.i
+
+test_string.s: test_string.cpp.s
+
+.PHONY : test_string.s
+
+# target to generate assembly for a file
+test_string.cpp.s:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f String/CMakeFiles/string.dir/build.make String/CMakeFiles/string.dir/test_string.cpp.s
+.PHONY : test_string.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -164,6 +191,9 @@ help:
 	@echo "... ReplaceBlank.o"
 	@echo "... ReplaceBlank.i"
 	@echo "... ReplaceBlank.s"
+	@echo "... test_string.o"
+	@echo "... test_string.i"
+	@echo "... test_string.s"
 .PHONY : help
 
 

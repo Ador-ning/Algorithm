@@ -287,6 +287,33 @@ sort.cpp.s:
 	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f Array/CMakeFiles/array.dir/build.make Array/CMakeFiles/array.dir/sort.cpp.s
 .PHONY : sort.cpp.s
 
+test_array.o: test_array.cpp.o
+
+.PHONY : test_array.o
+
+# target to build an object file
+test_array.cpp.o:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f Array/CMakeFiles/array.dir/build.make Array/CMakeFiles/array.dir/test_array.cpp.o
+.PHONY : test_array.cpp.o
+
+test_array.i: test_array.cpp.i
+
+.PHONY : test_array.i
+
+# target to preprocess a source file
+test_array.cpp.i:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f Array/CMakeFiles/array.dir/build.make Array/CMakeFiles/array.dir/test_array.cpp.i
+.PHONY : test_array.cpp.i
+
+test_array.s: test_array.cpp.s
+
+.PHONY : test_array.s
+
+# target to generate assembly for a file
+test_array.cpp.s:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f Array/CMakeFiles/array.dir/build.make Array/CMakeFiles/array.dir/test_array.cpp.s
+.PHONY : test_array.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -314,6 +341,9 @@ help:
 	@echo "... sort.o"
 	@echo "... sort.i"
 	@echo "... sort.s"
+	@echo "... test_array.o"
+	@echo "... test_array.i"
+	@echo "... test_array.s"
 .PHONY : help
 
 

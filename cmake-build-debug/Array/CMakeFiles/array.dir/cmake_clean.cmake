@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/array.dir/DupArrayNoEdit.cpp.o"
   "CMakeFiles/array.dir/DuplicationInArray.cpp.o"
   "CMakeFiles/array.dir/FindandSort.cpp.o"
+  "CMakeFiles/array.dir/test_array.cpp.o"
   "array.pdb"
   "array"
 )

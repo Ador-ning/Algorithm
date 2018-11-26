@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/ning/Project/Algorithm/DP/DynamicProgramming.cpp" "/Users/ning/Project/Algorithm/cmake-build-debug/DP/CMakeFiles/dp.dir/DynamicProgramming.cpp.o"
   "/Users/ning/Project/Algorithm/DP/Fibonacci.cpp" "/Users/ning/Project/Algorithm/cmake-build-debug/DP/CMakeFiles/dp.dir/Fibonacci.cpp.o"
+  "/Users/ning/Project/Algorithm/DP/test_dp.cpp" "/Users/ning/Project/Algorithm/cmake-build-debug/DP/CMakeFiles/dp.dir/test_dp.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

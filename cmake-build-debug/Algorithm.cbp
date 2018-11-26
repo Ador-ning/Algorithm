@@ -306,6 +306,9 @@
 		<Unit filename="/Users/ning/Project/Algorithm/Array/sort.cpp">
 			<Option target="array"/>
 		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Array/test_array.cpp">
+			<Option target="array"/>
+		</Unit>
 		<Unit filename="/Users/ning/Project/Algorithm/Base.cpp">
 			<Option target="main"/>
 		</Unit>
@@ -366,10 +369,16 @@
 		<Unit filename="/Users/ning/Project/Algorithm/DP/Fibonacci.cpp">
 			<Option target="dp"/>
 		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/DP/test_dp.cpp">
+			<Option target="dp"/>
+		</Unit>
 		<Unit filename="/Users/ning/Project/Algorithm/String/ReplaceBlank.cpp">
 			<Option target="string"/>
 		</Unit>
 		<Unit filename="/Users/ning/Project/Algorithm/String/StringUtils.h">
+			<Option target="string"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/String/test_string.cpp">
 			<Option target="string"/>
 		</Unit>
 		<Unit filename="/Users/ning/Project/Algorithm/main.cpp">

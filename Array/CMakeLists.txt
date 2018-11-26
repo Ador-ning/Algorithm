@@ -11,6 +11,6 @@ set(SRC_ARRAY
 		DupArrayNoEdit.cpp
 		DuplicationInArray.cpp
 		FindandSort.cpp
-		)
+		test_array.cpp)
 
 add_executable(array ${SRC_ARRAY})
