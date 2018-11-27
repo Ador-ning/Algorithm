@@ -35,6 +35,10 @@ namespace Algorithm {
 
 	BinTreeNode *stringToBinTreeNode(std::string &input);
 
+	void DestroyTree(BinTreeNode *pRoot);
+
+	// 遍历操作
+	// -----------------------------------------------------------------------------------
 	void pre_oder(const BinTreeNode *pRoot);
 
 	void pre_order_iterate(const BinTreeNode *root);
@@ -49,9 +53,20 @@ namespace Algorithm {
 
 	void PrintTreeTopBottom(const BinTreeNode *pRoot);
 
-	void DestroyTree(BinTreeNode *pRoot);
-
 	void test_stringToBinTreeNode();
+
+	// root to leaf 操作
+	// -----------------------------------------------------------------------------------
+	void rootToLeaf(BinTreeNode *root, std::vector<std::string> &res, std::string s = "");
+
+	bool hasPathSum(BinTreeNode *root, int sum);
+
+	void test_path();
+
+	// tree height
+	// -----------------------------------------------------------------------------------
+	int treeMaxDepth(BinTreeNode *root);
+
 }
 
 

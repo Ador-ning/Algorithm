@@ -224,7 +224,7 @@ void Algorithm::DestroyTree(BinTreeNode *pRoot) {
 }
 
 void Algorithm::test_stringToBinTreeNode() {
-	std::string s = "1 2 3 4 # 6 7 # 8 # # 9 10 # # # # # # # #";
+	std::string s = "1 2 3 4 5 6 7 # 8 # # 9 10 # # # # # # # #";
 	BinTreeNode *root = stringToBinTreeNode(s);
 	if (root != nullptr) {
 		PrintTreeTopBottom(root);
@@ -242,5 +242,101 @@ void Algorithm::test_stringToBinTreeNode() {
 		post_order_iterate(root);
 		Line();
 	}
+	DestroyTree(root);
+}
+
+// root to leaf path
+/*
+ * 函数功能：结点值 0->9， leetcode
+ * */
+void Algorithm::rootToLeaf(BinTreeNode *root, std::vector<std::string> &res, std::string s) {
+	if (root == nullptr)
+		return;
+	s += std::to_string(root->val);
+	if (root->left == nullptr && root->right == nullptr)
+		res.push_back(s);
+
+	if (root->left != nullptr)
+		rootToLeaf(root->left, res, s);
+	if (root->right != nullptr)
+		rootToLeaf(root->right, res, s);
+}
+
+int sumNumbers(BinTreeNode *root) {
+	if (root == nullptr)
+		return 0;
+
+	std::vector<std::string> res;
+	rootToLeaf(root, res);
+
+	int result = 0;
+	for (int i = 0; i < res.size(); ++i) {
+		result += atoi(res[i].c_str());
+	}
+	return result;
+}
+
+bool Algorithm::hasPathSum(BinTreeNode *root, int sum) {
+	if (root == nullptr)
+		return false;
+	if (root->left == nullptr && root->right == nullptr) {
+		if (root->val == sum)
+			return true;
+		else
+			return false;
+	}
+
+	return hasPathSum(root->left, sum - root->val) || hasPathSum(root->right, sum - root->val);
+}
+
+int Algorithm::treeMaxDepth(Algorithm::BinTreeNode *root) {
+	if (root == nullptr)
+		return 0;
+	return std::max(treeMaxDepth(root->left), treeMaxDepth(root->right)) + 1;
+}
+
+bool isBalanced(BinTreeNode *root) {
+	if (root == nullptr)
+		return true;
+	else
+		return std::abs(treeMaxDepth(root->left) - treeMaxDepth(root->right)) < 2 &&
+		       isBalanced(root->left) && isBalanced(root->right);
+}
+
+void Algorithm::test_path() {
+	// "1 2 3 4 5 6 7 # 8 # # 9 # # # # # # # #"
+	// "1 # 2 # # # 3"
+	std::string s = "1 2 3 4 5 6 7 # 8 # # 9 # # # # # # # #";
+	BinTreeNode *root = stringToBinTreeNode(s);
+	if (root != nullptr) {
+		Line();
+		/*
+		/*
+		 *  1248
+		 *  125
+		 *  1369
+		 *  137
+		 * */
+		/* std::vector<std::string> res;
+		rootToLeaf(root, res);
+		auto it = res.begin();
+		Print(it, res.end());
+		Line();
+		// 2879
+		std::cout << sumNumbers(root) << std::endl;
+
+		if (hasPathSum(root, 11))
+			std::cout << "True" << std::endl;
+		*/
+		if (isBalanced(root))
+			std::cout << "Balanced tree.";
+		Line();
+		std::cout << treeMaxDepth(root->left) << ' '
+		          << treeMaxDepth(root->right) << ' '
+		          << treeMaxDepth(root->left->left) << ' '  // 4 # 8
+		          << treeMaxDepth(root->right->right); // 7
+		Line();
+	}
+
 	DestroyTree(root);
 }
