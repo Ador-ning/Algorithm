@@ -71,7 +71,7 @@ void Algorithm::PrintList(ListNode *pHead) {
 		pNode = pNode->next;
 	}
 
-	printf("\n Print List end.\n");
+	printf("\nPrint List end.\n");
 }
 
 // 销毁 List

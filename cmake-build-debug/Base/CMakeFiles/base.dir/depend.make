@@ -22,5 +22,7 @@ Base/CMakeFiles/base.dir/LinkListProblem.cpp.o: ../Base/LinkListProblem.cpp
 
 Base/CMakeFiles/base.dir/test_base.cpp.o: ../Base.h
 Base/CMakeFiles/base.dir/test_base.cpp.o: ../Base/BinaryTree.h
+Base/CMakeFiles/base.dir/test_base.cpp.o: ../Base/LinkList.h
+Base/CMakeFiles/base.dir/test_base.cpp.o: ../Base/LinkListProblem.h
 Base/CMakeFiles/base.dir/test_base.cpp.o: ../Base/test_base.cpp
 

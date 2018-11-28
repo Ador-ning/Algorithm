@@ -10,6 +10,7 @@ set(SRC_BASE
 		BinaryTreeProblem.cpp
 		LinkList.h  # Link list
 		LinkList.cpp
+		LinkListProblem.h
 		LinkListProblem.cpp
 		Graph.h     # Graph
 		Graph.cpp

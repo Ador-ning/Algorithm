@@ -9,9 +9,9 @@ using namespace Algorithm;
 
 /*
  *  链表题目总结：
- *
- *
- *
+ *      1. 指针 / 双指针 / 快慢指针
+ *      2. 头插 / 尾插
+ *      3. 合并链表
  *
  *
  * */
@@ -135,6 +135,25 @@ ListNode *sortList(ListNode *head) {
 	return mergeTwoLists(sortList(head), sortList(p2));
 }
 
+// 合并两个排序的链表
+ListNode *Merge(ListNode *pHead1, ListNode *pHead2) {
+	if (pHead1 == nullptr)
+		return pHead2;
+	else if (pHead2 == nullptr)
+		return pHead1;
+
+	ListNode *pMergedHead = nullptr;
+
+	if (pHead1->val < pHead2->val) {
+		pMergedHead = pHead1;
+		pMergedHead->next = Merge(pHead1->next, pHead2);
+	} else {
+		pMergedHead = pHead2;
+		pMergedHead->next = Merge(pHead1, pHead2->next);
+	}
+	return pMergedHead;
+}
+
 // 反转链表
 ListNode *ReverseList(ListNode *pHead) {
 	ListNode *pReversedHead = nullptr; // 反转后的头结点指针
@@ -180,25 +199,6 @@ ListNode *FindKthToTail(ListNode *pHead, unsigned int k) {
 		pBehind = pBehind->next;
 	}
 	return pBehind;
-}
-
-// 合并两个排序的链表
-ListNode *Merge(ListNode *pHead1, ListNode *pHead2) {
-	if (pHead1 == nullptr)
-		return pHead2;
-	else if (pHead2 == nullptr)
-		return pHead1;
-
-	ListNode *pMergedHead = nullptr;
-
-	if (pHead1->val < pHead2->val) {
-		pMergedHead = pHead1;
-		pMergedHead->next = Merge(pHead1->next, pHead2);
-	} else {
-		pMergedHead = pHead2;
-		pMergedHead->next = Merge(pHead1, pHead2->next);
-	}
-	return pMergedHead;
 }
 
 // 链表结点删除 O(1)  --> 給被删除结点的指针
@@ -291,50 +291,93 @@ ListNode *EntryNode(ListNode *pHead) {
 	return pNode1;
 }
 
+// 删除倒数第 n 个结点
+ListNode *removeNthFromEnd(ListNode *head, int n) {
+	if (head == nullptr || n <= 0)
+		return head;
+
+	// ListNode *dummy = new ListNode(0);
+	// dummy->next = head;
+
+	ListNode *fast = head;
+	ListNode *slow = head;
+	for (int i = 0; i < n; ++i) {
+		if (fast->next != nullptr)
+			fast = fast->next;
+		else {
+			if ((i + 1) == n) {
+				return head->next;   // n == list length
+			} else
+				return head;    // n > list length
+		}
+	}
+
+	while (fast->next != nullptr) {
+		slow = slow->next;
+		fast = fast->next;
+	}
+
+	slow->next = slow->next->next;
+	return head;
+}
+
+// (2 -> 4 -> 3) + (5 -> 6 -> 4) = 7 -> 0 -> 8
+ListNode *addTwoNumbers(ListNode *l1, ListNode *l2) {
+	int flag = 0;
+	ListNode *tail = new ListNode(0);
+	ListNode *ptr = tail;
+
+	while (l1 != nullptr || l2 != nullptr) {
+		int val1 = 0;
+		if (l1 != nullptr) {
+			val1 = l1->val;
+			l1 = l1->next;
+		}
+
+		int val2 = 0;
+		if (l2 != nullptr) {
+			val2 = l2->val;
+			l2 = l2->next;
+		}
+
+		int tmp = val1 + val2 + flag;
+		ptr->next = new ListNode(tmp % 10);
+		flag = tmp / 10;
+		ptr = ptr->next;
+	}
+
+	if (flag == 1) {
+		ptr->next = new ListNode(1);
+	}
+	return tail->next;
+}
+
 // ====================测试代码====================
-void Test(ListNode *pHead) {
-	PrintList(pHead);
-	PrintListReversing_Iterative(pHead);
-	printf("\n");
-	PrintListReversing_Recursive(pHead);
+
+void test_removeNthFromEnd() {
+	std::string s = "1";
+	ListNode *head = stringToListNode(s);
+	if (head != nullptr) {
+		Line();
+		std::cout << "Pointer is not nullptr.";
+		Line();
+		// 1->2  n = 2
+		// 1    n = 1
+		// 1->2->3->4->5
+		auto h = removeNthFromEnd(head, 2);
+		PrintList(h);
+	}
+	DestroyList(head);
 }
 
-// 1->2->3->4->5
-void Test1() {
-	printf("\nTest1 begins.\n");
-
-	ListNode *pNode1 = CreateListNode(1);
-	ListNode *pNode2 = CreateListNode(2);
-	ListNode *pNode3 = CreateListNode(3);
-	ListNode *pNode4 = CreateListNode(4);
-	ListNode *pNode5 = CreateListNode(5);
-
-	ConnectListNodes(pNode1, pNode2);
-	ConnectListNodes(pNode2, pNode3);
-	ConnectListNodes(pNode3, pNode4);
-	ConnectListNodes(pNode4, pNode5);
-
-	Test(pNode1);
-
-	DestroyList(pNode1);
+void test_addTwoNumbers() {
+	std::string s1 = "9 9";
+	std::string s2 = "9";
+	ListNode *l1 = stringToListNode(s1);
+	ListNode *l2 = stringToListNode(s2);
+	if (l1 != nullptr && l2 != nullptr) {
+		ListNode * h = addTwoNumbers(l1, l2);
+		Line();
+		PrintList(h);
+	}
 }
-
-// 只有一个结点的链表: 1
-void Test2() {
-	printf("\nTest2 begins.\n");
-
-	ListNode *pNode1 = CreateListNode(1);
-
-	Test(pNode1);
-
-	DestroyList(pNode1);
-}
-
-// 空链表
-void Test3() {
-	printf("\nTest3 begins.\n");
-
-	Test(nullptr);
-}
-
-
