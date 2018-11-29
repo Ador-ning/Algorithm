@@ -5,6 +5,7 @@
 #include <cstdio>
 #include <exception>
 #include <stdexcept>
+#include "problem.h"
 
 /*
 面试：
@@ -12,7 +13,7 @@
 	输入一个递增排序的数组的一个旋转，输出旋转数组的最小元素
 */
 // 查找 坐标范围内，数组最小值
-int MinInOrder(const int numbers[], int index1, int index2) {
+int Algorithm::MinInOrder(const int numbers[], int index1, int index2) {
 	int result = numbers[index1];
 	if (index1 < index2) {
 		for (int i = index1 + 1; i < index2; ++i) {
@@ -24,7 +25,7 @@ int MinInOrder(const int numbers[], int index1, int index2) {
 }
 
 //
-int Min(int numbers[], int length) {
+int Algorithm::Min(int numbers[], int length) {
 	if (numbers == NULL || length <= 0) {
 		std::logic_error ex("Invalid parameters.\n");
 		throw std::exception(ex);
@@ -59,9 +60,8 @@ int Min(int numbers[], int length) {
 	return numbers[indexMid];
 }
 
-
 // ====================测试代码====================
-void Test(int *numbers, int length, int expected) {
+void Algorithm::Test(int *numbers, int length, int expected) {
 	int result = 0;
 	try {
 		result = Min(numbers, length);
@@ -82,7 +82,7 @@ void Test(int *numbers, int length, int expected) {
 	}
 }
 
-int main(int argc, char *argv[]) {
+int Algorithm::test_rotatedArray() {
 	// 典型输入，单调升序的数组的一个旋转
 	int array1[] = {3, 4, 5, 1, 2};
 	Test(array1, sizeof(array1) / sizeof(int), 1);

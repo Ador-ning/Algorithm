@@ -57,33 +57,9 @@ include Array/CMakeFiles/array.dir/progress.make
 # Include the compile flags for this target's objects.
 include Array/CMakeFiles/array.dir/flags.make
 
-Array/CMakeFiles/array.dir/RotatedArray.cpp.o: Array/CMakeFiles/array.dir/flags.make
-Array/CMakeFiles/array.dir/RotatedArray.cpp.o: ../Array/RotatedArray.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Array/CMakeFiles/array.dir/RotatedArray.cpp.o"
-	cd /Users/ning/Project/Algorithm/cmake-build-debug/Array && /usr/local/Cellar/gcc/8.1.0/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/array.dir/RotatedArray.cpp.o -c /Users/ning/Project/Algorithm/Array/RotatedArray.cpp
-
-Array/CMakeFiles/array.dir/RotatedArray.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/array.dir/RotatedArray.cpp.i"
-	cd /Users/ning/Project/Algorithm/cmake-build-debug/Array && /usr/local/Cellar/gcc/8.1.0/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ning/Project/Algorithm/Array/RotatedArray.cpp > CMakeFiles/array.dir/RotatedArray.cpp.i
-
-Array/CMakeFiles/array.dir/RotatedArray.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/array.dir/RotatedArray.cpp.s"
-	cd /Users/ning/Project/Algorithm/cmake-build-debug/Array && /usr/local/Cellar/gcc/8.1.0/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ning/Project/Algorithm/Array/RotatedArray.cpp -o CMakeFiles/array.dir/RotatedArray.cpp.s
-
-Array/CMakeFiles/array.dir/RotatedArray.cpp.o.requires:
-
-.PHONY : Array/CMakeFiles/array.dir/RotatedArray.cpp.o.requires
-
-Array/CMakeFiles/array.dir/RotatedArray.cpp.o.provides: Array/CMakeFiles/array.dir/RotatedArray.cpp.o.requires
-	$(MAKE) -f Array/CMakeFiles/array.dir/build.make Array/CMakeFiles/array.dir/RotatedArray.cpp.o.provides.build
-.PHONY : Array/CMakeFiles/array.dir/RotatedArray.cpp.o.provides
-
-Array/CMakeFiles/array.dir/RotatedArray.cpp.o.provides.build: Array/CMakeFiles/array.dir/RotatedArray.cpp.o
-
-
 Array/CMakeFiles/array.dir/sort.cpp.o: Array/CMakeFiles/array.dir/flags.make
 Array/CMakeFiles/array.dir/sort.cpp.o: ../Array/sort.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object Array/CMakeFiles/array.dir/sort.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Array/CMakeFiles/array.dir/sort.cpp.o"
 	cd /Users/ning/Project/Algorithm/cmake-build-debug/Array && /usr/local/Cellar/gcc/8.1.0/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/array.dir/sort.cpp.o -c /Users/ning/Project/Algorithm/Array/sort.cpp
 
 Array/CMakeFiles/array.dir/sort.cpp.i: cmake_force
@@ -103,6 +79,30 @@ Array/CMakeFiles/array.dir/sort.cpp.o.provides: Array/CMakeFiles/array.dir/sort.
 .PHONY : Array/CMakeFiles/array.dir/sort.cpp.o.provides
 
 Array/CMakeFiles/array.dir/sort.cpp.o.provides.build: Array/CMakeFiles/array.dir/sort.cpp.o
+
+
+Array/CMakeFiles/array.dir/RotatedArray.cpp.o: Array/CMakeFiles/array.dir/flags.make
+Array/CMakeFiles/array.dir/RotatedArray.cpp.o: ../Array/RotatedArray.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object Array/CMakeFiles/array.dir/RotatedArray.cpp.o"
+	cd /Users/ning/Project/Algorithm/cmake-build-debug/Array && /usr/local/Cellar/gcc/8.1.0/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/array.dir/RotatedArray.cpp.o -c /Users/ning/Project/Algorithm/Array/RotatedArray.cpp
+
+Array/CMakeFiles/array.dir/RotatedArray.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/array.dir/RotatedArray.cpp.i"
+	cd /Users/ning/Project/Algorithm/cmake-build-debug/Array && /usr/local/Cellar/gcc/8.1.0/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ning/Project/Algorithm/Array/RotatedArray.cpp > CMakeFiles/array.dir/RotatedArray.cpp.i
+
+Array/CMakeFiles/array.dir/RotatedArray.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/array.dir/RotatedArray.cpp.s"
+	cd /Users/ning/Project/Algorithm/cmake-build-debug/Array && /usr/local/Cellar/gcc/8.1.0/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ning/Project/Algorithm/Array/RotatedArray.cpp -o CMakeFiles/array.dir/RotatedArray.cpp.s
+
+Array/CMakeFiles/array.dir/RotatedArray.cpp.o.requires:
+
+.PHONY : Array/CMakeFiles/array.dir/RotatedArray.cpp.o.requires
+
+Array/CMakeFiles/array.dir/RotatedArray.cpp.o.provides: Array/CMakeFiles/array.dir/RotatedArray.cpp.o.requires
+	$(MAKE) -f Array/CMakeFiles/array.dir/build.make Array/CMakeFiles/array.dir/RotatedArray.cpp.o.provides.build
+.PHONY : Array/CMakeFiles/array.dir/RotatedArray.cpp.o.provides
+
+Array/CMakeFiles/array.dir/RotatedArray.cpp.o.provides.build: Array/CMakeFiles/array.dir/RotatedArray.cpp.o
 
 
 Array/CMakeFiles/array.dir/SortedArray.cpp.o: Array/CMakeFiles/array.dir/flags.make
@@ -227,8 +227,8 @@ Array/CMakeFiles/array.dir/test_array.cpp.o.provides.build: Array/CMakeFiles/arr
 
 # Object files for target array
 array_OBJECTS = \
-"CMakeFiles/array.dir/RotatedArray.cpp.o" \
 "CMakeFiles/array.dir/sort.cpp.o" \
+"CMakeFiles/array.dir/RotatedArray.cpp.o" \
 "CMakeFiles/array.dir/SortedArray.cpp.o" \
 "CMakeFiles/array.dir/DupArrayNoEdit.cpp.o" \
 "CMakeFiles/array.dir/DuplicationInArray.cpp.o" \
@@ -238,8 +238,8 @@ array_OBJECTS = \
 # External object files for target array
 array_EXTERNAL_OBJECTS =
 
-Array/array: Array/CMakeFiles/array.dir/RotatedArray.cpp.o
 Array/array: Array/CMakeFiles/array.dir/sort.cpp.o
+Array/array: Array/CMakeFiles/array.dir/RotatedArray.cpp.o
 Array/array: Array/CMakeFiles/array.dir/SortedArray.cpp.o
 Array/array: Array/CMakeFiles/array.dir/DupArrayNoEdit.cpp.o
 Array/array: Array/CMakeFiles/array.dir/DuplicationInArray.cpp.o
@@ -255,8 +255,8 @@ Array/CMakeFiles/array.dir/build: Array/array
 
 .PHONY : Array/CMakeFiles/array.dir/build
 
-Array/CMakeFiles/array.dir/requires: Array/CMakeFiles/array.dir/RotatedArray.cpp.o.requires
 Array/CMakeFiles/array.dir/requires: Array/CMakeFiles/array.dir/sort.cpp.o.requires
+Array/CMakeFiles/array.dir/requires: Array/CMakeFiles/array.dir/RotatedArray.cpp.o.requires
 Array/CMakeFiles/array.dir/requires: Array/CMakeFiles/array.dir/SortedArray.cpp.o.requires
 Array/CMakeFiles/array.dir/requires: Array/CMakeFiles/array.dir/DupArrayNoEdit.cpp.o.requires
 Array/CMakeFiles/array.dir/requires: Array/CMakeFiles/array.dir/DuplicationInArray.cpp.o.requires

@@ -5,8 +5,10 @@ project(Algorithm)
 set(CMAKE_CXX_STANDARD 17)
 
 set(SRC_ARRAY
-		RotatedArray.cpp
+		sort.h
 		sort.cpp
+		problem.h
+		RotatedArray.cpp
 		SortedArray.cpp
 		DupArrayNoEdit.cpp
 		DuplicationInArray.cpp

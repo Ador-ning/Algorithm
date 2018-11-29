@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/array.dir/RotatedArray.cpp.o"
   "CMakeFiles/array.dir/sort.cpp.o"
+  "CMakeFiles/array.dir/RotatedArray.cpp.o"
   "CMakeFiles/array.dir/SortedArray.cpp.o"
   "CMakeFiles/array.dir/DupArrayNoEdit.cpp.o"
   "CMakeFiles/array.dir/DuplicationInArray.cpp.o"

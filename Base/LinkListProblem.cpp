@@ -352,6 +352,55 @@ ListNode *addTwoNumbers(ListNode *l1, ListNode *l2) {
 	return tail->next;
 }
 
+// 反转链表 -- 头插法
+ListNode *ReverseNode(ListNode *head) {
+	ListNode *prev = nullptr;
+	ListNode *cur = head;
+	while (cur != nullptr && cur->next != nullptr) {
+		ListNode *next = cur->next;
+		cur->next = prev;
+		prev = cur;
+		cur = next;
+	}
+	cur->next = prev;
+	return cur;
+}
+
+// Given a singly linked list L: L0→L1→…→Ln-1→Ln,
+// reorder it to: L0→Ln →L1→Ln-1→L2→Ln-2→…
+void reorderList(ListNode *head) {
+
+	if (head == nullptr || head->next == nullptr || head->next->next == nullptr) {
+		return;//三个节点以下的都不用动
+	}
+
+	//定义快慢指针，找到链表的中间节点，将链表分成两部分，
+	//后面一部分逆序是要放到前面一部分每两个元素的中间。
+	ListNode *fast = head;
+	ListNode *slow = head;
+	while (fast && fast->next) {
+		fast = fast->next->next;
+		slow = slow->next;
+	}
+	ListNode *cur2 = slow->next;//cur2指向后面一部分
+	slow->next = nullptr;//这一步是将两部分断开
+	ListNode *cur1 = head;
+
+	//将后半部分逆置一下
+	cur2 = ReverseNode(cur2);
+	//将前半部分和逆置后的后半部分合并在一起，注意此处的合并就是一个前部分节点后面接上一个后半部分的节点依次往后。所以必须记住下一个节点
+	ListNode *next1;
+	ListNode *next2;
+	while (cur1 && cur2) {
+		next1 = cur1->next;
+		next2 = cur2->next;
+		cur1->next = cur2;
+		cur1 = next1;
+		cur2->next = cur1;
+		cur2 = next2;
+	}
+}
+
 // ====================测试代码====================
 
 void test_removeNthFromEnd() {
@@ -376,7 +425,7 @@ void test_addTwoNumbers() {
 	ListNode *l1 = stringToListNode(s1);
 	ListNode *l2 = stringToListNode(s2);
 	if (l1 != nullptr && l2 != nullptr) {
-		ListNode * h = addTwoNumbers(l1, l2);
+		ListNode *h = addTwoNumbers(l1, l2);
 		Line();
 		PrintList(h);
 	}

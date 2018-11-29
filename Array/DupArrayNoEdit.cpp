@@ -51,7 +51,3 @@ int getDuplication(const int *numbers, int length) {
 	}
 	return -1;
 }
-
-int main() {
-	return 0;
-}

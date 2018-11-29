@@ -15,7 +15,6 @@ void Swap(int *a, int *b) {
 	// printf("a: %d\tb:%d", *a, *b);
 }
 
-
 int RandomInRange(int index1, int index2) {
 	if (index1 >= index2) {
 		printf("Invalid range index.\n");
@@ -59,14 +58,6 @@ void QuickSort(int data[], int length, int start, int end) {
 	int index = Partition(data, length, start, end);
 	if (index > start)
 		QuickSort(data, length, start, index - 1);
-	else (index < end)
-	QuickSort(data, length, index + 1, end);
-}
-
-int main() {
-	int a = 0;
-	int b = 9;
-	// Swap(&a,&b);
-	// printf("%d", RandomInRange(a, b));
-	return 0;
+	else if (index < end)
+		QuickSort(data, length, index + 1, end);
 }

@@ -5,35 +5,11 @@
 #include <vector>
 #include <string>
 #include <map>
+#include "../Base.h"
 
 using namespace std;
 
 namespace Algorithm {
-// in data format: 122 33 22 88 9 0 7 3 2 12
-	vector<int> stringToIntVector1(string &s) {
-		vector<int> res;
-		// vector<string> vs;
-		string str_tmp = "";
-		int index = 0;
-		while (true) {
-			index = s.find(" ");
-			if (-1 == index) {
-				str_tmp = s.substr(0, s.length());
-				// vs.push_back(str_tmp);
-				int t = stoi(str_tmp);
-				res.push_back(t);
-				break;
-			}
-			str_tmp = s.substr(0, index);
-			// vs.push_back(str_tmp);
-			int t = stoi(str_tmp);
-			res.push_back(t);
-			s.erase(0, index + 1);
-		}
-
-		return res;
-	}
-
 /*
  建立在归并操作上的一种有效的排序算法。该算法是采用分治法（Divide and Conquer）的一个非常典型的应用。将已有序的子序列合并，得到完全有序的序列；即先使每个子序列有序，再使子序列段间有序。若将两个有序表合并成一个有序表，称为2-路归并。
  */
@@ -108,7 +84,7 @@ namespace Algorithm {
 		string line;
 		getline(cin, line);
 
-		vector<int> in = stringToIntVector1(line);
+		vector<int> in = stringToVector<int>(line);
 		cout << "in data: ";
 		for (int i = 0; i < in.size(); ++i)
 			cout << in[i] << ' ';
@@ -150,7 +126,7 @@ namespace Algorithm {
 		string line;
 		getline(cin, line);
 
-		vector<int> in = stringToIntVector1(line);
+		vector<int> in = stringToVector<int>(line);
 
 		quickSort(in, 0, in.size() - 1);
 
@@ -212,7 +188,7 @@ namespace Algorithm {
 		string line;
 		getline(cin, line);
 
-		vector<int> in = stringToIntVector1(line);
+		vector<int> in = stringToVector<int>(line);
 		cout << "In data: ";
 		for (int i = 0; i < in.size(); ++i)
 			cout << in[i] << ' ';
@@ -248,7 +224,7 @@ namespace Algorithm {
 		string line;
 		getline(cin, line);
 
-		vector<int> in = stringToIntVector1(line);
+		vector<int> in = stringToVector<int>(line);
 		countSort(in);
 	}
 
@@ -297,7 +273,7 @@ namespace Algorithm {
 		string line;
 		getline(cin, line);
 
-		vector<int> in = stringToIntVector1(line);
+		vector<int> in = stringToVector<int>(line);
 		bucketSort(in, 3);
 	}
 

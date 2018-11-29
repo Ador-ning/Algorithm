@@ -6,7 +6,6 @@
 题目：长度为n的数组中，所有数字都在0->n-1的范围内
 */
 
-
 bool duplicate(int numbers[], int length, int *duplication) {
 	/*
 	参数1：
@@ -113,7 +112,7 @@ void test6() {
 }
 
 
-int main() {
+int test_dupArray() {
 	test6();
 	return 0;
 }

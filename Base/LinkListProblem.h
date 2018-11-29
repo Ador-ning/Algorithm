@@ -39,4 +39,8 @@ ListNode *addTwoNumbers(ListNode *l1, ListNode *l2);
 
 void test_addTwoNumbers();
 
+ListNode *ReverseNode(ListNode *head);
+
+void reorderList(ListNode *head);
+
 #endif //ALGORITHM_LINKLISTPROBLEM_H

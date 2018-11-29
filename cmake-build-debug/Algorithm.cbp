@@ -303,7 +303,13 @@
 		<Unit filename="/Users/ning/Project/Algorithm/Array/SortedArray.cpp">
 			<Option target="array"/>
 		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Array/problem.h">
+			<Option target="array"/>
+		</Unit>
 		<Unit filename="/Users/ning/Project/Algorithm/Array/sort.cpp">
+			<Option target="array"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Array/sort.h">
 			<Option target="array"/>
 		</Unit>
 		<Unit filename="/Users/ning/Project/Algorithm/Array/test_array.cpp">

@@ -2,6 +2,7 @@
 // Created by ning on 2018/11/23.
 //
 #include <iostream>
+#include "problem.h"
 
 using namespace std;
 
@@ -21,16 +22,15 @@ namespace Algorithm {
 		int middleIndex = (start + ed) / 2;
 		int middleData = data[middleIndex];
 
-		if (middleData == k) {//K出现的范围， 在数组中间， 向左缩小范围
+		if (middleData == k) {  //K出现的范围， 在数组中间， 向左缩小范围
 			if ((middleIndex > 0 && data[middleIndex - 1] != k) || middleIndex == 0)
 				return middleIndex;
 			else
 				ed = middleIndex - 1;
 
 		} else if (middleData > k) //K出现的范围， 不在数组中间
-		{
 			ed = middleIndex - 1;
-		} else {
+		else {
 			start = middleIndex + 1;
 		}
 
@@ -58,7 +58,6 @@ namespace Algorithm {
 
 		return GetLastK(data, length, k, start, ed);
 	}
-
 
 	int GetNumberOfK(const int *data, int length, int k) {
 		int number = 0;
@@ -174,5 +173,4 @@ namespace Algorithm {
 
 		return found;
 	}
-
 }
