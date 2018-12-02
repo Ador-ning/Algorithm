@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/ning/Project/Algorithm/String/ReplaceBlank.cpp" "/Users/ning/Project/Algorithm/cmake-build-debug/String/CMakeFiles/string.dir/ReplaceBlank.cpp.o"
+  "/Users/ning/Project/Algorithm/String/StrinngsUtils.cpp" "/Users/ning/Project/Algorithm/cmake-build-debug/String/CMakeFiles/string.dir/StrinngsUtils.cpp.o"
   "/Users/ning/Project/Algorithm/String/test_string.cpp" "/Users/ning/Project/Algorithm/cmake-build-debug/String/CMakeFiles/string.dir/test_string.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

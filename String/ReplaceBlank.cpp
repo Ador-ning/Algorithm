@@ -1,6 +1,7 @@
 #include <cstdio>
 #include <cstdlib>
 #include <cstring>
+#include "problem.h"
 
 /*
 面试： 字符串中空格替换
@@ -76,9 +77,4 @@ void Test1() {
 
 	char str[length] = "hello world!";
 	Test("Test1", str, length, "hello%20world!");
-}
-
-int main() {
-	Test1();
-	return 0;
 }

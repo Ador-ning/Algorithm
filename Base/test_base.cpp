@@ -11,5 +11,6 @@ int main() {
 	std::cout << "base test: " << std::endl;
 	// test_stringToBinTreeNode();
 	// test_removeNthFromEnd();
-	test_addTwoNumbers();
+	// test_addTwoNumbers();
+	test_getIntersectionNode();
 }

@@ -387,6 +387,12 @@
 		<Unit filename="/Users/ning/Project/Algorithm/String/StringUtils.h">
 			<Option target="string"/>
 		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/String/StrinngsUtils.cpp">
+			<Option target="string"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/String/problem.h">
+			<Option target="string"/>
+		</Unit>
 		<Unit filename="/Users/ning/Project/Algorithm/String/test_string.cpp">
 			<Option target="string"/>
 		</Unit>

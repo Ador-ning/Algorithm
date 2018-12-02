@@ -5,6 +5,7 @@
 #include <cstdio>
 #include <exception>
 #include <stdexcept>
+#include <vector>
 #include "problem.h"
 
 /*
@@ -60,6 +61,60 @@ int Algorithm::Min(int numbers[], int length) {
 	return numbers[indexMid];
 }
 
+int Algorithm::search(std::vector<int> &nums, int target) {
+	int n = nums.size();
+	if (n <= 0)
+		return -1;
+	if (n == 1)
+		return nums[0] == target ? 0 : -1;
+
+	int low = 0, high = n - 1;
+	while (low <= high) {
+		// base
+		if (nums[low] < nums[high] && (target < nums[low]))
+			return -1;
+
+		// [low, high] 数字相同
+		while (low < high && nums[low] == nums[high])
+			low++;
+
+		int mid = low + (high - low) / 2;
+		// base
+		if (nums[low] == target)
+			return low;
+		if (nums[high] == target)
+			return high;
+		if (nums[mid] == target)
+			return mid;
+
+		// target in non-rotated array s1
+		if (nums[low] < nums[mid] && target >= nums[low] && target < nums[mid]) {
+			high = mid - 1;
+			continue;
+		}
+
+		// target in non-rotated array s2
+		if (nums[mid] < nums[high] && target >= nums[mid] && target < nums[high]) {
+			low = mid + 1;
+			continue;
+		}
+
+		// target in rotated array s3
+		if (nums[low] > nums[mid]) {
+			high = mid - 1;
+			continue;
+		}
+
+		// target in rotated array s4
+		if (nums[mid] > nums[high]) {
+			low = mid + 1;
+			continue;
+		}
+		low++;
+	}
+	return -1;
+}
+
 // ====================测试代码====================
 void Algorithm::Test(int *numbers, int length, int expected) {
 	int result = 0;
@@ -108,9 +163,16 @@ int Algorithm::test_rotatedArray() {
 	Test(array6, sizeof(array6) / sizeof(int), 2);
 
 	// 输入nullptr
-	Test(NULL, 0, 0);
+	Test(nullptr, 0, 0);
 
 	return 0;
+}
+
+void Algorithm::test_search() {
+
+	std::vector<int> nums1 = {4, 5, 6, 7, 0, 1, 2};
+	std::cout << search(nums1, 0) << " " << search(nums1, 3) << std::endl;
+
 }
 
 

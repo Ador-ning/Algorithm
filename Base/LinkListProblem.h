@@ -43,4 +43,10 @@ ListNode *ReverseNode(ListNode *head);
 
 void reorderList(ListNode *head);
 
+ListNode *getIntersectionNode(ListNode *headA, ListNode *headB);
+
+ListNode *detectCycle(ListNode *head);
+
+void test_getIntersectionNode();
+
 #endif //ALGORITHM_LINKLISTPROBLEM_H

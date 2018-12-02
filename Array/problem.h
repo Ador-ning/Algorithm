@@ -5,6 +5,9 @@
 #ifndef ALGORITHM_PROBLEM_H
 #define ALGORITHM_PROBLEM_H
 
+#include <vector>
+#include <iostream>
+
 namespace Algorithm {
 // Part one: 有序数组问题 -- log(n) -- 二分查找
 
@@ -33,6 +36,12 @@ namespace Algorithm {
 	int MinInOrder(const int numbers[], int index1, int index2);
 
 	int Min(int numbers[], int length);
+
+	// 假设按照升序排序的数组在预先未知的某个点上进行了旋转。
+	// 搜索一个给定的目标值，如果数组中存在这个目标值，则返回它的索引，否则返回 -1
+	int search(std::vector<int> &nums, int target);
+
+	void test_search();
 
 	void Test(int *numbers, int length, int expected);
 

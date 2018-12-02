@@ -152,6 +152,33 @@ ReplaceBlank.cpp.s:
 	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f String/CMakeFiles/string.dir/build.make String/CMakeFiles/string.dir/ReplaceBlank.cpp.s
 .PHONY : ReplaceBlank.cpp.s
 
+StrinngsUtils.o: StrinngsUtils.cpp.o
+
+.PHONY : StrinngsUtils.o
+
+# target to build an object file
+StrinngsUtils.cpp.o:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f String/CMakeFiles/string.dir/build.make String/CMakeFiles/string.dir/StrinngsUtils.cpp.o
+.PHONY : StrinngsUtils.cpp.o
+
+StrinngsUtils.i: StrinngsUtils.cpp.i
+
+.PHONY : StrinngsUtils.i
+
+# target to preprocess a source file
+StrinngsUtils.cpp.i:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f String/CMakeFiles/string.dir/build.make String/CMakeFiles/string.dir/StrinngsUtils.cpp.i
+.PHONY : StrinngsUtils.cpp.i
+
+StrinngsUtils.s: StrinngsUtils.cpp.s
+
+.PHONY : StrinngsUtils.s
+
+# target to generate assembly for a file
+StrinngsUtils.cpp.s:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f String/CMakeFiles/string.dir/build.make String/CMakeFiles/string.dir/StrinngsUtils.cpp.s
+.PHONY : StrinngsUtils.cpp.s
+
 test_string.o: test_string.cpp.o
 
 .PHONY : test_string.o
@@ -191,6 +218,9 @@ help:
 	@echo "... ReplaceBlank.o"
 	@echo "... ReplaceBlank.i"
 	@echo "... ReplaceBlank.s"
+	@echo "... StrinngsUtils.o"
+	@echo "... StrinngsUtils.i"
+	@echo "... StrinngsUtils.s"
 	@echo "... test_string.o"
 	@echo "... test_string.i"
 	@echo "... test_string.s"

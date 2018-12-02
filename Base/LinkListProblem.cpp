@@ -291,6 +291,35 @@ ListNode *EntryNode(ListNode *pHead) {
 	return pNode1;
 }
 
+// 给定一个链表，返回链表开始入环的第一个节点。 如果链表无环，则返回 null
+// 快慢指针
+ListNode *detectCycle(ListNode *head) {
+	if (head == nullptr)
+		return head;
+
+	ListNode *slow = head;
+	ListNode *fast = head;
+
+	while (fast && slow && fast->next) {
+		fast = fast->next->next;
+		slow = slow->next;
+		if (fast == slow)
+			break;
+	}
+
+	if (fast == nullptr || slow == nullptr || fast->next == nullptr)
+		return nullptr;
+
+	// 有环
+	fast = head;
+	while (fast != slow) {
+		slow = slow->next;
+		fast = fast->next;
+	}
+
+	return fast;
+}
+
 // 删除倒数第 n 个结点
 ListNode *removeNthFromEnd(ListNode *head, int n) {
 	if (head == nullptr || n <= 0)
@@ -401,6 +430,34 @@ void reorderList(ListNode *head) {
 	}
 }
 
+// 编写一个程序，找到两个单链表相交的起始节点。
+ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
+	ListNode *p = headA;
+	ListNode *q = headB;
+	// 双指针
+	while (p != nullptr && q != nullptr) {
+		p = p->next;
+		q = q->next;
+	}
+
+	while (p != nullptr) {
+		p = p->next;
+		headA = headA->next;
+	}
+
+	while (q != nullptr) {
+		q = q->next;
+		headB = headB->next;
+	}
+
+	while (headA != nullptr && headB != nullptr && headA != headB) {
+		headA = headA->next;
+		headB = headB->next;
+	}
+	return headA;
+}
+
+
 // ====================测试代码====================
 
 void test_removeNthFromEnd() {
@@ -428,5 +485,21 @@ void test_addTwoNumbers() {
 		ListNode *h = addTwoNumbers(l1, l2);
 		Line();
 		PrintList(h);
+	}
+}
+
+void test_getIntersectionNode() {
+	std::string s1 = "1 2 3 4";
+	std::string s2 = "5 6 0";
+	ListNode *l1 = stringToListNode(s1);
+	ListNode *l2 = stringToListNode(s2);
+	if (l1 != nullptr && l2 != nullptr) {
+		ListNode *move = l1->next->next;
+		// l2->next->next->next = move;
+		if (getIntersectionNode(l1, l2) != nullptr)
+			std::cout << getIntersectionNode(l1, l2)->val;
+		else
+			std::cout << " nullptr.";
+		Line();
 	}
 }
