@@ -7,4 +7,7 @@
 
 #include <string>
 
+std::string multiply(std::string num1, std::string num2);
+
+
 #endif //ALGORITHM_PROBLEM_H

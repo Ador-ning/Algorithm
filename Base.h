@@ -34,6 +34,10 @@
 
 #define Line() std::cout << std::endl
 
+// 2^32
+#define INT_MIN     (-2147483647 - 1)
+#define INT_MAX      2147483647
+
 
 namespace Algorithm {
 #define  DEBUG true
@@ -102,5 +106,13 @@ namespace Algorithm {
 	}
 
 }
+
+int myAtoi(std::string s);
+
+int myStrlen(const char *str);
+
+char *myStrcpy(char *to, const char *from);
+
+char *myStrstr(const char *haystack, const char *needle);
 
 #endif //ALGORITHM_BASE_H

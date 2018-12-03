@@ -49,4 +49,8 @@ ListNode *detectCycle(ListNode *head);
 
 void test_getIntersectionNode();
 
+ListNode *rotateRight(ListNode *head, int k);
+
+ListNode* mergeKLists(vector<ListNode*>& lists);
+
 #endif //ALGORITHM_LINKLISTPROBLEM_H

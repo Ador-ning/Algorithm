@@ -2,6 +2,7 @@
 // Created by ning on 2018/11/26.
 //
 
+#include <cassert>
 #include "Base.h"
 
 using namespace Algorithm;
@@ -80,5 +81,95 @@ void test1D() {
 	auto res_ = Algorithm::inputStrVector1D();
 	auto it_ = res_.begin();
 	Print(it_, res_.end());
+}
+
+// 测试用例
+// "+-42" "-+42" == 42
+// "   -42" == 42
+// "4193 with words" == 4193
+// "words and 987" == 0
+// "-91283472332" == -2147483648
+int myAtoi(std::string s) {
+	int num = 0;
+	int sign = 1;
+	bool tag = false; // +-
+	const int len = s.size();
+	int i = 0;
+
+	// 行首空白符
+	while (s[i] == ' ' && i < len)
+		i++;
+
+	// 符号位
+	if (s[i] == '+') {
+		if (tag)
+			return 0;
+		tag = true;
+		i++;
+	}
+
+	if (s[i] == '-') {
+		if (tag)
+			return 0;
+		tag = true;
+		sign = -1;
+		i++;
+	}
+
+	for (; i < len; ++i) {
+		if (s[i] < '0' || s[i] > '9')
+			break;
+
+		// 数据溢出
+		if (num > INT_MAX / 10 || (num == INT_MAX / 10 && (s[i] - '0') > INT_MAX % 10)) {
+			return sign == -1 ? INT_MIN : INT_MAX;
+		}
+
+		num = num * 10 + s[i] - '0';
+	}
+	return num * sign;
+}
+
+int myStrlen(const char *str) {
+	const char *s = str;
+	for (; *s; ++s) {
+
+	}
+	return (s - str);
+}
+
+char *myStrcpy(char *to, const char *from) {
+	assert(to != nullptr && from != nullptr);
+	char *p = to;
+	while ((*p++ = *from++) != '\0');
+	return to;
+}
+
+// substr O(mn) 暴力求解
+char *myStrstr(const char *haystack, const char *needle) {
+	// if needle is empty return the full string
+	if ((!*needle))
+		return (char *) haystack;
+
+	const char *p1;
+	const char *p2;
+	const char *p1_advance = haystack;
+
+	for (p2 = &needle[1]; *p2; ++p2) {
+		p1_advance++; // advance p1_advance M-1 times
+	}
+
+	for (p1 = haystack; *p1_advance; p1_advance++) {
+		char *p1_old = (char *) p1;
+		p2 = needle;
+		while (*p1 && *p2 && *p1 == *p2) {
+			p1++;
+			p2++;
+		}
+		if (!*p2)
+			return p1_old;
+		p1 = p1_old + 1;
+	}
+	return nullptr;
 }
 

@@ -4,6 +4,7 @@
 
 #include "LinkList.h"
 #include <stack>
+#include <vector>
 
 using namespace Algorithm;
 
@@ -457,6 +458,92 @@ ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
 	return headA;
 }
 
+// leetcode 给定一个链表，旋转链表，将链表每个节点向右移动 k 个位置，其中 k 是非负数
+// 1->2->3->4->5->NULL, k = 2  -->  4->5->1->2->3->NULL
+// 0->1->2->NULL, k = 4  -->  2->0->1->NULL
+ListNode *rotateRight(ListNode *head, int k) {
+	if (head == nullptr || k <= 0)
+		return head;
+
+	ListNode *pNext = head;
+	ListNode *pMove = head;
+	ListNode *test = head;
+
+	// 统计 list length
+	int length = 0;
+	while (test != nullptr) {
+		length += 1;
+		test = test->next;
+	}
+
+	k = k % length;
+
+	while (k > 0) {
+		if (pNext == nullptr) {
+			return head; // k > length of list
+		}
+		pNext = pNext->next;
+		k--;
+	}
+
+	while (pNext->next != nullptr) {
+		pMove = pMove->next;
+		pNext = pNext->next;
+	}
+
+	pNext->next = head;
+	head = pMove->next;
+	pMove->next = nullptr;
+
+	return head;
+}
+
+// leetcode 合并 k 个排序链表，返回合并后的排序链表  复杂度高
+ListNode *mergeKLists(std::vector<ListNode *> &lists) {
+	int size = lists.size();
+	if (size == 0)
+		return nullptr;
+	if (size == 1)
+		return lists[0];
+
+	ListNode *head = new ListNode(0);
+	ListNode *pMove = head;
+
+	while (true) {
+		int nullSize = 0;
+		int max = INT_MAX;
+		int index = 0;
+
+		// k 个 中选取最小
+		for (int i = 0; i < size; i++) {
+
+			// 第i个到尾部
+			if (lists[i] == nullptr) {
+				nullSize++;
+				continue;
+			}
+
+			if (lists[i]->val < max) {
+				max = lists[i]->val;
+				index = i;
+			}
+		}
+
+		if (lists[index] == nullptr || nullSize == size)
+			break;
+
+		pMove->next = lists[index];
+		pMove = pMove->next;
+
+		if (lists[index] != nullptr)
+			lists[index] = lists[index]->next;
+	}
+
+	pMove = head->next;
+	delete head;
+	return pMove;
+
+}
 
 // ====================测试代码====================
 
