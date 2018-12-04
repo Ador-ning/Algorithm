@@ -155,3 +155,42 @@ bool HasSuTree(BinTreeNode *pRoot1, BinTreeNode *pRoot2) {
 	return result;
 }
 
+// Leetcode 给定一个二叉树, 找到该树中两个指定节点的最近公共祖先
+// 遍历二叉树时，只有先访问给定两节点A、B后，才可能确定其最近共同父节点C，因而采用后序遍历
+// 可以统计任一节点的左右子树“是否包含A、B中的某一个”
+// 当后序遍历访问到某个节点D时，可得到三条信息：
+//         （1）节点D是否是A、B两节点之一、（2）其左子树是否包含A、B两节点之一、（3）其右子树是否包含A、B两节点之一
+// 当三条信息中有两个为真时，就可以确定节点D的父节点（或节点D，如果允许一个节点是自身的父节点的话）
+// 就是节点A、B的最近共同父节点。另外，找到最近共同父节点C后应停止遍历其它节点。
+bool lca(BinTreeNode *root, BinTreeNode *va, BinTreeNode *vb, BinTreeNode *&result) {
+	// left/right 左/右子树是否含有要判断的两节点之一
+	bool left = false, right = false;
+
+	if (!result && root->left != nullptr)
+		left = lca(root->left, va, vb, result);
+
+	if (!result && root->right != nullptr)
+		right = lca(root->right, va, vb, result);
+
+	// mid 当前节点是否是要判断的两节点之一
+	bool mid = false;
+	if (root == va || root == vb)
+		mid = true;
+
+	if (!result && int(left + right + mid) == 2) {
+		result = root;// root就是后序遍历（左，右，根），当前遍历的那个节点
+	}
+	return left | mid | right;
+}
+
+BinTreeNode *lowestCommonAncestor1(BinTreeNode *root, BinTreeNode *p, BinTreeNode *q) {
+	if (root == nullptr)
+		return nullptr;
+
+	BinTreeNode *result = nullptr;
+	lca(root, p, q, result);
+
+	return result;
+}
+
+
