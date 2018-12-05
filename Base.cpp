@@ -3,6 +3,7 @@
 //
 
 #include <cassert>
+#include <ctime>
 #include "Base.h"
 
 using namespace Algorithm;
@@ -173,3 +174,55 @@ char *myStrstr(const char *haystack, const char *needle) {
 	return nullptr;
 }
 
+int myRandom(int n) {
+	return rand() % n + 1;
+}
+
+int rand5() {
+	return myRandom(5);
+}
+
+// 由 rand5() 生成
+int rand7() {
+	while (1) {
+
+		// 生成等概率 0 -> 24
+		int x = (rand5() - 1) * 5 + (rand5() - 1);
+
+		if (x >= 21) { // 剔除 21 22 23 24
+			continue;
+		} else
+			return x % 7 + 1;  // 0 -> 20
+	}
+}
+
+void test_rand5() {
+
+	int i = 0;
+	int n = 5;
+	int a[100] = {0};
+
+	// 初始化随机种子
+	srand(time(nullptr));
+
+	// 测试 100 万次
+	for (; i < 1000000; ++i)
+		a[rand5() - 1]++;
+
+	for (i = 0; i < 5; ++i)
+		std::cout << a[i] << " ";
+}
+
+void test_rand7() {
+	int i = 0;
+	int n = 7;
+	int a[7] = {0};
+
+	srand(time(nullptr));
+
+	for (; i < 7000000; ++i)
+		a[rand7() - 1]++;
+
+	for (i = 0; i < n; ++i)
+		std::cout << a[i] << " ";
+}

@@ -12,6 +12,8 @@
 #include <typeinfo>
 #include <algorithm>
 #include <sstream>
+#include <cmath>
+#include <ctime>
 
 // iterator for printing contents to debug
 #define Print(it, end) \
@@ -35,9 +37,65 @@
 #define Line() std::cout << std::endl
 
 // 2^32
-#define INT_MIN     (-2147483647 - 1)
+#define INT_MIN     -2147483648
 #define INT_MAX      2147483647
 
+// leetcode 最小栈
+// 设计一个支持 push，pop，top 操作，并能在常数时间内检索到最小元素的栈
+class MinStack {
+public:
+	MinStack() : capacity_(1), top_(-1), min_(pow(2, 31) - 1) {
+		stack_ = (int *) malloc(capacity_ * sizeof(int));
+	}
+
+	~MinStack() {
+		free(stack_);
+	}
+
+	void push(int x) {
+		top_++;
+		if (top_ >= capacity_) {
+			capacity_ *= 2;
+			stack_ = (int *) realloc(stack_, capacity_ * sizeof(int));
+		}
+		stack_[top_] = x;
+		if (x < min_)
+			min_ = x;
+	}
+
+	void pop() {
+		if (top_ < 0)
+			return;
+		top_--;
+		min_ = pow(2, 31) - 1;
+		for (int i = 0; i <= top_; ++i) {
+			if (stack_[i] < min_)
+				min_ = stack_[i];
+		}
+	}
+
+	int top() {
+		return stack_[top_];
+	}
+
+	int getMin() {
+		return min_;
+	}
+
+	int size() {
+		return top_ + 1;
+	}
+
+	bool empty() {
+		return (top_ < 0);
+	}
+
+private:
+	int *stack_;
+	int capacity_;
+	int top_;
+	int min_;
+};
 
 namespace Algorithm {
 #define  DEBUG true
@@ -114,5 +172,19 @@ int myStrlen(const char *str);
 char *myStrcpy(char *to, const char *from);
 
 char *myStrstr(const char *haystack, const char *needle);
+
+// 生成 1 -> n 之间的整数
+int myRandom(int n);
+
+// 生成 1, 2, 3, 4, 5
+int rand5();
+
+// 由 rand5() 生成
+int rand7();
+
+void test_rand5();
+
+void test_rand7();
+
 
 #endif //ALGORITHM_BASE_H
