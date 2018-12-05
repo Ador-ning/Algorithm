@@ -260,6 +260,33 @@ SortedArray.cpp.s:
 	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f Array/CMakeFiles/array.dir/build.make Array/CMakeFiles/array.dir/SortedArray.cpp.s
 .PHONY : SortedArray.cpp.s
 
+problem.o: problem.cpp.o
+
+.PHONY : problem.o
+
+# target to build an object file
+problem.cpp.o:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f Array/CMakeFiles/array.dir/build.make Array/CMakeFiles/array.dir/problem.cpp.o
+.PHONY : problem.cpp.o
+
+problem.i: problem.cpp.i
+
+.PHONY : problem.i
+
+# target to preprocess a source file
+problem.cpp.i:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f Array/CMakeFiles/array.dir/build.make Array/CMakeFiles/array.dir/problem.cpp.i
+.PHONY : problem.cpp.i
+
+problem.s: problem.cpp.s
+
+.PHONY : problem.s
+
+# target to generate assembly for a file
+problem.cpp.s:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f Array/CMakeFiles/array.dir/build.make Array/CMakeFiles/array.dir/problem.cpp.s
+.PHONY : problem.cpp.s
+
 sort.o: sort.cpp.o
 
 .PHONY : sort.o
@@ -338,6 +365,9 @@ help:
 	@echo "... SortedArray.o"
 	@echo "... SortedArray.i"
 	@echo "... SortedArray.s"
+	@echo "... problem.o"
+	@echo "... problem.i"
+	@echo "... problem.s"
 	@echo "... sort.o"
 	@echo "... sort.i"
 	@echo "... sort.s"

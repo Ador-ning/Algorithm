@@ -6,37 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/Users/ning/Project/Algorithm/./Base.h
-iostream
--
-vector
--
-string
--
-list
--
-typeinfo
--
-algorithm
--
-sstream
--
-
-/Users/ning/Project/Algorithm/./Base/BinaryTree.h
-iostream
--
-deque
--
-queue
--
-fstream
--
-vector
--
-../Base.h
-/Users/ning/Project/Algorithm/./Base.h
-
 /Users/ning/Project/Algorithm/Base.cpp
+cassert
+-
+ctime
+-
 Base.h
 /Users/ning/Project/Algorithm/Base.h
 
@@ -54,6 +28,10 @@ typeinfo
 algorithm
 -
 sstream
+-
+cmath
+-
+ctime
 -
 
 /Users/ning/Project/Algorithm/main.cpp
@@ -65,6 +43,4 @@ string
 -
 Base.h
 /Users/ning/Project/Algorithm/Base.h
-./Base/BinaryTree.h
-/Users/ning/Project/Algorithm/./Base/BinaryTree.h
 

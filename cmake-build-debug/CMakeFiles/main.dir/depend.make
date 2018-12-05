@@ -4,8 +4,6 @@
 CMakeFiles/main.dir/Base.cpp.o: ../Base.cpp
 CMakeFiles/main.dir/Base.cpp.o: ../Base.h
 
-CMakeFiles/main.dir/main.cpp.o: .././Base.h
-CMakeFiles/main.dir/main.cpp.o: .././Base/BinaryTree.h
 CMakeFiles/main.dir/main.cpp.o: ../Base.h
 CMakeFiles/main.dir/main.cpp.o: ../main.cpp
 

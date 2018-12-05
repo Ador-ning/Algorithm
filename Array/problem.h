@@ -31,6 +31,11 @@ namespace Algorithm {
 	// 输入一个递增数组和一个数字s，在数组中查找两个数，使得和为s，如果有多对数字，输出任意一对即可
 	bool FindNumbersWithSum(int *data, int length, int sum, int *num1, int *num2);
 
+	// leetcode
+	// 给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。
+	//不要使用额外的数组空间，你必须在原地修改输入数组并在使用 O(1) 额外空间的条件下完成。
+	int removeDuplicates(std::vector<int> &nums);
+
 // Part two: 旋转有序数组问题 -- log(n)
 	// 输入一个递增排序的数组的一个旋转，输出旋转数组的最小元素
 	int MinInOrder(const int numbers[], int index1, int index2);
@@ -48,6 +53,11 @@ namespace Algorithm {
 	int test_rotatedArray();
 
 // Part three: 查找 / 排序
+
+
+
+// Part four: 其他
+	int maxArea(std::vector<int> &height);
 
 }
 

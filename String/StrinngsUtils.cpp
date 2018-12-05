@@ -3,6 +3,7 @@
 //
 #include "StringUtils.h"
 #include <string>
+#include <algorithm>
 
 namespace Algorithm {
 
@@ -138,5 +139,23 @@ namespace Algorithm {
 				pEnd++;
 		}
 		return pData;
+	}
+
+	// leetcode  stl using
+	// 输入: "Let's take LeetCode contest"
+	// 输出: "s'teL ekat edoCteeL tsetnoc"
+	std::string reverseWords(std::string &s) {
+		if(s.size() <= 1)
+			return s;
+
+		int i = 0;
+		int j = s.find(" ");
+		while( j !=  std::string::npos){
+			reverse(s.begin() + i, s.begin() + j);
+			i = j + 1;
+			j = s.find(" ", i);
+		}
+		reverse(s.begin() + i, s.end());
+		return s;
 	}
 }

@@ -21,6 +21,8 @@ namespace Algorithm {
 
 	void Permutation(char *pStr);
 
+	std::string reverseWords(std::string &s);
+
 	void Test(char *pStr);
 
 	void test_main();

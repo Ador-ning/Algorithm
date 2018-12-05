@@ -8,6 +8,7 @@ set(SRC_ARRAY
 		sort.h
 		sort.cpp
 		problem.h
+		problem.cpp
 		RotatedArray.cpp
 		SortedArray.cpp
 		DupArrayNoEdit.cpp
