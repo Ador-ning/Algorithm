@@ -12,6 +12,8 @@ set(SRC_BASE
 		LinkList.cpp
 		LinkListProblem.h
 		LinkListProblem.cpp
+		UnionFind.h     # Union and found
+		UnionFind.cpp
 		Graph.h     # Graph
 		Graph.cpp
 		ComplexList.h
