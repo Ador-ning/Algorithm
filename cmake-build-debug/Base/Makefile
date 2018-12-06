@@ -260,6 +260,33 @@ LinkListProblem.cpp.s:
 	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/LinkListProblem.cpp.s
 .PHONY : LinkListProblem.cpp.s
 
+UnionFind.o: UnionFind.cpp.o
+
+.PHONY : UnionFind.o
+
+# target to build an object file
+UnionFind.cpp.o:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/UnionFind.cpp.o
+.PHONY : UnionFind.cpp.o
+
+UnionFind.i: UnionFind.cpp.i
+
+.PHONY : UnionFind.i
+
+# target to preprocess a source file
+UnionFind.cpp.i:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/UnionFind.cpp.i
+.PHONY : UnionFind.cpp.i
+
+UnionFind.s: UnionFind.cpp.s
+
+.PHONY : UnionFind.s
+
+# target to generate assembly for a file
+UnionFind.cpp.s:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/UnionFind.cpp.s
+.PHONY : UnionFind.cpp.s
+
 test_base.o: test_base.cpp.o
 
 .PHONY : test_base.o
@@ -311,6 +338,9 @@ help:
 	@echo "... LinkListProblem.o"
 	@echo "... LinkListProblem.i"
 	@echo "... LinkListProblem.s"
+	@echo "... UnionFind.o"
+	@echo "... UnionFind.i"
+	@echo "... UnionFind.s"
 	@echo "... test_base.o"
 	@echo "... test_base.i"
 	@echo "... test_base.s"

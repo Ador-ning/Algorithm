@@ -81,9 +81,33 @@ String/CMakeFiles/string.dir/StrinngsUtils.cpp.o.provides: String/CMakeFiles/str
 String/CMakeFiles/string.dir/StrinngsUtils.cpp.o.provides.build: String/CMakeFiles/string.dir/StrinngsUtils.cpp.o
 
 
+String/CMakeFiles/string.dir/KMP.cpp.o: String/CMakeFiles/string.dir/flags.make
+String/CMakeFiles/string.dir/KMP.cpp.o: ../String/KMP.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object String/CMakeFiles/string.dir/KMP.cpp.o"
+	cd /Users/ning/Project/Algorithm/cmake-build-debug/String && /usr/local/Cellar/gcc/8.1.0/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/string.dir/KMP.cpp.o -c /Users/ning/Project/Algorithm/String/KMP.cpp
+
+String/CMakeFiles/string.dir/KMP.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/string.dir/KMP.cpp.i"
+	cd /Users/ning/Project/Algorithm/cmake-build-debug/String && /usr/local/Cellar/gcc/8.1.0/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ning/Project/Algorithm/String/KMP.cpp > CMakeFiles/string.dir/KMP.cpp.i
+
+String/CMakeFiles/string.dir/KMP.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/string.dir/KMP.cpp.s"
+	cd /Users/ning/Project/Algorithm/cmake-build-debug/String && /usr/local/Cellar/gcc/8.1.0/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ning/Project/Algorithm/String/KMP.cpp -o CMakeFiles/string.dir/KMP.cpp.s
+
+String/CMakeFiles/string.dir/KMP.cpp.o.requires:
+
+.PHONY : String/CMakeFiles/string.dir/KMP.cpp.o.requires
+
+String/CMakeFiles/string.dir/KMP.cpp.o.provides: String/CMakeFiles/string.dir/KMP.cpp.o.requires
+	$(MAKE) -f String/CMakeFiles/string.dir/build.make String/CMakeFiles/string.dir/KMP.cpp.o.provides.build
+.PHONY : String/CMakeFiles/string.dir/KMP.cpp.o.provides
+
+String/CMakeFiles/string.dir/KMP.cpp.o.provides.build: String/CMakeFiles/string.dir/KMP.cpp.o
+
+
 String/CMakeFiles/string.dir/ReplaceBlank.cpp.o: String/CMakeFiles/string.dir/flags.make
 String/CMakeFiles/string.dir/ReplaceBlank.cpp.o: ../String/ReplaceBlank.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object String/CMakeFiles/string.dir/ReplaceBlank.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object String/CMakeFiles/string.dir/ReplaceBlank.cpp.o"
 	cd /Users/ning/Project/Algorithm/cmake-build-debug/String && /usr/local/Cellar/gcc/8.1.0/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/string.dir/ReplaceBlank.cpp.o -c /Users/ning/Project/Algorithm/String/ReplaceBlank.cpp
 
 String/CMakeFiles/string.dir/ReplaceBlank.cpp.i: cmake_force
@@ -107,7 +131,7 @@ String/CMakeFiles/string.dir/ReplaceBlank.cpp.o.provides.build: String/CMakeFile
 
 String/CMakeFiles/string.dir/test_string.cpp.o: String/CMakeFiles/string.dir/flags.make
 String/CMakeFiles/string.dir/test_string.cpp.o: ../String/test_string.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object String/CMakeFiles/string.dir/test_string.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object String/CMakeFiles/string.dir/test_string.cpp.o"
 	cd /Users/ning/Project/Algorithm/cmake-build-debug/String && /usr/local/Cellar/gcc/8.1.0/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/string.dir/test_string.cpp.o -c /Users/ning/Project/Algorithm/String/test_string.cpp
 
 String/CMakeFiles/string.dir/test_string.cpp.i: cmake_force
@@ -132,6 +156,7 @@ String/CMakeFiles/string.dir/test_string.cpp.o.provides.build: String/CMakeFiles
 # Object files for target string
 string_OBJECTS = \
 "CMakeFiles/string.dir/StrinngsUtils.cpp.o" \
+"CMakeFiles/string.dir/KMP.cpp.o" \
 "CMakeFiles/string.dir/ReplaceBlank.cpp.o" \
 "CMakeFiles/string.dir/test_string.cpp.o"
 
@@ -139,11 +164,12 @@ string_OBJECTS = \
 string_EXTERNAL_OBJECTS =
 
 String/string: String/CMakeFiles/string.dir/StrinngsUtils.cpp.o
+String/string: String/CMakeFiles/string.dir/KMP.cpp.o
 String/string: String/CMakeFiles/string.dir/ReplaceBlank.cpp.o
 String/string: String/CMakeFiles/string.dir/test_string.cpp.o
 String/string: String/CMakeFiles/string.dir/build.make
 String/string: String/CMakeFiles/string.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable string"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable string"
 	cd /Users/ning/Project/Algorithm/cmake-build-debug/String && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/string.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -152,6 +178,7 @@ String/CMakeFiles/string.dir/build: String/string
 .PHONY : String/CMakeFiles/string.dir/build
 
 String/CMakeFiles/string.dir/requires: String/CMakeFiles/string.dir/StrinngsUtils.cpp.o.requires
+String/CMakeFiles/string.dir/requires: String/CMakeFiles/string.dir/KMP.cpp.o.requires
 String/CMakeFiles/string.dir/requires: String/CMakeFiles/string.dir/ReplaceBlank.cpp.o.requires
 String/CMakeFiles/string.dir/requires: String/CMakeFiles/string.dir/test_string.cpp.o.requires
 

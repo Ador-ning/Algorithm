@@ -38,4 +38,5 @@ std::string multiply(std::string num1, std::string num2) {
 
 int main() {
 	std::cout << "string test: " << std::endl;
+	test_kmp();
 }

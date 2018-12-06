@@ -125,6 +125,33 @@ string/fast:
 	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f String/CMakeFiles/string.dir/build.make String/CMakeFiles/string.dir/build
 .PHONY : string/fast
 
+KMP.o: KMP.cpp.o
+
+.PHONY : KMP.o
+
+# target to build an object file
+KMP.cpp.o:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f String/CMakeFiles/string.dir/build.make String/CMakeFiles/string.dir/KMP.cpp.o
+.PHONY : KMP.cpp.o
+
+KMP.i: KMP.cpp.i
+
+.PHONY : KMP.i
+
+# target to preprocess a source file
+KMP.cpp.i:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f String/CMakeFiles/string.dir/build.make String/CMakeFiles/string.dir/KMP.cpp.i
+.PHONY : KMP.cpp.i
+
+KMP.s: KMP.cpp.s
+
+.PHONY : KMP.s
+
+# target to generate assembly for a file
+KMP.cpp.s:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f String/CMakeFiles/string.dir/build.make String/CMakeFiles/string.dir/KMP.cpp.s
+.PHONY : KMP.cpp.s
+
 ReplaceBlank.o: ReplaceBlank.cpp.o
 
 .PHONY : ReplaceBlank.o
@@ -215,6 +242,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... string"
+	@echo "... KMP.o"
+	@echo "... KMP.i"
+	@echo "... KMP.s"
 	@echo "... ReplaceBlank.o"
 	@echo "... ReplaceBlank.i"
 	@echo "... ReplaceBlank.s"

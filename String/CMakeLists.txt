@@ -8,6 +8,7 @@ set(SRC_STRING
 		StringUtils.h
 		StrinngsUtils.cpp
 		problem.h
+		KMP.cpp
 		ReplaceBlank.cpp
 		test_string.cpp)
 
