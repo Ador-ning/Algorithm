@@ -14,6 +14,10 @@ set(SRC_BASE
 		LinkListProblem.cpp
 		UnionFind.h     # Union and found
 		UnionFind.cpp
+		IntervalTree.h # interval tree
+		IntervalTree.cpp
+		HashSet.h # hash
+		HashSet.cpp
 		Graph.h     # Graph
 		Graph.cpp
 		ComplexList.h
