@@ -1,0 +1,8 @@
+//
+// Created by ning on 2018/12/6.
+//
+
+#ifndef ALGORITHM_INTERVALTREE_H
+#define ALGORITHM_INTERVALTREE_H
+
+#endif //ALGORITHM_INTERVALTREE_H
