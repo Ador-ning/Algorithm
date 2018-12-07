@@ -225,9 +225,33 @@ Base/CMakeFiles/base.dir/HashSet.cpp.o.provides: Base/CMakeFiles/base.dir/HashSe
 Base/CMakeFiles/base.dir/HashSet.cpp.o.provides.build: Base/CMakeFiles/base.dir/HashSet.cpp.o
 
 
+Base/CMakeFiles/base.dir/BFS.cpp.o: Base/CMakeFiles/base.dir/flags.make
+Base/CMakeFiles/base.dir/BFS.cpp.o: ../Base/BFS.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object Base/CMakeFiles/base.dir/BFS.cpp.o"
+	cd /Users/ning/Project/Algorithm/cmake-build-debug/Base && /usr/local/Cellar/gcc/8.1.0/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/base.dir/BFS.cpp.o -c /Users/ning/Project/Algorithm/Base/BFS.cpp
+
+Base/CMakeFiles/base.dir/BFS.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/base.dir/BFS.cpp.i"
+	cd /Users/ning/Project/Algorithm/cmake-build-debug/Base && /usr/local/Cellar/gcc/8.1.0/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ning/Project/Algorithm/Base/BFS.cpp > CMakeFiles/base.dir/BFS.cpp.i
+
+Base/CMakeFiles/base.dir/BFS.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/base.dir/BFS.cpp.s"
+	cd /Users/ning/Project/Algorithm/cmake-build-debug/Base && /usr/local/Cellar/gcc/8.1.0/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ning/Project/Algorithm/Base/BFS.cpp -o CMakeFiles/base.dir/BFS.cpp.s
+
+Base/CMakeFiles/base.dir/BFS.cpp.o.requires:
+
+.PHONY : Base/CMakeFiles/base.dir/BFS.cpp.o.requires
+
+Base/CMakeFiles/base.dir/BFS.cpp.o.provides: Base/CMakeFiles/base.dir/BFS.cpp.o.requires
+	$(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/BFS.cpp.o.provides.build
+.PHONY : Base/CMakeFiles/base.dir/BFS.cpp.o.provides
+
+Base/CMakeFiles/base.dir/BFS.cpp.o.provides.build: Base/CMakeFiles/base.dir/BFS.cpp.o
+
+
 Base/CMakeFiles/base.dir/Graph.cpp.o: Base/CMakeFiles/base.dir/flags.make
 Base/CMakeFiles/base.dir/Graph.cpp.o: ../Base/Graph.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object Base/CMakeFiles/base.dir/Graph.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object Base/CMakeFiles/base.dir/Graph.cpp.o"
 	cd /Users/ning/Project/Algorithm/cmake-build-debug/Base && /usr/local/Cellar/gcc/8.1.0/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/base.dir/Graph.cpp.o -c /Users/ning/Project/Algorithm/Base/Graph.cpp
 
 Base/CMakeFiles/base.dir/Graph.cpp.i: cmake_force
@@ -251,7 +275,7 @@ Base/CMakeFiles/base.dir/Graph.cpp.o.provides.build: Base/CMakeFiles/base.dir/Gr
 
 Base/CMakeFiles/base.dir/test_base.cpp.o: Base/CMakeFiles/base.dir/flags.make
 Base/CMakeFiles/base.dir/test_base.cpp.o: ../Base/test_base.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object Base/CMakeFiles/base.dir/test_base.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object Base/CMakeFiles/base.dir/test_base.cpp.o"
 	cd /Users/ning/Project/Algorithm/cmake-build-debug/Base && /usr/local/Cellar/gcc/8.1.0/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/base.dir/test_base.cpp.o -c /Users/ning/Project/Algorithm/Base/test_base.cpp
 
 Base/CMakeFiles/base.dir/test_base.cpp.i: cmake_force
@@ -282,6 +306,7 @@ base_OBJECTS = \
 "CMakeFiles/base.dir/UnionFind.cpp.o" \
 "CMakeFiles/base.dir/IntervalTree.cpp.o" \
 "CMakeFiles/base.dir/HashSet.cpp.o" \
+"CMakeFiles/base.dir/BFS.cpp.o" \
 "CMakeFiles/base.dir/Graph.cpp.o" \
 "CMakeFiles/base.dir/test_base.cpp.o"
 
@@ -295,11 +320,12 @@ Base/base: Base/CMakeFiles/base.dir/LinkListProblem.cpp.o
 Base/base: Base/CMakeFiles/base.dir/UnionFind.cpp.o
 Base/base: Base/CMakeFiles/base.dir/IntervalTree.cpp.o
 Base/base: Base/CMakeFiles/base.dir/HashSet.cpp.o
+Base/base: Base/CMakeFiles/base.dir/BFS.cpp.o
 Base/base: Base/CMakeFiles/base.dir/Graph.cpp.o
 Base/base: Base/CMakeFiles/base.dir/test_base.cpp.o
 Base/base: Base/CMakeFiles/base.dir/build.make
 Base/base: Base/CMakeFiles/base.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable base"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable base"
 	cd /Users/ning/Project/Algorithm/cmake-build-debug/Base && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/base.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -314,6 +340,7 @@ Base/CMakeFiles/base.dir/requires: Base/CMakeFiles/base.dir/LinkListProblem.cpp.
 Base/CMakeFiles/base.dir/requires: Base/CMakeFiles/base.dir/UnionFind.cpp.o.requires
 Base/CMakeFiles/base.dir/requires: Base/CMakeFiles/base.dir/IntervalTree.cpp.o.requires
 Base/CMakeFiles/base.dir/requires: Base/CMakeFiles/base.dir/HashSet.cpp.o.requires
+Base/CMakeFiles/base.dir/requires: Base/CMakeFiles/base.dir/BFS.cpp.o.requires
 Base/CMakeFiles/base.dir/requires: Base/CMakeFiles/base.dir/Graph.cpp.o.requires
 Base/CMakeFiles/base.dir/requires: Base/CMakeFiles/base.dir/test_base.cpp.o.requires
 

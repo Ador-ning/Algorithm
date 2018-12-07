@@ -125,6 +125,33 @@ base/fast:
 	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/build
 .PHONY : base/fast
 
+BFS.o: BFS.cpp.o
+
+.PHONY : BFS.o
+
+# target to build an object file
+BFS.cpp.o:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/BFS.cpp.o
+.PHONY : BFS.cpp.o
+
+BFS.i: BFS.cpp.i
+
+.PHONY : BFS.i
+
+# target to preprocess a source file
+BFS.cpp.i:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/BFS.cpp.i
+.PHONY : BFS.cpp.i
+
+BFS.s: BFS.cpp.s
+
+.PHONY : BFS.s
+
+# target to generate assembly for a file
+BFS.cpp.s:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/BFS.cpp.s
+.PHONY : BFS.cpp.s
+
 BinaryTree.o: BinaryTree.cpp.o
 
 .PHONY : BinaryTree.o
@@ -377,6 +404,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... base"
+	@echo "... BFS.o"
+	@echo "... BFS.i"
+	@echo "... BFS.s"
 	@echo "... BinaryTree.o"
 	@echo "... BinaryTree.i"
 	@echo "... BinaryTree.s"

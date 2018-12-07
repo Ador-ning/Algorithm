@@ -18,6 +18,8 @@ set(SRC_BASE
 		IntervalTree.cpp
 		HashSet.h # hash
 		HashSet.cpp
+		BFS.h   # BFS
+		BFS.cpp
 		Graph.h     # Graph
 		Graph.cpp
 		ComplexList.h

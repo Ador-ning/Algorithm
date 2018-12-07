@@ -327,6 +327,12 @@
 		<Unit filename="/Users/ning/Project/Algorithm/Base/AVL.h">
 			<Option target="base"/>
 		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Base/BFS.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Base/BFS.h">
+			<Option target="base"/>
+		</Unit>
 		<Unit filename="/Users/ning/Project/Algorithm/Base/BST.h">
 			<Option target="base"/>
 		</Unit>
