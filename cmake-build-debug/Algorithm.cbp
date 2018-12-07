@@ -351,7 +351,19 @@
 		<Unit filename="/Users/ning/Project/Algorithm/Base/Graph.h">
 			<Option target="base"/>
 		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Base/HashSet.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Base/HashSet.h">
+			<Option target="base"/>
+		</Unit>
 		<Unit filename="/Users/ning/Project/Algorithm/Base/Heap.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Base/IntervalTree.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Base/IntervalTree.h">
 			<Option target="base"/>
 		</Unit>
 		<Unit filename="/Users/ning/Project/Algorithm/Base/LinkList.cpp">

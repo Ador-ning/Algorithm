@@ -206,6 +206,60 @@ Graph.cpp.s:
 	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/Graph.cpp.s
 .PHONY : Graph.cpp.s
 
+HashSet.o: HashSet.cpp.o
+
+.PHONY : HashSet.o
+
+# target to build an object file
+HashSet.cpp.o:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/HashSet.cpp.o
+.PHONY : HashSet.cpp.o
+
+HashSet.i: HashSet.cpp.i
+
+.PHONY : HashSet.i
+
+# target to preprocess a source file
+HashSet.cpp.i:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/HashSet.cpp.i
+.PHONY : HashSet.cpp.i
+
+HashSet.s: HashSet.cpp.s
+
+.PHONY : HashSet.s
+
+# target to generate assembly for a file
+HashSet.cpp.s:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/HashSet.cpp.s
+.PHONY : HashSet.cpp.s
+
+IntervalTree.o: IntervalTree.cpp.o
+
+.PHONY : IntervalTree.o
+
+# target to build an object file
+IntervalTree.cpp.o:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/IntervalTree.cpp.o
+.PHONY : IntervalTree.cpp.o
+
+IntervalTree.i: IntervalTree.cpp.i
+
+.PHONY : IntervalTree.i
+
+# target to preprocess a source file
+IntervalTree.cpp.i:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/IntervalTree.cpp.i
+.PHONY : IntervalTree.cpp.i
+
+IntervalTree.s: IntervalTree.cpp.s
+
+.PHONY : IntervalTree.s
+
+# target to generate assembly for a file
+IntervalTree.cpp.s:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/IntervalTree.cpp.s
+.PHONY : IntervalTree.cpp.s
+
 LinkList.o: LinkList.cpp.o
 
 .PHONY : LinkList.o
@@ -332,6 +386,12 @@ help:
 	@echo "... Graph.o"
 	@echo "... Graph.i"
 	@echo "... Graph.s"
+	@echo "... HashSet.o"
+	@echo "... HashSet.i"
+	@echo "... HashSet.s"
+	@echo "... IntervalTree.o"
+	@echo "... IntervalTree.i"
+	@echo "... IntervalTree.s"
 	@echo "... LinkList.o"
 	@echo "... LinkList.i"
 	@echo "... LinkList.s"

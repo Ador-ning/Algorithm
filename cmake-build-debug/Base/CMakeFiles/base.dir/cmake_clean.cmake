@@ -4,6 +4,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/base.dir/LinkList.cpp.o"
   "CMakeFiles/base.dir/LinkListProblem.cpp.o"
   "CMakeFiles/base.dir/UnionFind.cpp.o"
+  "CMakeFiles/base.dir/IntervalTree.cpp.o"
+  "CMakeFiles/base.dir/HashSet.cpp.o"
   "CMakeFiles/base.dir/Graph.cpp.o"
   "CMakeFiles/base.dir/test_base.cpp.o"
   "base.pdb"

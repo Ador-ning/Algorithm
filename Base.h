@@ -40,6 +40,13 @@
 #define INT_MIN     （-2147483648）
 #define INT_MAX      2147483647
 
+#define MAXN 5001
+#define INF INT_MAX
+#define Max(a, b) ((a) > (b) ? (a) : (b))
+#define Min(a, b) ((a) > (b) ? (b) : (a))
+#define LL(a) ((a) << 1)
+#define RR(a) (((a) >> 1)+1)
+
 // leetcode 最小栈
 // 设计一个支持 push，pop，top 操作，并能在常数时间内检索到最小元素的栈
 class MinStack {
