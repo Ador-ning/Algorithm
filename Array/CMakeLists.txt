@@ -9,6 +9,7 @@ set(SRC_ARRAY
 		sort.cpp
 		problem.h
 		problem.cpp
+		SubSets.cpp  # 子集
 		RotatedArray.cpp
 		SortedArray.cpp
 		DupArrayNoEdit.cpp

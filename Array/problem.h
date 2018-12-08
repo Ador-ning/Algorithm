@@ -57,8 +57,16 @@ namespace Algorithm {
 
 
 // Part four: 其他
+	// leetcode
 	int maxArea(std::vector<int> &height);
 
+	// leetcode -- 子集 subsets  增量
+	std::vector<std::vector<int>> subsets(std::vector<int> &nums);
+
+	// BFS
+	void
+	helper(std::vector<int> &nums, std::vector<std::vector<int>> &res, std::vector<int> &path, int start, int count,
+	       int max_count);
 }
 
 #endif //ALGORITHM_PROBLEM_H
