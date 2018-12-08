@@ -5,6 +5,8 @@ project(Algorithm)
 set(CMAKE_CXX_STANDARD 17)
 
 set(SRC_DP
+		problem.h
+		BackTracing.cpp # 回溯算法
 		DynamicProgramming.cpp
 		Fibonacci.cpp
 		test_dp.cpp)
