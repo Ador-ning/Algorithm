@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/ning/Project/Algorithm/Array/FindandSort.cpp" "/Users/ning/Project/Algorithm/cmake-build-debug/Array/CMakeFiles/array.dir/FindandSort.cpp.o"
   "/Users/ning/Project/Algorithm/Array/RotatedArray.cpp" "/Users/ning/Project/Algorithm/cmake-build-debug/Array/CMakeFiles/array.dir/RotatedArray.cpp.o"
   "/Users/ning/Project/Algorithm/Array/SortedArray.cpp" "/Users/ning/Project/Algorithm/cmake-build-debug/Array/CMakeFiles/array.dir/SortedArray.cpp.o"
+  "/Users/ning/Project/Algorithm/Array/SubSets.cpp" "/Users/ning/Project/Algorithm/cmake-build-debug/Array/CMakeFiles/array.dir/SubSets.cpp.o"
   "/Users/ning/Project/Algorithm/Array/problem.cpp" "/Users/ning/Project/Algorithm/cmake-build-debug/Array/CMakeFiles/array.dir/problem.cpp.o"
   "/Users/ning/Project/Algorithm/Array/sort.cpp" "/Users/ning/Project/Algorithm/cmake-build-debug/Array/CMakeFiles/array.dir/sort.cpp.o"
   "/Users/ning/Project/Algorithm/Array/test_array.cpp" "/Users/ning/Project/Algorithm/cmake-build-debug/Array/CMakeFiles/array.dir/test_array.cpp.o"

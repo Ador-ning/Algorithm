@@ -125,6 +125,33 @@ dp/fast:
 	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f DP/CMakeFiles/dp.dir/build.make DP/CMakeFiles/dp.dir/build
 .PHONY : dp/fast
 
+BackTracing.o: BackTracing.cpp.o
+
+.PHONY : BackTracing.o
+
+# target to build an object file
+BackTracing.cpp.o:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f DP/CMakeFiles/dp.dir/build.make DP/CMakeFiles/dp.dir/BackTracing.cpp.o
+.PHONY : BackTracing.cpp.o
+
+BackTracing.i: BackTracing.cpp.i
+
+.PHONY : BackTracing.i
+
+# target to preprocess a source file
+BackTracing.cpp.i:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f DP/CMakeFiles/dp.dir/build.make DP/CMakeFiles/dp.dir/BackTracing.cpp.i
+.PHONY : BackTracing.cpp.i
+
+BackTracing.s: BackTracing.cpp.s
+
+.PHONY : BackTracing.s
+
+# target to generate assembly for a file
+BackTracing.cpp.s:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f DP/CMakeFiles/dp.dir/build.make DP/CMakeFiles/dp.dir/BackTracing.cpp.s
+.PHONY : BackTracing.cpp.s
+
 DynamicProgramming.o: DynamicProgramming.cpp.o
 
 .PHONY : DynamicProgramming.o
@@ -215,6 +242,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... dp"
+	@echo "... BackTracing.o"
+	@echo "... BackTracing.i"
+	@echo "... BackTracing.s"
 	@echo "... DynamicProgramming.o"
 	@echo "... DynamicProgramming.i"
 	@echo "... DynamicProgramming.s"

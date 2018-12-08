@@ -303,6 +303,9 @@
 		<Unit filename="/Users/ning/Project/Algorithm/Array/SortedArray.cpp">
 			<Option target="array"/>
 		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Array/SubSets.cpp">
+			<Option target="array"/>
+		</Unit>
 		<Unit filename="/Users/ning/Project/Algorithm/Array/problem.cpp">
 			<Option target="array"/>
 		</Unit>
@@ -399,10 +402,16 @@
 		<Unit filename="/Users/ning/Project/Algorithm/Base/test_base.cpp">
 			<Option target="base"/>
 		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/DP/BackTracing.cpp">
+			<Option target="dp"/>
+		</Unit>
 		<Unit filename="/Users/ning/Project/Algorithm/DP/DynamicProgramming.cpp">
 			<Option target="dp"/>
 		</Unit>
 		<Unit filename="/Users/ning/Project/Algorithm/DP/Fibonacci.cpp">
+			<Option target="dp"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/DP/problem.h">
 			<Option target="dp"/>
 		</Unit>
 		<Unit filename="/Users/ning/Project/Algorithm/DP/test_dp.cpp">

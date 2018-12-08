@@ -57,9 +57,33 @@ include DP/CMakeFiles/dp.dir/progress.make
 # Include the compile flags for this target's objects.
 include DP/CMakeFiles/dp.dir/flags.make
 
+DP/CMakeFiles/dp.dir/BackTracing.cpp.o: DP/CMakeFiles/dp.dir/flags.make
+DP/CMakeFiles/dp.dir/BackTracing.cpp.o: ../DP/BackTracing.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object DP/CMakeFiles/dp.dir/BackTracing.cpp.o"
+	cd /Users/ning/Project/Algorithm/cmake-build-debug/DP && /usr/local/Cellar/gcc/8.1.0/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dp.dir/BackTracing.cpp.o -c /Users/ning/Project/Algorithm/DP/BackTracing.cpp
+
+DP/CMakeFiles/dp.dir/BackTracing.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dp.dir/BackTracing.cpp.i"
+	cd /Users/ning/Project/Algorithm/cmake-build-debug/DP && /usr/local/Cellar/gcc/8.1.0/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ning/Project/Algorithm/DP/BackTracing.cpp > CMakeFiles/dp.dir/BackTracing.cpp.i
+
+DP/CMakeFiles/dp.dir/BackTracing.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dp.dir/BackTracing.cpp.s"
+	cd /Users/ning/Project/Algorithm/cmake-build-debug/DP && /usr/local/Cellar/gcc/8.1.0/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ning/Project/Algorithm/DP/BackTracing.cpp -o CMakeFiles/dp.dir/BackTracing.cpp.s
+
+DP/CMakeFiles/dp.dir/BackTracing.cpp.o.requires:
+
+.PHONY : DP/CMakeFiles/dp.dir/BackTracing.cpp.o.requires
+
+DP/CMakeFiles/dp.dir/BackTracing.cpp.o.provides: DP/CMakeFiles/dp.dir/BackTracing.cpp.o.requires
+	$(MAKE) -f DP/CMakeFiles/dp.dir/build.make DP/CMakeFiles/dp.dir/BackTracing.cpp.o.provides.build
+.PHONY : DP/CMakeFiles/dp.dir/BackTracing.cpp.o.provides
+
+DP/CMakeFiles/dp.dir/BackTracing.cpp.o.provides.build: DP/CMakeFiles/dp.dir/BackTracing.cpp.o
+
+
 DP/CMakeFiles/dp.dir/DynamicProgramming.cpp.o: DP/CMakeFiles/dp.dir/flags.make
 DP/CMakeFiles/dp.dir/DynamicProgramming.cpp.o: ../DP/DynamicProgramming.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object DP/CMakeFiles/dp.dir/DynamicProgramming.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object DP/CMakeFiles/dp.dir/DynamicProgramming.cpp.o"
 	cd /Users/ning/Project/Algorithm/cmake-build-debug/DP && /usr/local/Cellar/gcc/8.1.0/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dp.dir/DynamicProgramming.cpp.o -c /Users/ning/Project/Algorithm/DP/DynamicProgramming.cpp
 
 DP/CMakeFiles/dp.dir/DynamicProgramming.cpp.i: cmake_force
@@ -83,7 +107,7 @@ DP/CMakeFiles/dp.dir/DynamicProgramming.cpp.o.provides.build: DP/CMakeFiles/dp.d
 
 DP/CMakeFiles/dp.dir/Fibonacci.cpp.o: DP/CMakeFiles/dp.dir/flags.make
 DP/CMakeFiles/dp.dir/Fibonacci.cpp.o: ../DP/Fibonacci.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object DP/CMakeFiles/dp.dir/Fibonacci.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object DP/CMakeFiles/dp.dir/Fibonacci.cpp.o"
 	cd /Users/ning/Project/Algorithm/cmake-build-debug/DP && /usr/local/Cellar/gcc/8.1.0/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dp.dir/Fibonacci.cpp.o -c /Users/ning/Project/Algorithm/DP/Fibonacci.cpp
 
 DP/CMakeFiles/dp.dir/Fibonacci.cpp.i: cmake_force
@@ -107,7 +131,7 @@ DP/CMakeFiles/dp.dir/Fibonacci.cpp.o.provides.build: DP/CMakeFiles/dp.dir/Fibona
 
 DP/CMakeFiles/dp.dir/test_dp.cpp.o: DP/CMakeFiles/dp.dir/flags.make
 DP/CMakeFiles/dp.dir/test_dp.cpp.o: ../DP/test_dp.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object DP/CMakeFiles/dp.dir/test_dp.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object DP/CMakeFiles/dp.dir/test_dp.cpp.o"
 	cd /Users/ning/Project/Algorithm/cmake-build-debug/DP && /usr/local/Cellar/gcc/8.1.0/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dp.dir/test_dp.cpp.o -c /Users/ning/Project/Algorithm/DP/test_dp.cpp
 
 DP/CMakeFiles/dp.dir/test_dp.cpp.i: cmake_force
@@ -131,6 +155,7 @@ DP/CMakeFiles/dp.dir/test_dp.cpp.o.provides.build: DP/CMakeFiles/dp.dir/test_dp.
 
 # Object files for target dp
 dp_OBJECTS = \
+"CMakeFiles/dp.dir/BackTracing.cpp.o" \
 "CMakeFiles/dp.dir/DynamicProgramming.cpp.o" \
 "CMakeFiles/dp.dir/Fibonacci.cpp.o" \
 "CMakeFiles/dp.dir/test_dp.cpp.o"
@@ -138,12 +163,13 @@ dp_OBJECTS = \
 # External object files for target dp
 dp_EXTERNAL_OBJECTS =
 
+DP/dp: DP/CMakeFiles/dp.dir/BackTracing.cpp.o
 DP/dp: DP/CMakeFiles/dp.dir/DynamicProgramming.cpp.o
 DP/dp: DP/CMakeFiles/dp.dir/Fibonacci.cpp.o
 DP/dp: DP/CMakeFiles/dp.dir/test_dp.cpp.o
 DP/dp: DP/CMakeFiles/dp.dir/build.make
 DP/dp: DP/CMakeFiles/dp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable dp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable dp"
 	cd /Users/ning/Project/Algorithm/cmake-build-debug/DP && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/dp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -151,6 +177,7 @@ DP/CMakeFiles/dp.dir/build: DP/dp
 
 .PHONY : DP/CMakeFiles/dp.dir/build
 
+DP/CMakeFiles/dp.dir/requires: DP/CMakeFiles/dp.dir/BackTracing.cpp.o.requires
 DP/CMakeFiles/dp.dir/requires: DP/CMakeFiles/dp.dir/DynamicProgramming.cpp.o.requires
 DP/CMakeFiles/dp.dir/requires: DP/CMakeFiles/dp.dir/Fibonacci.cpp.o.requires
 DP/CMakeFiles/dp.dir/requires: DP/CMakeFiles/dp.dir/test_dp.cpp.o.requires

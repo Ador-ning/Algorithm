@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/Users/ning/Project/Algorithm/DP/BackTracing.cpp" "/Users/ning/Project/Algorithm/cmake-build-debug/DP/CMakeFiles/dp.dir/BackTracing.cpp.o"
   "/Users/ning/Project/Algorithm/DP/DynamicProgramming.cpp" "/Users/ning/Project/Algorithm/cmake-build-debug/DP/CMakeFiles/dp.dir/DynamicProgramming.cpp.o"
   "/Users/ning/Project/Algorithm/DP/Fibonacci.cpp" "/Users/ning/Project/Algorithm/cmake-build-debug/DP/CMakeFiles/dp.dir/Fibonacci.cpp.o"
   "/Users/ning/Project/Algorithm/DP/test_dp.cpp" "/Users/ning/Project/Algorithm/cmake-build-debug/DP/CMakeFiles/dp.dir/test_dp.cpp.o"
