@@ -8,5 +8,8 @@ using namespace Algorithm;
 
 int main(int argc, const char *argv[]) {
 	std::cout << "main test: " << std::endl;
-	std::cout << (1 ^ 4) << (1 & 2) << (2 >> 1);
+	long long mid = 202051;
+	long long res = mid * mid;
+	int num = 800;
+	std::cout << (res > num);
 }

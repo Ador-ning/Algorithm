@@ -7,7 +7,6 @@
 
 #include <vector>
 #include <iostream>
-
 namespace Algorithm {
 // Part one: 有序数组问题 -- log(n) -- 二分查找
 
@@ -57,7 +56,7 @@ namespace Algorithm {
 
 
 // Part four: 其他
-	// leetcode
+	// leetcode 最大区域
 	int maxArea(std::vector<int> &height);
 
 	// leetcode -- 子集 subsets  增量
@@ -67,6 +66,15 @@ namespace Algorithm {
 	void
 	helper(std::vector<int> &nums, std::vector<std::vector<int>> &res, std::vector<int> &path, int start, int count,
 	       int max_count);
+
+	// leetcode TwoSum
+	// 给定一个整数数组 nums 和一个目标值 target，
+	// 请你在该数组中找出和为目标值的那两个 整数，并返回他们的数组下标。
+	std::vector<int> twoSum(std::vector<int> &nums, int target);
+
+	// leetcode ThreeSums
+	std::vector<std::vector<int>> threeSum(std::vector<int> &nums);
+
 }
 
 #endif //ALGORITHM_PROBLEM_H

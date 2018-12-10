@@ -14,6 +14,8 @@
 #include <sstream>
 #include <cmath>
 #include <ctime>
+#include <list>
+#include <unordered_map>
 
 // iterator for printing contents to debug
 #define Print(it, end) \
@@ -37,8 +39,8 @@
 #define Line() std::cout << std::endl
 
 // 2^32
-#define INT_MIN     （-2147483648）
-#define INT_MAX      2147483647
+#define INT_MIN     (-2147483648)
+#define INT_MAX      (2147483647)
 
 #define MAXN 5001
 #define INF INT_MAX
@@ -176,6 +178,48 @@ private:
 	int size_;
 };
 
+// leetcode LRU 缓存机制
+// 获取数据 get(key) - 如果密钥 (key) 存在于缓存中，则获取密钥的值（总是正数），否则返回 -1。
+// 写入数据 put(key, value) - 如果密钥不存在，则写入其数据值。
+// 当缓存容量达到上限时，它应该在写入新数据之前删除最近最少使用的数据值
+class LRUCache {
+public:
+	LRUCache(int capacity) : capacity_(capacity) {}
+
+	int get(int key) {
+		auto it = m.find(key);
+		if (it == m.end())
+			return -1;
+		l.splice(l.begin(), l, it->second);
+		return it->second->second;
+	}
+
+	void put(int key, int value) {
+		auto it = m.find(key);
+
+		// 存在
+		if (it != m.end()) {
+			l.erase(it->second);
+		}
+
+		l.push_front(std::make_pair(key, value));
+		m[key] = l.begin();
+
+		if(m.size() > capacity_){
+			int k = l.rbegin()->first;
+			l.pop_back();
+			m.erase(k);
+		}
+	}
+
+private:
+	// key-value
+	std::list<std::pair<int, int>> l;
+	// key-value
+	std::unordered_map<int, std::list<std::pair<int, int>>::iterator> m;
+	const int capacity_;
+};
+
 
 namespace Algorithm {
 #define  DEBUG true
@@ -192,7 +236,6 @@ namespace Algorithm {
 		input.erase(std::find_if(input.rbegin(), input.rend(), [](int ch) { return !isspace(ch); }).base(),
 		            input.end());
 	}
-
 
 	std::vector<int> stringToIntegerVector(std::string input);
 
@@ -252,6 +295,10 @@ int myStrlen(const char *str);
 char *myStrcpy(char *to, const char *from);
 
 char *myStrstr(const char *haystack, const char *needle);
+
+double myPow(double x, int n);
+
+double power(double x, int n);
 
 // 生成 1 -> n 之间的整数
 int myRandom(int n);
