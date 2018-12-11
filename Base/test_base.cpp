@@ -4,6 +4,7 @@
 
 #include "BinaryTree.h"
 #include "LinkListProblem.h"
+#include "UnionFind.h"
 
 using namespace Algorithm;
 
@@ -12,5 +13,6 @@ int main() {
 	// test_stringToBinTreeNode();
 	// test_removeNthFromEnd();
 	// test_addTwoNumbers();
-	test_getIntersectionNode();
+	// test_getIntersectionNode();
+	test_UnionFind();
 }

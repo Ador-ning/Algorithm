@@ -5,77 +5,64 @@
 #ifndef ALGORITHM_UNIONFIND_H
 #define ALGORITHM_UNIONFIND_H
 
-#include <stdlib.h>
+#include <vector>
+#include <cassert>
 
-typedef struct ufs_t {
-	int *p;    // 树的双亲表示法
-	int size; // 大小
-} ufs_t;
-
-// 创建并查集
-ufs_t ufs_create(int n) {
-	ufs_t *ufs = (ufs_t *) malloc(sizeof(ufs_t));
-	int i;
-	ufs->p = (int *) malloc(n * sizeof(int));
-	for (i = 0; i < n; ++i)
-		ufs->p[i] = -1;
-	ufs->size = n;
-	return ufs;
-}
-
-// 销毁并查集合
-void ufs_destroy(ufs_t *ufs) {
-	free(ufs->p);
-	free(ufs);
-}
-
-// 查找
-int ufs_find(ufs_t *ufs, int x) {
-	// 终止条件
-	if (ufs->p[x] < 0)
-		return x;
-	// 回溯时的压缩路径
-	return ufs->p[x] = ufs_find(ufs, ufs->p[x]);
-}
-
-// 查找
-static int ufs_find_naive(ufs_t *ufs, int x) {
-	while (ufs->p[x] >= 0) {
-		x = ufs->p[x];
+class UnionFind {
+public:
+	UnionFind(int n) {
+		// 初始化
+		UnionTable_.resize(n, -1);
 	}
-	return x;
-}
 
-static int ufs_find_iterative(ufs_t *ufs, int x {
-	int oldx = x;
-	while (ufs->p[x] >= 0)
-		x = ufs->p[x];
+	// 合并
+	void addUnion(int i, int j) {
+		// 仅两单个
+		if (UnionTable_[i] < 0 && UnionTable_[j] < 0) {
+			UnionTable_[i] += UnionTable_[j];
+			UnionTable_[j] = i;
+		} else {
+			int iFind = find(i);
+			int jFind = find(j);
 
-	while (oldx != x) {
-		int temp = ufs->p[oldx];
-		ufs->p[oldx] = x;
-		x = temp;
+			// 同一个
+			if (iFind == jFind)
+				return;
+
+			UnionTable_[iFind] += UnionTable_[jFind];
+			UnionTable_[jFind] = iFind;
+		}
 	}
-	return x;
-}
 
-// union 操作, 将 y 并入到 x
-int ufs_union(ufs_t *ufs, int x, int y) {
-	const int rx = ufs_find(ufs, x);
-	const int ry = ufs_find(ufs, y);
+	// 查找
+	int find(int j) {
+		assert(j >= 0);
+		while (UnionTable_[j] >= 0) {
+			j = UnionTable_[j];
+		}
+		return j;
+	}
 
-	if (rx == ry)
-		return -1;
+	// 结果
+	int size() {
+		int count = 0;
+		for (int i = 0; i < UnionTable_.size(); ++i) {
+			if (UnionTable_[i] < 0)
+				++count;
+		}
+		return count;
+	}
 
-	ufs->p[rx] += ufs->p[ry];
-	ufs->p[ry] = rx;
-	return 0;
-}
+	void debug() {
+		for (int i = 0; i < UnionTable_.size(); ++i)
+			std::cout << UnionTable_[i] << ' ';
+	}
 
-// 获取元素所在集合的大小
-int ufs_set_size(ufs_t *ufs, int x) {
-	const int rx = ufs_find(ufs, x);
-	return -ufs->p[rx];
-}
+private:
+	std::vector<int> UnionTable_;
+};
+
+
+void test_UnionFind();
 
 #endif //ALGORITHM_UNIONFIND_H
