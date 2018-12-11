@@ -7,6 +7,10 @@
 #IncludeRegexTransform: 
 
 /Users/ning/Project/Algorithm/Base.cpp
+cassert
+-
+ctime
+-
 Base.h
 /Users/ning/Project/Algorithm/Base.h
 
@@ -25,6 +29,16 @@ algorithm
 -
 sstream
 -
+cmath
+-
+ctime
+-
+list
+-
+unordered_map
+-
+
+/Users/ning/Project/Algorithm/Base/BFS.cpp
 
 /Users/ning/Project/Algorithm/Base/BinaryTree.cpp
 stack
@@ -62,6 +76,16 @@ iostream
 string
 -
 
+/Users/ning/Project/Algorithm/Base/HashSet.cpp
+algorithm
+-
+HashSet.h
+/Users/ning/Project/Algorithm/Base/HashSet.h
+
+/Users/ning/Project/Algorithm/Base/HashSet.h
+
+/Users/ning/Project/Algorithm/Base/IntervalTree.cpp
+
 /Users/ning/Project/Algorithm/Base/LinkList.cpp
 cstdio
 -
@@ -87,14 +111,34 @@ LinkList.h
 /Users/ning/Project/Algorithm/Base/LinkList.h
 stack
 -
+vector
+-
 
 /Users/ning/Project/Algorithm/Base/LinkListProblem.h
 LinkList.h
 /Users/ning/Project/Algorithm/Base/LinkList.h
+
+/Users/ning/Project/Algorithm/Base/UnionFind.cpp
+cassert
+-
+vector
+-
+iostream
+-
+UnionFind.h
+/Users/ning/Project/Algorithm/Base/UnionFind.h
+
+/Users/ning/Project/Algorithm/Base/UnionFind.h
+vector
+-
+cassert
+-
 
 /Users/ning/Project/Algorithm/Base/test_base.cpp
 BinaryTree.h
 /Users/ning/Project/Algorithm/Base/BinaryTree.h
 LinkListProblem.h
 /Users/ning/Project/Algorithm/Base/LinkListProblem.h
+UnionFind.h
+/Users/ning/Project/Algorithm/Base/UnionFind.h
 
