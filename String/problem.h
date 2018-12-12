@@ -22,5 +22,8 @@ int kmp(const std::string &test, const std::string &pattern);
 
 void test_kmp();
 
+// leetcode 给定两个字符串 s1 和 s2，写一个函数来判断 s2 是否包含 s1 的排列
+//  等长滑动 + hash
+bool checkInclusion(std::string s1, std::string s2);
 
 #endif //ALGORITHM_PROBLEM_H

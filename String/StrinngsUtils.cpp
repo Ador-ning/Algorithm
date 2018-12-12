@@ -2,6 +2,7 @@
 // Created by ning on 2018/11/29.
 //
 #include "StringUtils.h"
+#include "problem.h"
 #include <string>
 #include <algorithm>
 
@@ -145,12 +146,12 @@ namespace Algorithm {
 	// 输入: "Let's take LeetCode contest"
 	// 输出: "s'teL ekat edoCteeL tsetnoc"
 	std::string reverseWords(std::string &s) {
-		if(s.size() <= 1)
+		if (s.size() <= 1)
 			return s;
 
 		int i = 0;
 		int j = s.find(" ");
-		while( j !=  std::string::npos){
+		while (j != std::string::npos) {
 			reverse(s.begin() + i, s.begin() + j);
 			i = j + 1;
 			j = s.find(" ", i);
@@ -158,4 +159,31 @@ namespace Algorithm {
 		reverse(s.begin() + i, s.end());
 		return s;
 	}
+}
+
+bool checkInclusion(std::string s1, std::string s2) {
+	int n1 = s1.size();
+	int n2 = s2.size();
+	if (n1 > n2)
+		return false;
+
+	std::vector<int> m1(128);
+	std::vector<int> m2(128);
+
+	// n1 < n2
+	for (int i = 0; i < n1; ++i) {
+		++m1[s1[i]];
+		++m2[s2[i]];
+	}
+
+	if (m1 == m2)
+		return true;
+	// 窗口大小 n1 --> 右滑
+	for (int i = n1; i < n2; ++i) {
+		++m2[s2[i]];
+		--m2[s2[i - n1]];
+		if (m1 == m2)
+			return true;
+	}
+	return false;
 }
