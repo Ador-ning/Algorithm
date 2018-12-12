@@ -7,12 +7,13 @@
 
 #include <vector>
 #include <cassert>
+#include <algorithm>
 
 class UnionFind {
 public:
 	UnionFind(int n) {
 		// 初始化
-		UnionTable_.resize(n, -1);
+		UnionTable_.resize(n + 1, -1);
 	}
 
 	// 合并
@@ -26,8 +27,14 @@ public:
 			int jFind = find(j);
 
 			// 同一个
-			if (iFind == jFind)
+			if (iFind == jFind) {
+
+				if (i > j)
+					std::swap(i, j);
+				std::vector<int> temp = {i, j};
+				more_.push_back(temp);
 				return;
+			}
 
 			UnionTable_[iFind] += UnionTable_[jFind];
 			UnionTable_[jFind] = iFind;
@@ -58,8 +65,18 @@ public:
 			std::cout << UnionTable_[i] << ' ';
 	}
 
+	void showMore() {
+		for (int i = 0; i < more_.size(); ++i)
+			std::cout << more_[i][0] << " " << more_[i][1] << std::endl;
+	}
+
+	std::vector<std::vector<int>> getMore() {
+		return more_;
+	}
+
 private:
 	std::vector<int> UnionTable_;
+	std::vector<std::vector<int>> more_; // leetcode 冗余连接
 };
 
 

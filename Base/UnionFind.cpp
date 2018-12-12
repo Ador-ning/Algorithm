@@ -29,3 +29,17 @@ void test_UnionFind() {
 	}
 	std::cout << t.size() << std::endl;
 }
+
+// leetcode 冗余连接 100%
+std::vector<int> findRedundantConnection(std::vector<std::vector<int>>& edges) {
+	int n = edges.size();
+
+	UnionFind t(n);
+
+	for(int i = 0; i < n; ++i){
+		t.addUnion(edges[i][0], edges[i][1]);
+	}
+
+	auto res = t.getMore();
+	return res.back();
+}
