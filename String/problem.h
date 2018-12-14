@@ -26,4 +26,11 @@ void test_kmp();
 //  等长滑动 + hash
 bool checkInclusion(std::string s1, std::string s2);
 
+// leetcode 最小窗口子字符串
+// 给定一个字符串 S 和一个字符串 T，请在 S 中找出包含 T 所有字母的最小子串
+// 输入: S = "ADOBECODEBANC", T = "ABC"
+// 输出: "BANC
+// 变长滑动窗口
+std::string minWindow(std::string s, std::string t);
+
 #endif //ALGORITHM_PROBLEM_H

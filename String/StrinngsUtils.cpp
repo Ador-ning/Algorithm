@@ -3,8 +3,11 @@
 //
 #include "StringUtils.h"
 #include "problem.h"
+#include "../Base.h"
 #include <string>
 #include <algorithm>
+#include <map>
+#include <unordered_map>
 
 namespace Algorithm {
 
@@ -161,6 +164,7 @@ namespace Algorithm {
 	}
 }
 
+// 等长滑动
 bool checkInclusion(std::string s1, std::string s2) {
 	int n1 = s1.size();
 	int n2 = s2.size();
@@ -186,4 +190,44 @@ bool checkInclusion(std::string s1, std::string s2) {
 			return true;
 	}
 	return false;
+}
+
+// 变长滑动
+std::string minWindow(std::string s, std::string t) {
+
+	std::unorded_map<char, int> m;
+	for (auto item : t) {
+		if (m.count(item))
+			m[item]++;
+		else
+			m.insert({item, 1});
+	}
+
+	int count = t.size(); // 计数器
+	int begin = 0, end = 0; // 窗口 begin -> end
+	int head = 0, len = INT_MAX; // 解范围 head + len
+
+	while (end < s.size()) {
+		// 右边加，当这个字符是滑动窗缺少的字符时，计数器减一
+		if (m.count(s[end])) {
+			if (m[s[end++]]-- > 0)
+				--count;
+		} else
+			end++;
+
+		while (count == 0) {
+			if (end - begin < len) {
+				len = end - begin;
+				head = begin;
+			}
+
+			// 左边减，当这个字符是滑动窗不缺也不富余的字符时，计数器加一
+			if (m.count(s[begin])) {
+				if (m[s[begin++]]++ == 0)
+					++count;
+			} else
+				begin++;
+		}
+	}
+	return len == INT_MAX ? "" : s.substr(head, len);
 }
