@@ -7,161 +7,197 @@
 
 #include <iostream>
 #include <queue>
-#include <math.h>
+#include <set>
+#include <stack>
+#include "../Base.h"
 
-using namespace std;
+
+/*
+ *  图分为无向图和有向图。
+ *  在无向图中，若图中任意一对顶点都是连通的，则称此图是连通图。
+ *  在有向图中，若任意一对顶点u和v间存在一条从u到v的路径和从v到u的路径，则称此图是强连通图。
+ *  无向图的一个极大连通子图称为该图的一个连通分量。
+ *  有向图的一个极大强连通子图称为该图的一个强连通分量。
+ *  在图的每条边上加上一个数字作权，也称代价，带权的图称为网。
+ * */
 
 namespace Algorithm {
 
-#define N 15
-
-	class Node {
+	// 边结点类
+	template<typename T>
+	class ENode {
 	public:
-		int v;  // 连接点编号
-		int w;  // 权值
+		int vertex; // 端点号1
+		int adjVex; // 端点号2
+		T weight; // 边权值
+		ENode<T> *next;
 
-		Node() : v(0), w(0) {}
+		ENode() : next(nullptr) {}
 
-		Node(int i, int j) : v(i), w(j) {}
+		ENode(int ver, int adj, T w, ENode<T> *next_) : vertex(ver), adjVex(adj),
+		                                                weight(w), next(next_) {}
+
+		operator T() const { return weight; }
+
+		bool operator<(const ENode<T> &rhs) const {
+			return this->weight > rhs.weight; // 最小值优先
+		}
 	};
 
-	vector<int> Adj[N]; // 图邻接表存储  N 个结点
-	bool visit[N] = {false}; // 访问标志    DFS
-	bool inq[N] = {false}; // 入队列标志    BFS
-
-// ======================= 图遍历 ======================= //
-	void DFS(int u, int depth) {
-		visit[u] = true;
-		// 对 u 操作
-		for (int i = 0; i < Adj[u].size(); i++) {
-			int v = Adj[u][i];
-			if (visit[v] == false)
-				DFS(v, depth + 1);
+	// 自定义优先队列 less 的比较函数
+	// 函数对象  -- 重载 () 操作符
+	template<typename T>
+	class cmp {
+	public:
+		bool operator()(const ENode<T> &a, const ENode<T> &b) const {
+			return a.weight > b.weight;
 		}
-	}
+	};
 
-	void DfsTrave() {
-		for (int u = 0; u < N; u++) {
-			if (visit[u] == false)
-				DFS(u, 1);
-		}
-	}
+	// 图类
+	template<typename T>
+	class Graph {
+	public:
+		Graph(int size);
 
-	void BFS(int u) {
-		queue<int> q;
-		q.push(u);
-		inq[u] = true;
+		~Graph();
 
-		while (!q.empty()) {
-			int u = q.front();
-			q.pop();
-			for (int i = 0; i < Adj[u].size(); i++) {
+		// 边u->v是否存在
+		bool Exist(int u, int v) const;
 
-				int v = Adj[u][i];  // 邻接结点编号
+		// 插入边u->v
+		bool Insert(int u, int v, T w);
 
-				if (inq[v] == false) {
-					q.push(v);
-					inq[v] = true;
-				}
-			}
-		}
-	}
+		// 删去边u->v
+		bool Remove(int u, int v);
 
-	void BfsTrave() {
-		for (int u = 0; u < N; u++) {
-			if (inq[u] == false)
-				BFS(u); // 遍历u所在的连通块
-		}
-	}
+		//得到反向图
+		Graph<T> Reverse();
 
-// ======================= 最短路径1 ======================= //
-// Dijkstra
-	const int MAXV = 1000;
-	const int INF = pow(2, 31) - 1;
+		void DFS();
 
-	vector<Node> Adj2[MAXV];
-	static int n; // 顶点数
-	int d[MAXV]; // 起点到达各点的最短路径
-	bool visit2[MAXV] = {false};    // 访问标志
+		void BFS();
 
-	void Dijkstra(int s) {
+		//判断是否有环
+		bool HasCycle();
 
-		fill(d, d + MAXV, INF); // INF填充
-		d[s] = 0; // 到达自身距离
+		//返回环
+		std::stack<int> GetCycle();
 
-		for (int i = 0; i < n; i++) {
-			int u = -1; // u 使 d[u]最小，MIN 存放该最小的 d[u]
-			int MIN = INF;
+		//通过递归调用DFSForReversePost来求得
+		void CalReversePost();
 
-			for (int j = 0; j < n; j++) { // 找到未访问的顶点中 d[] 最小的
-				if (visit2[j] == false && d[j] < MIN) {
-					u = j;
-					MIN = d[j];
-				}
-			}   // 先确定没访问过的结点中，离起点最近的，然后 Relax
+		//拓扑排序
+		void TopoSort();
 
-			// 找不到小于 INF 的 d[u], 说明剩下的顶点和 s 不连通
-			if (u == -1)
-				return;
+		//用DFS来求拓扑序列
+		void TopoSortByDFS();
 
-			visit2[u] = true;   // 标记 u 已访问
-
-			// 遍历 u 的 连通子图 更新 d[v] (Relax)
-			for (int j = 0; j < Adj2[u].size(); j++) {
-				int v = Adj2[u][j].v;    // 通过邻接表直接获取 u 能到达的顶点 v
-
-				if (visit2[v] == false && d[u] + Adj2[u][j].w < d[v]) {
-					// v未访问  // u 为中介可以使 d[v]更优
-					d[v] = d[u] + Adj2[u][j].w;
-				}
-			}
-		}
-	}
-
-// ======================= 最短路径2 ======================= //
-// Bellman-Ford
-// 对所有的边进行n-1次 Relax
-	void Ford() {
-		int n, m, s, t; // 分别是 节点数、边条数、起点、终点
-
-		cin >> n >> m >> s >> t;
-
-		vector<int> u(2 * m + 1, 0); // 某条边的起点
-		vector<int> v(2 * m + 1, 0); // 某条边的终点
-		vector<int> w(2 * m + 1, 0); // 某条边的长度
-		vector<int> dis(n + 1, 0); // 从起点出发的最短路径
-
-		int num = 0;
-		for (int i = 1; i <= m; i++) {
-			num++;
-			cin >> u[num] >> v[num] >> w[num];
-			swap(u[num], v[num]);
+		//返回DFS中顶点的逆后序序列
+		std::stack<int> GetReversePost() {
+			// 因为栈的特殊性,这里直接返回一个拷贝,以保证源栈不会因为外界操作而改变
+			std::stack<int> temp(reversePost);
+			return temp;
 		}
 
-		// 无向图
-		for (int i = num + 1; i <= 2 * num; i++) {
-			u[i] = v[i - num];
-			v[i] = u[i - num];
-			w[i] = w[i - num];
-		}   // 智障图表示  ################
+		//求图的强连通分量
+		void CalculateConnection();
 
-		num = 2 * num;
-		for (int i = 1; i <= n; i++)
-			dis[i] = INF;
-		d[s] = 0;
+		//得到强连通分量数
+		int GetConnectedCount() {
+			return connectedCount;
+		}
 
-		// n 轮
-		for (int k = 1; k <= n; k++)
-			for (int j = 1; j <= num; j++) {
-				if (dis[u[j]] < INF && dis[v[j]] > dis[u[j]] + w[j])
-					dis[v[j]] = dis[u[j]] + w[j];
-			}
+		//v所在的强连通分量的标识符(1~connectedCount)
+		int ConnectionID(int v) {
+			return id[v];
+		}
 
-	}
+		//打印强连通分量
+		void ShowConnection();
 
-// ======================= 最短路径3 ======================= //
-//  Floyd
+		//用tarjan算法求强连通分量
+		void TarjanForConnection();
 
+
+		//普里姆算法求无向图最小代价生成树,外部接口
+		void Prim(int v0);
+
+		//克鲁斯卡尔算法求无向图最小代价生成树,外部接口
+		void Kruskal();
+
+		//迪杰斯特拉算法解决单源最短路径问题
+		void Dijkstra(int v0);
+
+		//弗洛伊德算法求所有顶点之间的最短路径
+		void Floyd();
+
+		//获得边u-v的权值
+		T GetWeight(int u, int v);
+
+
+	private:
+		void DFS(int v, std::vector<bool> &visited);
+
+		void BFS(int v, std::vector<bool> &visited);
+
+		//用DFS思想来判断环
+		void DFSForCycle(int v, std::vector<bool> &visited, std::vector<bool> &onStack, std::vector<int> &edgeTo);
+
+		//用DFS思想来求逆后序序列,用于求拓扑序列或者强连通分量
+		void DFSForReversePost(int v, std::vector<bool> &visited);
+
+		//用DFS思想来求强连通分量
+		void DFSForConnection(int v, std::vector<bool> &visited);
+
+		//用tarjan算法求强连通分量,其实也是运用了DFS思想
+		void TarjanForConnection(int u, std::vector<bool> &visited, std::vector<int> &DFN, std::vector<int> &low,
+		                         std::stack<int> *tarjanStack, std::vector<bool> &inStack, int &index);
+
+		// 清空栈 cycle 中的记录
+		void ClearCycle() {
+			while (!cycle.empty())
+				cycle.pop();
+		}
+
+		// 清空栈 reversePost 中的记录
+		void ClearReversePost() {
+			while (!reversePost.empty())
+				reversePost.pop();
+		}
+
+		void ClearId() {
+			for (int i = 0; i < id.size(); ++i)
+				id[i] = 0;
+		}
+
+		// 计算所有顶点的入度
+		void CalInDegree(std::vector<int> &inDegree);
+
+		//普里姆算法求无向图最小代价生成树,私有,内部调用
+		void Prim(int v0, int *nearest, T *lowcost);
+
+		//克鲁斯卡尔算法求无向图最小代价生成树,私有,内部调用
+		void Kruskal(std::priority_queue<ENode<T>> &pq);
+
+		//迪杰斯特拉算法解决单源最短路径问题,私有,内部调用
+		void Dijkstra(int v0, int *path, T *curShortLen);
+
+		//Dijkstra算法的辅助函数,用于找出下一条最短路径的终点
+		int FinMinLen(T *curShortLen, bool *mark);
+
+		ENode<T> **enodes;
+		int n;      // 顶点个数
+		int edges;  // 边的个数
+		int connectedCount; // 强连同通分量个数
+		std::vector<int> id;    // 由定点索引的数组，存放顶点所属的连同分量标识符
+		std::vector<int> *tarjanConnection; // tarjan 算法得到的强连通分量
+		int connectedCountForTarJan; // 在tarjan算法中使用的强连通分量个数
+		bool hasCycle; // 是否有环
+		std::stack<int> cycle; // 有向环中的所有顶点（如果存在）
+		std::stack<int> reversePost; //通过DFS得到的所有顶点的逆后序排列
+		// UnionFind *uf;           //用于Kruskal算法,用来判断最小生成树森林中是否会构成回路
+	};
 }
 
 

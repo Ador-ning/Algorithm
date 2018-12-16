@@ -195,7 +195,7 @@ bool checkInclusion(std::string s1, std::string s2) {
 // 变长滑动
 std::string minWindow(std::string s, std::string t) {
 
-	std::unorded_map<char, int> m;
+	std::unordered_map<char, int> m;
 	for (auto item : t) {
 		if (m.count(item))
 			m[item]++;

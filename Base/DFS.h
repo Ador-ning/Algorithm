@@ -33,7 +33,7 @@ namespace Algorithm {
 
 	BinTreeNode *sortedListToBST(ListNode *head) {
 		int len = 0;
-		for (ListNode *p = head; p != nullptr; p = p->val)
+		for (ListNode *p = head; p != nullptr; p = p->next)
 			len++;
 
 		return sortedListToBST(0, len - 1, head);
