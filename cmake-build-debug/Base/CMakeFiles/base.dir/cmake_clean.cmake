@@ -8,6 +8,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/base.dir/HashSet.cpp.o"
   "CMakeFiles/base.dir/BFS.cpp.o"
   "CMakeFiles/base.dir/Graph.cpp.o"
+  "CMakeFiles/base.dir/Trie.cpp.o"
   "CMakeFiles/base.dir/test_base.cpp.o"
   "base.pdb"
   "base"

@@ -393,6 +393,12 @@
 		<Unit filename="/Users/ning/Project/Algorithm/Base/Tree.h">
 			<Option target="base"/>
 		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Base/Trie.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Base/Trie.h">
+			<Option target="base"/>
+		</Unit>
 		<Unit filename="/Users/ning/Project/Algorithm/Base/UnionFind.cpp">
 			<Option target="base"/>
 		</Unit>

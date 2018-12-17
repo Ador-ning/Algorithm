@@ -22,6 +22,8 @@ set(SRC_BASE
 		BFS.cpp
 		Graph.h     # Graph
 		Graph.cpp
+		Trie.h      # trie 前缀树
+		Trie.cpp
 		ComplexList.h
 		BST.h   # Bianry search tree
 		AVL.h   # AVL tree  --> have a bug
