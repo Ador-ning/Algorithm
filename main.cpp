@@ -8,5 +8,5 @@ using namespace Algorithm;
 
 int main(int argc, const char *argv[]) {
 	std::cout << "main test: " << std::endl;
-	
+
 }
