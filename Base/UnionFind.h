@@ -79,6 +79,42 @@ private:
 	std::vector<std::vector<int>> more_; // leetcode 冗余连接
 };
 
+// 简易版并查集
+class UnionFindSample {
+public:
+	UnionFindSample(int n) : size(n), parents(size) {
+		for (int i = 0; i < size; ++i)
+			parents[i] = i;
+	}
+
+	int getParent(int i, std::vector<int> &parents) {
+		if (i != parents[i]) {
+			int index = parents[i];
+			parents[i] = getParent(index, parents); // 递归，优化路径
+		}
+		return parents[i];
+	}
+
+	void Union(int i, int j, std::vector<int> &parents) {
+		int index = getParent(j, parents);
+		parents[index] = parents[i];
+	}
+
+	int getResult() {
+		int count = 0;
+		for (int i = 0; i < parents.size(); ++i) {
+			if (parents[i] == i)
+				count++;
+		}
+		return count;
+	}
+
+
+private:
+	std::vector<int> parents;
+	int size;
+};
+
 
 void test_UnionFind();
 
