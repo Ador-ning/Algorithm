@@ -3,11 +3,15 @@
 #include <string>
 #include <set>
 #include <map>
+#include <list>
 #include "Base.h"
 
 using std::cout;
 using std::endl;
 using std::vector;
+using std::string;
+using std::list;
+
 /*
  *  cur -- path 的当前位置
  *  ed -- nums 的当前元素  1 / 1 2 / 1 2 3 / 2 / 2 3 / 3
@@ -23,10 +27,55 @@ void print_subset(const vector<int> &nums, vector<int> &path, int cur, int ed) {
 	}
 }
 
+void list_using() {
+	cout << "list using: " << endl;
+	list<int> myList1, myList2;
+	list<int>::iterator it;
+
+	for (int i = 1; i <= 4; ++i)
+		myList1.push_back(i); // 1 2 3 4
+	for (int i = 1; i <= 3; ++i)
+		myList2.push_back(i * 10); // 10 20 30
+
+	it = myList1.begin();
+	std::advance(it, 1); // 2
+
+	// list1: 1 10 20 30 2 3 4
+	// list2: empty
+	// it: list1 -> 2
+	myList1.splice(it, myList2);
+
+	// list1: 1 10 20 30
+	// list2: 2 3 4
+	myList2.splice(myList2.begin(), myList1, it, myList1.end());
+
+
+	for (it = myList1.begin(); it != myList1.end(); ++it)
+		cout << *it << " ";
+	cout << endl;
+
+	for (it = myList2.begin(); it != myList2.end(); ++it)
+		cout << *it << " ";
+	cout << endl;
+
+	it = myList1.begin();
+	std::advance(it, 3);
+	myList1.splice(myList1.begin(), myList1, it);  // 将 it 移动到 myList1 首部
+	cout << *it << endl;
+	for (it = myList1.begin(); it != myList1.end(); ++it)
+		cout << *it << " ";
+	cout << endl;
+
+	it = myList1.begin();
+	std::advance(it, 2);
+	myList1.splice(myList1.end(), myList1, it);  // 将 it 移动到 myList1 尾部
+	cout << *it << endl;
+	for (it = myList1.begin(); it != myList1.end(); ++it)
+		cout << *it << " ";
+	cout << endl;
+}
+
 int main(int argc, const char *argv[]) {
 	cout << "main test: " << endl;
-
-	vector<int> vv = {1, 2, 3};
-	vector<int> path(vv.size(), 0);
-	print_subset(vv, path, 0, 0);
+	list_using();
 }

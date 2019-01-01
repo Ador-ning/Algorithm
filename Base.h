@@ -220,6 +220,92 @@ private:
 	const int capacity_;
 };
 
+// leetcode LFU 缓存机制
+class LFUCache{
+public:
+	LFUCache(int capacity) {
+		cap = capacity;
+		size = 0;
+		minFreq = -1;
+	}
+
+	int get(int key) {
+		// 不存在 key
+		if(m.count(key) == 0)
+			return -1;
+
+		int oldFreq = m[key].second;
+		// 删除其原来在 fm 的位置
+		fm[oldFreq].erase(mIter[key]);
+		if(fm[oldFreq].empty()){
+			fm.erase(oldFreq);
+			if(oldFreq == minFreq)
+				minFreq++;
+		}
+
+		m[key].second++; // 更新
+		if(fm.count(m[key].second) == 0){
+			std::list<int> l;
+			l.push_back(key);
+			fm[m[key].second] = l;
+		}else
+			fm[m[key].second].push_back(key); // 后插入
+		// 更新 mIter
+		mIter[key] = std::prev(fm[m[key].second].end());
+		return m[key].first;
+	}
+
+	void put(int key, int value) {
+		if(cap <= 0)
+			return;
+
+		int storeValue = get(key);
+		if(storeValue != -1){ // 存在，更新
+			m[key].first = value;
+			return;
+		}
+
+		// 不存在
+		std::pair<int, int> p(value, 1);
+		m[key] = p;
+
+		// 淘汰
+		if(size == cap){
+			int outKey = *fm[minFreq].begin(); // 头出
+			fm[minFreq].pop_front();
+			mIter.erase(outKey);
+			m.erase(outKey);
+			size--;
+
+			if(fm[minFreq].empty() && minFreq > 1)
+				fm.erase(minFreq);
+		}
+		// 插入
+		size++;
+		minFreq = 1;
+		if(fm.count(minFreq) == 0){
+			std::list<int> l;
+			l.push_back(key);
+			fm[minFreq] = l;
+		}else
+			fm[minFreq].push_back(key);
+		// list::iterator
+		mIter[key] = std::prev(fm[minFreq].end());
+	}
+
+private:
+	int cap;
+	int size;
+	int minFreq;
+
+	// <key, <value, freq>>
+	std::unordered_map<int, std::pair<int, int>> m;
+	// <key, list<int>::iterator>
+	std::unordered_map<int, std::list<int>::iterator> mIter;
+	// <freq, list<int>(keys)>
+	std::unordered_map<int, std::list<int>> fm;
+};
+
 
 namespace Algorithm {
 #define  DEBUG true
