@@ -5,9 +5,15 @@
 #include "problem.h"
 #include "../Base.h"
 #include <string>
+#include <vector>
 #include <algorithm>
 #include <map>
 #include <unordered_map>
+
+using std::string;
+using std::vector;
+using std::cout;
+using std::endl;
 
 namespace Algorithm {
 
@@ -164,6 +170,7 @@ namespace Algorithm {
 	}
 }
 
+
 // 等长滑动
 bool checkInclusion(std::string s1, std::string s2) {
 	int n1 = s1.size();
@@ -230,4 +237,45 @@ std::string minWindow(std::string s, std::string t) {
 		}
 	}
 	return len == INT_MAX ? "" : s.substr(head, len);
+}
+
+// leetcode -- longest common subsequence
+void lcs_print(vector<vector<int>> &dp, const string &str1, const string &str2, int m, int n) {
+	if (m == 0 || n == 0)
+		return;
+
+	if (dp[m][n] == 1) {
+		lcs_print(dp, str1, str2, m - 1, n - 1);
+		cout << str1[m - 1] << ' ';
+	} else if (dp[m][n] == 2) {
+		lcs_print(dp, str1, str2, m - 1, n);
+	} else if (dp[m][n] == 3) {
+		lcs_print(dp, str1, str2, m, n - 1);
+	}
+}
+
+int lcs(string str1, string str2) {
+	vector<vector<int>> dp(str1.size() + 1, vector<int>(str2.size() + 1, 0));
+	vector<vector<int>> dp_print(str1.size() + 1, vector<int>(str2.size() + 1, 0));
+
+	// 结果 + 行走路径
+	for (int i = 1; i <= str1.size(); ++i) {
+		for (int j = 1; j <= str2.size(); ++j) {
+			if (str1[i - 1] == str2[j - 1]) {
+				dp[i][j] = dp[i - 1][j - 1] + 1;
+				dp_print[i][j] = 1;
+			} else if (dp[i - 1][j] >= dp[i][j - 1]) {
+				dp[i][j] = dp[i - 1][j];
+				dp_print[i][j] = 2;
+			} else {
+				dp[i][j] = dp[i][j - 1];
+				dp_print[i][j] = 3;
+			}
+		}
+	}
+
+	// 打印结果
+	lcs_print(dp_print, str1, str2, str1.size(), str2.size());
+	cout << endl;
+	return dp[str1.size()][str2.size()];
 }

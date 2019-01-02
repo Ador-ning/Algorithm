@@ -8,6 +8,9 @@
 #include <string>
 #include <vector>
 
+using std::vector;
+using std::string;
+
 // leetcode
 std::string multiply(std::string num1, std::string num2);
 
@@ -32,5 +35,9 @@ bool checkInclusion(std::string s1, std::string s2);
 // 输出: "BANC
 // 变长滑动窗口
 std::string minWindow(std::string s, std::string t);
+
+void lcs_print(vector<vector<int>> &, const string &, const string &, int, int);
+
+int lcs(std::string str1, std::string str2);
 
 #endif //ALGORITHM_PROBLEM_H

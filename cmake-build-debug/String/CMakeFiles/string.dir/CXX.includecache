@@ -25,6 +25,10 @@ cmath
 -
 ctime
 -
+list
+-
+unordered_map
+-
 
 /Users/ning/Project/Algorithm/String/KMP.cpp
 iostream
@@ -55,9 +59,19 @@ iostream
 /Users/ning/Project/Algorithm/String/StrinngsUtils.cpp
 StringUtils.h
 /Users/ning/Project/Algorithm/String/StringUtils.h
+problem.h
+/Users/ning/Project/Algorithm/String/problem.h
+../Base.h
+/Users/ning/Project/Algorithm/Base.h
 string
 -
+vector
+-
 algorithm
+-
+map
+-
+unordered_map
 -
 
 /Users/ning/Project/Algorithm/String/problem.h
@@ -70,6 +84,8 @@ vector
 iostream
 -
 vector
+-
+string
 -
 problem.h
 /Users/ning/Project/Algorithm/String/problem.h

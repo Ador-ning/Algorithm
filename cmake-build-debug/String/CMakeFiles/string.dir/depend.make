@@ -8,8 +8,10 @@ String/CMakeFiles/string.dir/KMP.cpp.o: ../String/problem.h
 String/CMakeFiles/string.dir/ReplaceBlank.cpp.o: ../String/ReplaceBlank.cpp
 String/CMakeFiles/string.dir/ReplaceBlank.cpp.o: ../String/problem.h
 
+String/CMakeFiles/string.dir/StrinngsUtils.cpp.o: ../Base.h
 String/CMakeFiles/string.dir/StrinngsUtils.cpp.o: ../String/StringUtils.h
 String/CMakeFiles/string.dir/StrinngsUtils.cpp.o: ../String/StrinngsUtils.cpp
+String/CMakeFiles/string.dir/StrinngsUtils.cpp.o: ../String/problem.h
 
 String/CMakeFiles/string.dir/test_string.cpp.o: ../String/problem.h
 String/CMakeFiles/string.dir/test_string.cpp.o: ../String/test_string.cpp

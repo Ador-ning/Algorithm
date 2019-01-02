@@ -3,10 +3,16 @@
 //
 #include <iostream>
 #include <vector>
+#include <string>
 #include "problem.h"
 
+using std::string;
+using std::cout;
+using std::endl;
+using std::vector;
+
 // "2" * "3" = "6"
-std::string multiply(std::string num1, std::string num2) {
+string multiply(string num1, string num2) {
 	std::string res;
 	int n1 = num1.size();
 	int n2 = num2.size();
@@ -37,6 +43,8 @@ std::string multiply(std::string num1, std::string num2) {
 }
 
 int main() {
-	std::cout << "string test: " << std::endl;
-	test_kmp();
+	cout << "string test: " << endl;
+	string s1 = "programming";
+	string s2 = "contest";
+	cout << lcs(s1, s2);
 }
