@@ -1,4 +1,5 @@
 #include <iostream>
+#include <istream>
 #include <vector>
 #include <string>
 #include <set>
@@ -75,7 +76,40 @@ void list_using() {
 	cout << endl;
 }
 
+// string parse ' ', '/' and so on...
+void string_parsing() {
+	string s = "root/a 1.txt(abcd) 2.txt(efgh) 3.txt(,,,,)";
+	string dir = s.substr(0, s.find(' '));
+	string files = s.substr(s.find(' ') + 1, s.size() - s.find(' ') - 1);
+	string filename, content;
+	cout << dir << '\t' << files << endl;
+	while (files.find(' ') != std::string::npos) {
+		string file = files.substr(0, files.find(' '));
+		files = files.substr(files.find(' ') + 1, files.size() - files.find(' ') - 1);
+		cout << file << endl;
+		if (file.find('(') == std::string::npos)
+			continue;
+		filename = file.substr(0, file.find('('));
+		content = file.substr(file.find('(') + 1, file.size() - file.find('(') - 2);
+		cout << filename << '\t' << content << endl;;
+	}
+	cout << files << endl;
+
+	// <istream>
+	s = "root/a 1.txt(abcd) 2.txt(efgh)";
+	std::istringstream is(s);
+	string pre = "", t = "";
+	// 按空格分割
+	is >> pre; // pre == root/a
+	while (is >> t) {
+		cout << t << '\t'; // 1.txt(abcd) // 2.txt(efgh)
+		int idx = t.find_last_of('(');
+		string dir = pre + "/" + t.substr(0, idx);
+		string content = t.substr(idx + 1, t.size() - idx - 2);
+		cout << dir << '\t' << content << endl;
+	}
+}
+
 int main(int argc, const char *argv[]) {
 	cout << "main test: " << endl;
-	list_using();
 }
