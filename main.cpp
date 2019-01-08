@@ -9,9 +9,11 @@
 
 using std::cout;
 using std::endl;
+using std::cin;
 using std::vector;
 using std::string;
 using std::list;
+using std::istringstream;
 
 /*
  *  cur -- path 的当前位置
@@ -110,6 +112,29 @@ void string_parsing() {
 	}
 }
 
+vector<vector<int>> io_parse(int lines) {
+	vector<vector<int>> res;
+	vector<int> vl;
+	string line;
+	while (lines-- && getline(cin, line)) {
+		istringstream is(line);
+		string item;
+		while (is >> item) {
+			vl.push_back(std::stoi(item));
+		}
+		res.push_back(vl);
+		vl.clear();
+	}
+
+	return res;
+}
+
 int main(int argc, const char *argv[]) {
 	cout << "main test: " << endl;
+	auto res = io_parse(2);
+	for (int i = 0; i < res.size(); ++i) {
+		for (int j = 0; j < res[i].size(); ++j)
+			cout << res[i][j] << ' ';
+		cout << endl;
+	}
 }
