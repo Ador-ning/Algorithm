@@ -75,6 +75,20 @@ iostream
 -
 string
 -
+Graph.h
+/Users/ning/Project/Algorithm/Base/Graph.h
+
+/Users/ning/Project/Algorithm/Base/Graph.h
+iostream
+-
+queue
+-
+set
+-
+stack
+-
+../Base.h
+/Users/ning/Project/Algorithm/Base.h
 
 /Users/ning/Project/Algorithm/Base/HashSet.cpp
 algorithm
@@ -83,6 +97,16 @@ HashSet.h
 /Users/ning/Project/Algorithm/Base/HashSet.h
 
 /Users/ning/Project/Algorithm/Base/HashSet.h
+
+/Users/ning/Project/Algorithm/Base/Heap.h
+iostream
+-
+vector
+-
+queue
+-
+algorithm
+-
 
 /Users/ning/Project/Algorithm/Base/IntervalTree.cpp
 
@@ -118,6 +142,18 @@ vector
 LinkList.h
 /Users/ning/Project/Algorithm/Base/LinkList.h
 
+/Users/ning/Project/Algorithm/Base/Trie.cpp
+iostream
+-
+Trie.h
+/Users/ning/Project/Algorithm/Base/Trie.h
+
+/Users/ning/Project/Algorithm/Base/Trie.h
+string
+-
+vector
+-
+
 /Users/ning/Project/Algorithm/Base/UnionFind.cpp
 cassert
 -
@@ -137,10 +173,14 @@ algorithm
 -
 
 /Users/ning/Project/Algorithm/Base/test_base.cpp
+vector
+-
 BinaryTree.h
 /Users/ning/Project/Algorithm/Base/BinaryTree.h
 LinkListProblem.h
 /Users/ning/Project/Algorithm/Base/LinkListProblem.h
 UnionFind.h
 /Users/ning/Project/Algorithm/Base/UnionFind.h
+Heap.h
+/Users/ning/Project/Algorithm/Base/Heap.h
 

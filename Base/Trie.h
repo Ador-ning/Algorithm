@@ -16,10 +16,9 @@ public:
 	int node; // 子节点个数
 	std::vector<TrieNode *> child;
 
-	TrieNode() : isWord(false),node(0), child(SIZE, nullptr) {}
+	TrieNode() : isWord(false), node(0), child(SIZE, nullptr) {}
 };
 
-template<int Size>
 class Trie {
 public:
 	Trie() { root = new TrieNode(); }
@@ -37,17 +36,17 @@ public:
 		p->isWord = true;
 	}
 
-	bool search(std::string word) {
-		TrieNode *p = find(word);
-		return p != nullptr && p->isWord;
-	}
-
 	TrieNode *find(std::string key) {
 		int len = key.size();
 		TrieNode *p = root;
 		for (int i = 0; i < len && p != nullptr; ++i)
 			p = p->child[key[i] - 'a'];
 		return p;
+	}
+
+	bool search(std::string word) {
+		TrieNode *p = find(word);
+		return p != nullptr && p->isWord;
 	}
 
 	bool startsWith(std::string prefix) {

@@ -37,7 +37,7 @@ namespace Algorithm {
 	}
 
 	template<typename T>
-	bool Graph::Insert(int u, int v, T w) {
+	bool Graph<T>::Insert(int u, int v, T w) {
 		if (u < 0 || v < 0 || u > n - 1 || v > n - 1 || u == v)
 			return false; // 顶点编号无效
 

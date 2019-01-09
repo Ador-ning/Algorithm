@@ -13,7 +13,9 @@ Base/CMakeFiles/base.dir/BinaryTreeProblem.cpp.o
  /Users/ning/Project/Algorithm/Base/BinaryTree.h
  /Users/ning/Project/Algorithm/Base/BinaryTreeProblem.cpp
 Base/CMakeFiles/base.dir/Graph.cpp.o
+ /Users/ning/Project/Algorithm/Base.h
  /Users/ning/Project/Algorithm/Base/Graph.cpp
+ /Users/ning/Project/Algorithm/Base/Graph.h
 Base/CMakeFiles/base.dir/HashSet.cpp.o
  /Users/ning/Project/Algorithm/Base/HashSet.cpp
  /Users/ning/Project/Algorithm/Base/HashSet.h
@@ -27,12 +29,16 @@ Base/CMakeFiles/base.dir/LinkListProblem.cpp.o
  /Users/ning/Project/Algorithm/Base.h
  /Users/ning/Project/Algorithm/Base/LinkList.h
  /Users/ning/Project/Algorithm/Base/LinkListProblem.cpp
+Base/CMakeFiles/base.dir/Trie.cpp.o
+ /Users/ning/Project/Algorithm/Base/Trie.cpp
+ /Users/ning/Project/Algorithm/Base/Trie.h
 Base/CMakeFiles/base.dir/UnionFind.cpp.o
  /Users/ning/Project/Algorithm/Base/UnionFind.cpp
  /Users/ning/Project/Algorithm/Base/UnionFind.h
 Base/CMakeFiles/base.dir/test_base.cpp.o
  /Users/ning/Project/Algorithm/Base.h
  /Users/ning/Project/Algorithm/Base/BinaryTree.h
+ /Users/ning/Project/Algorithm/Base/Heap.h
  /Users/ning/Project/Algorithm/Base/LinkList.h
  /Users/ning/Project/Algorithm/Base/LinkListProblem.h
  /Users/ning/Project/Algorithm/Base/UnionFind.h

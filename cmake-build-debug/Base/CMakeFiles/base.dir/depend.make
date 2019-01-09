@@ -12,7 +12,9 @@ Base/CMakeFiles/base.dir/BinaryTreeProblem.cpp.o: ../Base.h
 Base/CMakeFiles/base.dir/BinaryTreeProblem.cpp.o: ../Base/BinaryTree.h
 Base/CMakeFiles/base.dir/BinaryTreeProblem.cpp.o: ../Base/BinaryTreeProblem.cpp
 
+Base/CMakeFiles/base.dir/Graph.cpp.o: ../Base.h
 Base/CMakeFiles/base.dir/Graph.cpp.o: ../Base/Graph.cpp
+Base/CMakeFiles/base.dir/Graph.cpp.o: ../Base/Graph.h
 
 Base/CMakeFiles/base.dir/HashSet.cpp.o: ../Base/HashSet.cpp
 Base/CMakeFiles/base.dir/HashSet.cpp.o: ../Base/HashSet.h
@@ -27,11 +29,15 @@ Base/CMakeFiles/base.dir/LinkListProblem.cpp.o: ../Base.h
 Base/CMakeFiles/base.dir/LinkListProblem.cpp.o: ../Base/LinkList.h
 Base/CMakeFiles/base.dir/LinkListProblem.cpp.o: ../Base/LinkListProblem.cpp
 
+Base/CMakeFiles/base.dir/Trie.cpp.o: ../Base/Trie.cpp
+Base/CMakeFiles/base.dir/Trie.cpp.o: ../Base/Trie.h
+
 Base/CMakeFiles/base.dir/UnionFind.cpp.o: ../Base/UnionFind.cpp
 Base/CMakeFiles/base.dir/UnionFind.cpp.o: ../Base/UnionFind.h
 
 Base/CMakeFiles/base.dir/test_base.cpp.o: ../Base.h
 Base/CMakeFiles/base.dir/test_base.cpp.o: ../Base/BinaryTree.h
+Base/CMakeFiles/base.dir/test_base.cpp.o: ../Base/Heap.h
 Base/CMakeFiles/base.dir/test_base.cpp.o: ../Base/LinkList.h
 Base/CMakeFiles/base.dir/test_base.cpp.o: ../Base/LinkListProblem.h
 Base/CMakeFiles/base.dir/test_base.cpp.o: ../Base/UnionFind.h

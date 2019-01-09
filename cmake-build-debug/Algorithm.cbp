@@ -444,6 +444,12 @@
 		<Unit filename="/Users/ning/Project/Algorithm/main.cpp">
 			<Option target="main"/>
 		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/poll_client.cpp">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/poll_server.cpp">
+			<Option target="main"/>
+		</Unit>
 		<Unit filename="/Users/ning/Project/Algorithm/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
