@@ -129,12 +129,16 @@ vector<vector<int>> io_parse(int lines) {
 	return res;
 }
 
-int main(int argc, const char *argv[]) {
-	cout << "main test: " << endl;
+void io_test() {
 	auto res = io_parse(2);
 	for (int i = 0; i < res.size(); ++i) {
 		for (int j = 0; j < res[i].size(); ++j)
 			cout << res[i][j] << ' ';
 		cout << endl;
 	}
+}
+
+int main(int argc, const char *argv[]) {
+	cout << "main test: " << endl;
+
 }

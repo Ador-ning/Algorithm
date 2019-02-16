@@ -143,6 +143,9 @@ static void do_poll(int listenfd) {
 // bind -> bind socket_fd and address
 // accept ->
 
+/*
+ *
+
 int main(int argc, char *argv[]) {
 	int listenfd;
 
@@ -153,3 +156,5 @@ int main(int argc, char *argv[]) {
 	do_poll(listenfd);
 	return 0;
 }
+
+ * */

@@ -53,7 +53,8 @@ static void handle_connection(int sockfd){
     }
 }
 
-
+/*
+ *
 int main(int argc, char *argv[]){
     int sockfd;
     struct sockaddr_in server_addr;
@@ -68,3 +69,5 @@ int main(int argc, char *argv[]){
     handle_connection(sockfd);
     return 0;
 }
+
+ * */

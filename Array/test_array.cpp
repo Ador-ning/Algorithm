@@ -2,10 +2,11 @@
 // Created by ning on 2018/11/26.
 //
 #include <iostream>
+#include <vector>
 #include "problem.h"
 
-
 using namespace Algorithm;
+using std::vector;
 
 // Given an array of integers, every element appears twice except for one. Find that single one.
 int singleNumber(int A[], int n) {
@@ -30,6 +31,27 @@ int singleNumber2(int A[], int n) {
 	return one;
 }
 
+// leetcode 字典序 -- 十叉树
+// 给定 n =1 3，返回 [1,10,11,12,13,2,3,4,5,6,7,8,9] 。
+vector<int> lexicalOrder(int n) {
+	vector<int> res(n);
+	int cur = 1;
+	for(int i = 0; i < n; ++i) {
+		res[i] = cur;
+		if(cur * 10 <= n)
+			cur *= 10; // 向下
+		else {
+			if(cur >= n)
+				cur /= 10;  // 向上
+			// 0->9
+			cur += 1;
+			while (cur % 10 == 0)
+				cur /= 10; // 向上
+		}
+	}
+
+	return res;
+}
 
 int main() {
 	std::cout << "array test: " << std::endl;
