@@ -61,6 +61,7 @@ int Algorithm::Min(int numbers[], int length) {
 	return numbers[indexMid];
 }
 
+// 旋转数组中查找某个数字，不存在返回 -1， 存在返回 index
 int Algorithm::search(std::vector<int> &nums, int target) {
 	int n = nums.size();
 	if (n <= 0)
@@ -175,4 +176,30 @@ void Algorithm::test_search() {
 
 }
 
+
+// 思考旋转数组的 二分查找
+// -- 考虑了 重复元素 / 递增 / 递减（没有考虑）
+int Algorithm::minNumberInRotateArray(vector<int> rotateArray) {
+	if (rotateArray.size() <= 0)
+		return 0;
+
+	int left = 0, right = rotateArray.size() - 1;
+	int mid = -1;
+	while (rotateArray[left] >= rotateArray[right]) {
+		if (right - left == 1) {
+			mid = right;
+			break;
+		}
+
+		mid = left + (right - left) / 2;
+		if (rotateArray[mid] >= rotateArray[left]) {
+			left = mid;
+		}
+		if (rotateArray[mid] <= rotateArray[right]) {
+			right = mid;
+		}
+	}
+
+	return mid == -1 ? rotateArray[0] : rotateArray[mid];
+}
 

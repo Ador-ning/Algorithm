@@ -25,16 +25,16 @@ public:
 	// 调整 index
 	void adjust(vector<int> &data, int index) {
 		int left = 2 * index + 1, right = 2 * index + 2;
-		int maxIdx = index;
+		int minIdx = index;
 
 		// data[left] == data[right] --> chose left
-		if (left < size && data[left] < data[maxIdx])
-			maxIdx = left;
-		if (right < size && data[right] < data[maxIdx])
-			maxIdx = right;
-		if (maxIdx != index) {
-			swap(data[maxIdx], data[index]);
-			adjust(data, maxIdx); // 递归 调整其它不满足堆性质的部分
+		if (left < size && data[left] < data[minIdx])
+			minIdx = left;
+		if (right < size && data[right] < data[minIdx])
+			minIdx = right;
+		if (minIdx != index) {
+			swap(data[minIdx], data[index]);
+			adjust(data, minIdx); // 递归 调整其它不满足堆性质的部分
 		}
 	}
 

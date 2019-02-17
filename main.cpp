@@ -5,6 +5,9 @@
 #include <set>
 #include <map>
 #include <list>
+#include <unordered_set>
+#include <unordered_map>
+#include <algorithm>
 #include "Base.h"
 
 using std::cout;
@@ -14,6 +17,8 @@ using std::vector;
 using std::string;
 using std::list;
 using std::istringstream;
+using std::unordered_set;
+using std::unordered_map;
 
 /*
  *  cur -- path 的当前位置
@@ -138,7 +143,41 @@ void io_test() {
 	}
 }
 
+// stl heap 操作
+vector<int> GetLeastNumbers_Solution(vector<int> input, int k) {
+	int len = input.size();
+	if (len <= 0 || k > len)
+		return vector<int>();
+
+	vector<int> res(input.begin(), input.begin() + k);
+
+	// 建立大根堆
+	std::make_heap(res.begin(), res.end());
+	for (int i = k; i < len; ++i) {
+
+		// 需要进入
+		if (input[i] < res[0]) {
+			// res[0] <--> res[res.size()-1]  互换
+			std::pop_heap(res.begin(), res.end());
+			// delete res[res.size()-1]
+			res.pop_back();
+			// insert back input[i]
+			res.push_back(input[i]);
+			// adjust heap
+			std::push_heap(res.begin(), res.end());
+		}
+	}
+
+	std::sort_heap(res.begin(), res.end());
+	auto it = res.begin();
+	Print(it, res.end());
+	return res;
+}
+
+
 int main(int argc, const char *argv[]) {
 	cout << "main test: " << endl;
+	vector<int> data = {14, 50, 90, 6, 2, 12, 7, 8, 2, 3};
 
+	GetLeastNumbers_Solution(data, 5);
 }

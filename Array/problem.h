@@ -7,6 +7,9 @@
 
 #include <vector>
 #include <iostream>
+
+using std::vector;
+
 namespace Algorithm {
 // Part one: 有序数组问题 -- log(n) -- 二分查找
 
@@ -35,6 +38,9 @@ namespace Algorithm {
 	//不要使用额外的数组空间，你必须在原地修改输入数组并在使用 O(1) 额外空间的条件下完成。
 	int removeDuplicates(std::vector<int> &nums);
 
+	// 剑指offer 旋转数组
+	int minNumberInRotateArray(vector<int> rotateArray);
+
 // Part two: 旋转有序数组问题 -- log(n)
 	// 输入一个递增排序的数组的一个旋转，输出旋转数组的最小元素
 	int MinInOrder(const int numbers[], int index1, int index2);
@@ -43,7 +49,7 @@ namespace Algorithm {
 
 	// 假设按照升序排序的数组在预先未知的某个点上进行了旋转。
 	// 搜索一个给定的目标值，如果数组中存在这个目标值，则返回它的索引，否则返回 -1
-	int search(std::vector<int> &nums, int target);
+	int search(vector<int> &nums, int target);
 
 	void test_search();
 
@@ -54,26 +60,25 @@ namespace Algorithm {
 // Part three: 查找 / 排序
 
 
-
 // Part four: 其他
 	// leetcode 最大区域
-	int maxArea(std::vector<int> &height);
+	int maxArea(vector<int> &height);
 
 	// leetcode -- 子集 subsets  增量
-	std::vector<std::vector<int>> subsets(std::vector<int> &nums);
+	vector<vector<int>> subsets(vector<int> &nums);
 
 	// BFS
 	void
-	helper(std::vector<int> &nums, std::vector<std::vector<int>> &res, std::vector<int> &path, int start, int count,
+	helper(vector<int> &nums, vector<vector<int>> &res, vector<int> &path, int start, int count,
 	       int max_count);
 
 	// leetcode TwoSum
 	// 给定一个整数数组 nums 和一个目标值 target，
 	// 请你在该数组中找出和为目标值的那两个 整数，并返回他们的数组下标。
-	std::vector<int> twoSum(std::vector<int> &nums, int target);
+	vector<int> twoSum(vector<int> &nums, int target);
 
 	// leetcode ThreeSums
-	std::vector<std::vector<int>> threeSum(std::vector<int> &nums);
+	vector<vector<int>> threeSum(vector<int> &nums);
 
 }
 
