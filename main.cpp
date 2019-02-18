@@ -174,10 +174,120 @@ vector<int> GetLeastNumbers_Solution(vector<int> input, int k) {
 	return res;
 }
 
+int maxTag;
+
+
+// 求 data[left, right] --> 中最大值
+int maxInt(const vector<int> &data, int left, int right) {
+	int res = data[left];
+	while (++left <= right) {
+		if (data[left] > res)
+			res = data[left];
+	}
+	return res;
+}
+
+// 给定一个数组和滑动窗口的大小，找出所有滑动窗口里数值的最大值
+vector<int> maxInWindows(const vector<int> &num, unsigned int size) {
+	vector<int> res(num.size() - size + 1);
+
+	int left = 0, right = size - 1;
+	maxTag = maxInt(num, left, right);
+	res[0] = maxTag;
+	int k = 1;
+	while (++right < num.size()) {
+		// count -- 优化
+		// 1. 出去的值 大于 上一个窗口的最大值
+		if (num[left] >= maxTag) {
+			if (num[left] < num[right])
+				maxTag = num[right];
+			else
+				maxTag = maxInt(num, left + 1, right); // 重新遍历
+		} else {
+			if (num[right] > maxTag)
+				maxTag = num[right];
+		}
+
+		// 保存结果
+		res[k++] = maxTag;
+		// move
+		left++;
+	}
+
+	auto it = res.begin();
+	Print(it, res.end());
+
+	return res;
+}
+
+
+// 递归
+bool check(vector<vector<char>> &data, vector<vector<bool>> tag, int i, int j, string p) {
+
+	if (data[i][j] != p[0])
+		return false;
+
+	// 1. 等
+	tag[i][j] = true;
+	// 2. new path
+	p = p.substr(1, p.size() - 1);
+	if (p.size() <= 0)
+		return true;
+
+	// 四个方向
+	bool res = false;
+	if ((i - 1) >= 0 && tag[i - 1][j] == false) {
+		res = check(data, tag, i - 1, j, p);
+	}
+	if (res == false && (i + 1) < data.size() && tag[i + 1][j] == false) {
+		res = check(data, tag, i + 1, j, p);
+	}
+	if (res == false && (j - 1) >= 0 && tag[i][j - 1] == false) {
+		res = check(data, tag, i, j - 1, p);
+	}
+	if (res == false && (j + 1) < data[0].size() && tag[i][j + 1] == false) {
+		res = check(data, tag, i, j + 1, p);
+	}
+	return res;
+}
+
+bool helper(vector<vector<char>> &data, string path) {
+	for (int i = 0; i < data.size(); ++i) {
+		for (int j = 0; j < data[i].size(); ++j) {
+			if (data[i][j] == path[0]) {
+				vector<vector<bool>> tag(data.size(), vector<bool>(data[0].size(), false));
+				if (check(data, tag, i, j, path))
+					return true;
+			}
+		}
+	}
+	return false;
+}
+
+// 剑指offer -- 矩阵中的路径
+bool hasPath(char *matrix, int rows, int cols, char *str) {
+	vector<vector<char>> data(rows, vector<char>(cols)); // rows * cols
+
+	for (int i = 0; i < rows; ++i) {
+		for (int j = 0; j < cols; ++j) {
+			if (*matrix == ' ') {
+				matrix++;
+			}
+			data[i][j] = *matrix++;
+		}
+	}
+
+	string path;
+	while (*str != '\0') {
+		path += *str;
+		str++;
+	}
+
+	return helper(data, path);
+}
+
 
 int main(int argc, const char *argv[]) {
 	cout << "main test: " << endl;
-	vector<int> data = {14, 50, 90, 6, 2, 12, 7, 8, 2, 3};
 
-	GetLeastNumbers_Solution(data, 5);
 }
