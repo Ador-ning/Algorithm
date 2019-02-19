@@ -4,8 +4,12 @@
 CMakeFiles/main.dir/Base.cpp.o
  /Users/ning/Project/Algorithm/Base.cpp
  /Users/ning/Project/Algorithm/Base.h
+CMakeFiles/main.dir/String.cpp.o
+ /Users/ning/Project/Algorithm/String.cpp
+ /Users/ning/Project/Algorithm/String.h
 CMakeFiles/main.dir/main.cpp.o
  /Users/ning/Project/Algorithm/Base.h
+ /Users/ning/Project/Algorithm/String.h
  /Users/ning/Project/Algorithm/main.cpp
 CMakeFiles/main.dir/poll_client.cpp.o
  /Users/ning/Project/Algorithm/poll_client.cpp

@@ -1,5 +1,4 @@
 #include <iostream>
-#include <istream>
 #include <vector>
 #include <string>
 #include <set>
@@ -9,6 +8,7 @@
 #include <unordered_map>
 #include <algorithm>
 #include "Base.h"
+#include "String.h"
 
 using std::cout;
 using std::endl;
@@ -289,5 +289,5 @@ bool hasPath(char *matrix, int rows, int cols, char *str) {
 
 int main(int argc, const char *argv[]) {
 	cout << "main test: " << endl;
-
+	test_classString();
 }

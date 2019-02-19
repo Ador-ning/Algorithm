@@ -38,10 +38,22 @@ list
 unordered_map
 -
 
-/Users/ning/Project/Algorithm/main.cpp
+/Users/ning/Project/Algorithm/String.cpp
 iostream
 -
-istream
+String.h
+/Users/ning/Project/Algorithm/String.h
+
+/Users/ning/Project/Algorithm/String.h
+iostream
+-
+iomanip
+-
+string.h
+-
+
+/Users/ning/Project/Algorithm/main.cpp
+iostream
 -
 vector
 -
@@ -61,6 +73,8 @@ algorithm
 -
 Base.h
 /Users/ning/Project/Algorithm/Base.h
+String.h
+/Users/ning/Project/Algorithm/String.h
 
 /Users/ning/Project/Algorithm/poll_client.cpp
 iostream

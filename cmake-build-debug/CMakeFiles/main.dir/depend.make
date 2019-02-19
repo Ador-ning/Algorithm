@@ -4,7 +4,11 @@
 CMakeFiles/main.dir/Base.cpp.o: ../Base.cpp
 CMakeFiles/main.dir/Base.cpp.o: ../Base.h
 
+CMakeFiles/main.dir/String.cpp.o: ../String.cpp
+CMakeFiles/main.dir/String.cpp.o: ../String.h
+
 CMakeFiles/main.dir/main.cpp.o: ../Base.h
+CMakeFiles/main.dir/main.cpp.o: ../String.h
 CMakeFiles/main.dir/main.cpp.o: ../main.cpp
 
 CMakeFiles/main.dir/poll_client.cpp.o: ../poll_client.cpp

@@ -202,6 +202,33 @@ Base.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Base.cpp.s
 .PHONY : Base.cpp.s
 
+String.o: String.cpp.o
+
+.PHONY : String.o
+
+# target to build an object file
+String.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/String.cpp.o
+.PHONY : String.cpp.o
+
+String.i: String.cpp.i
+
+.PHONY : String.i
+
+# target to preprocess a source file
+String.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/String.cpp.i
+.PHONY : String.cpp.i
+
+String.s: String.cpp.s
+
+.PHONY : String.s
+
+# target to generate assembly for a file
+String.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/String.cpp.s
+.PHONY : String.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -299,6 +326,9 @@ help:
 	@echo "... Base.o"
 	@echo "... Base.i"
 	@echo "... Base.s"
+	@echo "... String.o"
+	@echo "... String.i"
+	@echo "... String.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
