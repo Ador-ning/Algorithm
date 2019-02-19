@@ -9,6 +9,7 @@
 #include <algorithm>
 #include "Base.h"
 #include "String.h"
+#include "Ptr.h"
 
 using std::cout;
 using std::endl;
@@ -289,5 +290,5 @@ bool hasPath(char *matrix, int rows, int cols, char *str) {
 
 int main(int argc, const char *argv[]) {
 	cout << "main test: " << endl;
-	test_classString();
+	test_loopReference();
 }

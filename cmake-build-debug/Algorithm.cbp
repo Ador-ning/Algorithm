@@ -423,6 +423,12 @@
 		<Unit filename="/Users/ning/Project/Algorithm/DP/test_dp.cpp">
 			<Option target="dp"/>
 		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Ptr.cpp">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Ptr.h">
+			<Option target="main"/>
+		</Unit>
 		<Unit filename="/Users/ning/Project/Algorithm/String.cpp">
 			<Option target="main"/>
 		</Unit>

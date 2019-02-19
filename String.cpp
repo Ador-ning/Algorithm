@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+#include <memory>
 #include "String.h"
 
 using std::cout;

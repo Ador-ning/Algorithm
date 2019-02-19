@@ -38,8 +38,28 @@ list
 unordered_map
 -
 
+/Users/ning/Project/Algorithm/Ptr.cpp
+memory
+-
+iostream
+-
+Ptr.h
+/Users/ning/Project/Algorithm/Ptr.h
+
+/Users/ning/Project/Algorithm/Ptr.h
+string
+-
+iostream
+-
+memory
+-
+cassert
+-
+
 /Users/ning/Project/Algorithm/String.cpp
 iostream
+-
+memory
 -
 String.h
 /Users/ning/Project/Algorithm/String.h
@@ -75,6 +95,8 @@ Base.h
 /Users/ning/Project/Algorithm/Base.h
 String.h
 /Users/ning/Project/Algorithm/String.h
+Ptr.h
+/Users/ning/Project/Algorithm/Ptr.h
 
 /Users/ning/Project/Algorithm/poll_client.cpp
 iostream

@@ -4,10 +4,14 @@
 CMakeFiles/main.dir/Base.cpp.o: ../Base.cpp
 CMakeFiles/main.dir/Base.cpp.o: ../Base.h
 
+CMakeFiles/main.dir/Ptr.cpp.o: ../Ptr.cpp
+CMakeFiles/main.dir/Ptr.cpp.o: ../Ptr.h
+
 CMakeFiles/main.dir/String.cpp.o: ../String.cpp
 CMakeFiles/main.dir/String.cpp.o: ../String.h
 
 CMakeFiles/main.dir/main.cpp.o: ../Base.h
+CMakeFiles/main.dir/main.cpp.o: ../Ptr.h
 CMakeFiles/main.dir/main.cpp.o: ../String.h
 CMakeFiles/main.dir/main.cpp.o: ../main.cpp
 
