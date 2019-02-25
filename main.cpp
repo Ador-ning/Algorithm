@@ -20,6 +20,7 @@ using std::list;
 using std::istringstream;
 using std::unordered_set;
 using std::unordered_map;
+using std::map;
 
 /*
  *  cur -- path 的当前位置
@@ -287,8 +288,39 @@ bool hasPath(char *matrix, int rows, int cols, char *str) {
 	return helper(data, path);
 }
 
+// leetcode 旋转数组二分查找 -- 模版
+bool search(int A[], int n, int target) {
+	int left = 0, right = n - 1;
+	int mid = 0;
+	while (left <= right) {
+		if (A[mid] == target || A[left] == target || A[right] == target)
+			return true;
+
+		// 去重复
+		while (A[left] == A[left + 1])
+			left += 1;
+		while (A[right] == A[right - 1])
+			right -= 1;
+		
+		mid = left + (right - left) / 2;
+		if (A[left] <= A[mid]) { // 左边有序
+			if (A[left] < target && target < A[mid])
+				right = mid - 1;
+			else
+				left = mid + 1;
+		} else { // 右边有序
+			if (A[mid] < target && target < A[right]) {
+				left = mid + 1;
+			} else
+				right = mid - 1;
+		}
+	}
+	return false;
+}
 
 int main(int argc, const char *argv[]) {
 	cout << "main test: " << endl;
-	test_loopReference();
+	int A[] = {10, -10, -9, -8, -7, -6, -5, -4, -3, -2, 2, 3, 4, 5, 6, 7, 8, 9};
+	// int A[] = {1, 2};
+	cout << search(A, 19, 3);
 }
