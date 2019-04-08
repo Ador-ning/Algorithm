@@ -17,7 +17,6 @@ void compute_prefix(const std::string &pattern, std::vector<int> &next) {
 	next[0] = j;
 
 	for (i = 1; i < m; ++i) {
-
 		// 如果下一个不同，那么 j 就变成 next[j]，注意next[j]是小于j的，无论j取任何值。
 		while (j > -1 && pattern[j + 1] != pattern[i])
 			j = next[j]; // 往前回溯
@@ -30,11 +29,6 @@ void compute_prefix(const std::string &pattern, std::vector<int> &next) {
 		next[i] = j;
 	}
 
-	if (DEBUG) {
-		auto it = next.begin();
-		Print(it, next.end());
-		Line();
-	}
 }
 
 int kmp(const std::string &text, const std::string &pattern) {

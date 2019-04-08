@@ -1,15 +1,19 @@
 #include <iostream>
+#include <sstream>
 #include <vector>
 #include <string>
 #include <set>
 #include <map>
 #include <list>
+#include <set>
+#include <stack>
 #include <unordered_set>
 #include <unordered_map>
 #include <algorithm>
 #include "Base.h"
-#include "String.h"
-#include "Ptr.h"
+#include "BaseClass/String.h"
+#include "BaseClass/Ptr.h"
+#include <queue>
 
 using std::cout;
 using std::endl;
@@ -21,6 +25,14 @@ using std::istringstream;
 using std::unordered_set;
 using std::unordered_map;
 using std::map;
+using std::set;
+using std::stringstream;
+using std::stack;
+using std::pair;
+using std::sort;
+using std::min;
+using std::max;
+using std::queue;
 
 /*
  *  cur -- path 的当前位置
@@ -301,7 +313,7 @@ bool search(int A[], int n, int target) {
 			left += 1;
 		while (A[right] == A[right - 1])
 			right -= 1;
-		
+
 		mid = left + (right - left) / 2;
 		if (A[left] <= A[mid]) { // 左边有序
 			if (A[left] < target && target < A[mid])
@@ -318,9 +330,126 @@ bool search(int A[], int n, int target) {
 	return false;
 }
 
-int main(int argc, const char *argv[]) {
-	cout << "main test: " << endl;
-	int A[] = {10, -10, -9, -8, -7, -6, -5, -4, -3, -2, 2, 3, 4, 5, 6, 7, 8, 9};
-	// int A[] = {1, 2};
-	cout << search(A, 19, 3);
+// pair -- 升序 <
+static bool cmp(pair<int, int> a, pair<int, int> b) {
+	return a.first < b.first;
 }
+
+vector<int> stringToIntegerVector(string input) {
+	vector<int> output;
+	stringstream ss;
+	ss.str(input);
+	string item;
+	char delimiter = ',';
+	while (getline(ss, item, delimiter)) {
+		output.push_back(stoi(item));
+	}
+	return output;
+}
+
+bool isValid(string &s) {
+	stringstream ss(s);
+	int num;
+	ss >> num;
+	if (s.size() > 1)
+		return s[0] != '0' && num >= 0 && num <= 255;
+	return num >= 0 && num <= 255;
+}
+
+// 最长公共子串 -- dp
+int LCS(string s1, string s2) {
+	int n1 = s1.size(), n2 = s2.size();
+	vector<vector<int>> dp(n1 + 1, vector<int>(n2 + 1, 0));
+	for (int i = 1; i <= n1; ++i) {
+		for (int j = 1; j <= n2; ++j) {
+			if (s1[i - 1] == s2[j - 1]) // 状态转移方程
+				dp[i][j] = dp[i - 1][j - 1] + 1;
+			else
+				dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]);
+		}
+	}
+	return dp[n1][n2];
+}
+
+//  素数判定
+bool primeNumber(int i) {
+	if (i == 1)
+		return false;
+	for (int j = 2; j <= (int) sqrt(i); ++j) {
+		int t = i / j;
+		if (i == t * j) // 整除
+			return false;
+	}
+
+	// C++ int convert to string
+	/*
+	 * stringstream ss;
+	 * ss << i;
+	 * string s = ss.str();
+	 * ss.str(""); // flush out the ss content
+	 * */
+
+	return true;
+}
+
+// 小根堆 -- 调整函数
+void HeapAdjust(vector<int> &data, int s, int k) {
+	int j;
+	for (j = 2 * s + 1; j < k; j = 2 * j + 1) {
+		// 左右孩子中小者
+		if (j < (k - 1) && data[j] > data[j + 1])
+			++j;
+		// 不需要调整了
+		if (data[s] <= data[j])
+			break;
+		int tmp = data[s];
+		data[s] = data[j];
+		data[j] = tmp;
+		s = j;
+	}
+}
+
+// next 数组计算
+vector<int> getNext(string &pattern) {
+	vector<int> next(pattern.size());
+	next[0] = -1;
+	int j = 0, k = -1;
+	while (j < pattern.size() - 1) {
+		if (k == -1 || pattern[j] == pattern[k])
+			next[++j] = ++k; // 累积
+		else
+			k = next[k];
+	}
+	return next;
+}
+
+vector<int> next(string &str) {
+	int len = str.size();
+	vector<int> next(len); // 前缀 后缀
+	next[0] = -1;
+	next[1] = 0;
+	if (len <= 2)
+		return next; // base
+
+	string sub, pre, de;
+	for (int i = 2; i < len; ++i) {
+		sub = str.substr(0, i);
+		int len = 1;
+
+		// 依次匹配前缀 / 后缀 -- 除去本身
+		while (len < i) {
+			pre = sub.substr(0, len);
+			de = sub.substr(i - len, len);
+			if (pre == de)
+				next[i] = len;
+			++len;
+		}
+	}
+	return next;
+}
+
+int main() {
+	cout << "main test: " << endl;
+
+}
+

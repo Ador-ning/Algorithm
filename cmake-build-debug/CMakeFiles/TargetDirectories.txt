@@ -17,3 +17,6 @@
 /Users/ning/Project/Algorithm/cmake-build-debug/DP/CMakeFiles/rebuild_cache.dir
 /Users/ning/Project/Algorithm/cmake-build-debug/DP/CMakeFiles/edit_cache.dir
 /Users/ning/Project/Algorithm/cmake-build-debug/DP/CMakeFiles/dp.dir
+/Users/ning/Project/Algorithm/cmake-build-debug/BaseClass/CMakeFiles/rebuild_cache.dir
+/Users/ning/Project/Algorithm/cmake-build-debug/BaseClass/CMakeFiles/edit_cache.dir
+/Users/ning/Project/Algorithm/cmake-build-debug/BaseClass/CMakeFiles/class.dir

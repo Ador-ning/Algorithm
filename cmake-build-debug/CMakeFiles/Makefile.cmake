@@ -29,6 +29,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/Applications/CLion.app/Contents/bin/cmake/share/cmake-3.10/Modules/ProcessorCount.cmake"
   "../Array/CMakeLists.txt"
   "../Base/CMakeLists.txt"
+  "../BaseClass/CMakeLists.txt"
   "../CMakeLists.txt"
   "../Campus/CMakeLists.txt"
   "../DP/CMakeLists.txt"
@@ -54,6 +55,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "Array/CMakeFiles/CMakeDirectoryInformation.cmake"
   "String/CMakeFiles/CMakeDirectoryInformation.cmake"
   "DP/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "BaseClass/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -63,4 +65,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "Array/CMakeFiles/array.dir/DependInfo.cmake"
   "String/CMakeFiles/string.dir/DependInfo.cmake"
   "DP/CMakeFiles/dp.dir/DependInfo.cmake"
+  "BaseClass/CMakeFiles/class.dir/DependInfo.cmake"
   )

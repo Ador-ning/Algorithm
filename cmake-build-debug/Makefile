@@ -175,6 +175,19 @@ dp/fast:
 	$(MAKE) -f DP/CMakeFiles/dp.dir/build.make DP/CMakeFiles/dp.dir/build
 .PHONY : dp/fast
 
+#=============================================================================
+# Target rules for targets named class
+
+# Build rule for target.
+class: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 class
+.PHONY : class
+
+# fast build rule for target.
+class/fast:
+	$(MAKE) -f BaseClass/CMakeFiles/class.dir/build.make BaseClass/CMakeFiles/class.dir/build
+.PHONY : class/fast
+
 Base.o: Base.cpp.o
 
 .PHONY : Base.o
@@ -202,59 +215,59 @@ Base.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Base.cpp.s
 .PHONY : Base.cpp.s
 
-Ptr.o: Ptr.cpp.o
+BaseClass/Ptr.o: BaseClass/Ptr.cpp.o
 
-.PHONY : Ptr.o
-
-# target to build an object file
-Ptr.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Ptr.cpp.o
-.PHONY : Ptr.cpp.o
-
-Ptr.i: Ptr.cpp.i
-
-.PHONY : Ptr.i
-
-# target to preprocess a source file
-Ptr.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Ptr.cpp.i
-.PHONY : Ptr.cpp.i
-
-Ptr.s: Ptr.cpp.s
-
-.PHONY : Ptr.s
-
-# target to generate assembly for a file
-Ptr.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Ptr.cpp.s
-.PHONY : Ptr.cpp.s
-
-String.o: String.cpp.o
-
-.PHONY : String.o
+.PHONY : BaseClass/Ptr.o
 
 # target to build an object file
-String.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/String.cpp.o
-.PHONY : String.cpp.o
+BaseClass/Ptr.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/BaseClass/Ptr.cpp.o
+.PHONY : BaseClass/Ptr.cpp.o
 
-String.i: String.cpp.i
+BaseClass/Ptr.i: BaseClass/Ptr.cpp.i
 
-.PHONY : String.i
+.PHONY : BaseClass/Ptr.i
 
 # target to preprocess a source file
-String.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/String.cpp.i
-.PHONY : String.cpp.i
+BaseClass/Ptr.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/BaseClass/Ptr.cpp.i
+.PHONY : BaseClass/Ptr.cpp.i
 
-String.s: String.cpp.s
+BaseClass/Ptr.s: BaseClass/Ptr.cpp.s
 
-.PHONY : String.s
+.PHONY : BaseClass/Ptr.s
 
 # target to generate assembly for a file
-String.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/String.cpp.s
-.PHONY : String.cpp.s
+BaseClass/Ptr.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/BaseClass/Ptr.cpp.s
+.PHONY : BaseClass/Ptr.cpp.s
+
+BaseClass/String.o: BaseClass/String.cpp.o
+
+.PHONY : BaseClass/String.o
+
+# target to build an object file
+BaseClass/String.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/BaseClass/String.cpp.o
+.PHONY : BaseClass/String.cpp.o
+
+BaseClass/String.i: BaseClass/String.cpp.i
+
+.PHONY : BaseClass/String.i
+
+# target to preprocess a source file
+BaseClass/String.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/BaseClass/String.cpp.i
+.PHONY : BaseClass/String.cpp.i
+
+BaseClass/String.s: BaseClass/String.cpp.s
+
+.PHONY : BaseClass/String.s
+
+# target to generate assembly for a file
+BaseClass/String.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/BaseClass/String.cpp.s
+.PHONY : BaseClass/String.cpp.s
 
 main.o: main.cpp.o
 
@@ -350,15 +363,16 @@ help:
 	@echo "... array"
 	@echo "... string"
 	@echo "... dp"
+	@echo "... class"
 	@echo "... Base.o"
 	@echo "... Base.i"
 	@echo "... Base.s"
-	@echo "... Ptr.o"
-	@echo "... Ptr.i"
-	@echo "... Ptr.s"
-	@echo "... String.o"
-	@echo "... String.i"
-	@echo "... String.s"
+	@echo "... BaseClass/Ptr.o"
+	@echo "... BaseClass/Ptr.i"
+	@echo "... BaseClass/Ptr.s"
+	@echo "... BaseClass/String.o"
+	@echo "... BaseClass/String.i"
+	@echo "... BaseClass/String.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

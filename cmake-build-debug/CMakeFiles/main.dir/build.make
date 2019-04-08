@@ -105,52 +105,52 @@ CMakeFiles/main.dir/Base.cpp.o.provides: CMakeFiles/main.dir/Base.cpp.o.requires
 CMakeFiles/main.dir/Base.cpp.o.provides.build: CMakeFiles/main.dir/Base.cpp.o
 
 
-CMakeFiles/main.dir/String.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/String.cpp.o: ../String.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/main.dir/String.cpp.o"
-	/usr/local/Cellar/gcc/8.1.0/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/String.cpp.o -c /Users/ning/Project/Algorithm/String.cpp
+CMakeFiles/main.dir/BaseClass/String.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/BaseClass/String.cpp.o: ../BaseClass/String.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/main.dir/BaseClass/String.cpp.o"
+	/usr/local/Cellar/gcc/8.1.0/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/BaseClass/String.cpp.o -c /Users/ning/Project/Algorithm/BaseClass/String.cpp
 
-CMakeFiles/main.dir/String.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/String.cpp.i"
-	/usr/local/Cellar/gcc/8.1.0/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ning/Project/Algorithm/String.cpp > CMakeFiles/main.dir/String.cpp.i
+CMakeFiles/main.dir/BaseClass/String.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/BaseClass/String.cpp.i"
+	/usr/local/Cellar/gcc/8.1.0/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ning/Project/Algorithm/BaseClass/String.cpp > CMakeFiles/main.dir/BaseClass/String.cpp.i
 
-CMakeFiles/main.dir/String.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/String.cpp.s"
-	/usr/local/Cellar/gcc/8.1.0/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ning/Project/Algorithm/String.cpp -o CMakeFiles/main.dir/String.cpp.s
+CMakeFiles/main.dir/BaseClass/String.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/BaseClass/String.cpp.s"
+	/usr/local/Cellar/gcc/8.1.0/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ning/Project/Algorithm/BaseClass/String.cpp -o CMakeFiles/main.dir/BaseClass/String.cpp.s
 
-CMakeFiles/main.dir/String.cpp.o.requires:
+CMakeFiles/main.dir/BaseClass/String.cpp.o.requires:
 
-.PHONY : CMakeFiles/main.dir/String.cpp.o.requires
+.PHONY : CMakeFiles/main.dir/BaseClass/String.cpp.o.requires
 
-CMakeFiles/main.dir/String.cpp.o.provides: CMakeFiles/main.dir/String.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/String.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/String.cpp.o.provides
+CMakeFiles/main.dir/BaseClass/String.cpp.o.provides: CMakeFiles/main.dir/BaseClass/String.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/BaseClass/String.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/BaseClass/String.cpp.o.provides
 
-CMakeFiles/main.dir/String.cpp.o.provides.build: CMakeFiles/main.dir/String.cpp.o
+CMakeFiles/main.dir/BaseClass/String.cpp.o.provides.build: CMakeFiles/main.dir/BaseClass/String.cpp.o
 
 
-CMakeFiles/main.dir/Ptr.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/Ptr.cpp.o: ../Ptr.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main.dir/Ptr.cpp.o"
-	/usr/local/Cellar/gcc/8.1.0/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/Ptr.cpp.o -c /Users/ning/Project/Algorithm/Ptr.cpp
+CMakeFiles/main.dir/BaseClass/Ptr.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/BaseClass/Ptr.cpp.o: ../BaseClass/Ptr.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main.dir/BaseClass/Ptr.cpp.o"
+	/usr/local/Cellar/gcc/8.1.0/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/BaseClass/Ptr.cpp.o -c /Users/ning/Project/Algorithm/BaseClass/Ptr.cpp
 
-CMakeFiles/main.dir/Ptr.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Ptr.cpp.i"
-	/usr/local/Cellar/gcc/8.1.0/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ning/Project/Algorithm/Ptr.cpp > CMakeFiles/main.dir/Ptr.cpp.i
+CMakeFiles/main.dir/BaseClass/Ptr.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/BaseClass/Ptr.cpp.i"
+	/usr/local/Cellar/gcc/8.1.0/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ning/Project/Algorithm/BaseClass/Ptr.cpp > CMakeFiles/main.dir/BaseClass/Ptr.cpp.i
 
-CMakeFiles/main.dir/Ptr.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Ptr.cpp.s"
-	/usr/local/Cellar/gcc/8.1.0/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ning/Project/Algorithm/Ptr.cpp -o CMakeFiles/main.dir/Ptr.cpp.s
+CMakeFiles/main.dir/BaseClass/Ptr.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/BaseClass/Ptr.cpp.s"
+	/usr/local/Cellar/gcc/8.1.0/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ning/Project/Algorithm/BaseClass/Ptr.cpp -o CMakeFiles/main.dir/BaseClass/Ptr.cpp.s
 
-CMakeFiles/main.dir/Ptr.cpp.o.requires:
+CMakeFiles/main.dir/BaseClass/Ptr.cpp.o.requires:
 
-.PHONY : CMakeFiles/main.dir/Ptr.cpp.o.requires
+.PHONY : CMakeFiles/main.dir/BaseClass/Ptr.cpp.o.requires
 
-CMakeFiles/main.dir/Ptr.cpp.o.provides: CMakeFiles/main.dir/Ptr.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Ptr.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/Ptr.cpp.o.provides
+CMakeFiles/main.dir/BaseClass/Ptr.cpp.o.provides: CMakeFiles/main.dir/BaseClass/Ptr.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/BaseClass/Ptr.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/BaseClass/Ptr.cpp.o.provides
 
-CMakeFiles/main.dir/Ptr.cpp.o.provides.build: CMakeFiles/main.dir/Ptr.cpp.o
+CMakeFiles/main.dir/BaseClass/Ptr.cpp.o.provides.build: CMakeFiles/main.dir/BaseClass/Ptr.cpp.o
 
 
 CMakeFiles/main.dir/poll_server.cpp.o: CMakeFiles/main.dir/flags.make
@@ -205,8 +205,8 @@ CMakeFiles/main.dir/poll_client.cpp.o.provides.build: CMakeFiles/main.dir/poll_c
 main_OBJECTS = \
 "CMakeFiles/main.dir/main.cpp.o" \
 "CMakeFiles/main.dir/Base.cpp.o" \
-"CMakeFiles/main.dir/String.cpp.o" \
-"CMakeFiles/main.dir/Ptr.cpp.o" \
+"CMakeFiles/main.dir/BaseClass/String.cpp.o" \
+"CMakeFiles/main.dir/BaseClass/Ptr.cpp.o" \
 "CMakeFiles/main.dir/poll_server.cpp.o" \
 "CMakeFiles/main.dir/poll_client.cpp.o"
 
@@ -215,8 +215,8 @@ main_EXTERNAL_OBJECTS =
 
 main: CMakeFiles/main.dir/main.cpp.o
 main: CMakeFiles/main.dir/Base.cpp.o
-main: CMakeFiles/main.dir/String.cpp.o
-main: CMakeFiles/main.dir/Ptr.cpp.o
+main: CMakeFiles/main.dir/BaseClass/String.cpp.o
+main: CMakeFiles/main.dir/BaseClass/Ptr.cpp.o
 main: CMakeFiles/main.dir/poll_server.cpp.o
 main: CMakeFiles/main.dir/poll_client.cpp.o
 main: CMakeFiles/main.dir/build.make
@@ -231,8 +231,8 @@ CMakeFiles/main.dir/build: main
 
 CMakeFiles/main.dir/requires: CMakeFiles/main.dir/main.cpp.o.requires
 CMakeFiles/main.dir/requires: CMakeFiles/main.dir/Base.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/String.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/Ptr.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/BaseClass/String.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/BaseClass/Ptr.cpp.o.requires
 CMakeFiles/main.dir/requires: CMakeFiles/main.dir/poll_server.cpp.o.requires
 CMakeFiles/main.dir/requires: CMakeFiles/main.dir/poll_client.cpp.o.requires
 
