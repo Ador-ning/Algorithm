@@ -5,7 +5,7 @@
 		<Option title="Algorithm"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\Campus\;CMake Files\Leetcode\;CMake Files\Base\;CMake Files\Array\;CMake Files\String\;CMake Files\DP\;CMake Files\BaseClass\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\Campus\;CMake Files\Leetcode\;CMake Files\Base\;CMake Files\Array\;CMake Files\String\;CMake Files\DP\;CMake Files\BaseClass\;CMake Files\Recipes\;CMake Files\Recipes\thread\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/Users/ning/Project/Algorithm/cmake-build-debug"/>
@@ -337,6 +337,56 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/BaseClass/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="recipes_thread">
+				<Option output="/Users/ning/Project/Algorithm/cmake-build-debug/Recipes/thread/recipes_thread" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ning/Project/Algorithm/cmake-build-debug/Recipes/thread"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/../../../../../../include/c++/8.1.0"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/../../../../../../include/c++/8.1.0/x86_64-apple-darwin17.5.0"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/../../../../../../include/c++/8.1.0/backward"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/include"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/Recipes/thread/Makefile&quot;  VERBOSE=1 recipes_thread"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/Recipes/thread/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/Recipes/thread/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/Recipes/thread/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="recipes_thread/fast">
+				<Option output="/Users/ning/Project/Algorithm/cmake-build-debug/Recipes/thread/recipes_thread" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ning/Project/Algorithm/cmake-build-debug/Recipes/thread"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/../../../../../../include/c++/8.1.0"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/../../../../../../include/c++/8.1.0/x86_64-apple-darwin17.5.0"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/../../../../../../include/c++/8.1.0/backward"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/include"/>
+					<Add directory="/usr/local/Cellar/gcc/8.1.0/lib/gcc/8/gcc/x86_64-apple-darwin17.5.0/8.1.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/Recipes/thread/Makefile&quot;  VERBOSE=1 recipes_thread/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/Recipes/thread/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/Recipes/thread/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ning/Project/Algorithm/cmake-build-debug/Recipes/thread/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 		</Build>
 		<Unit filename="/Users/ning/Project/Algorithm/Array/DupArrayNoEdit.cpp">
 			<Option target="array"/>
@@ -489,6 +539,66 @@
 		<Unit filename="/Users/ning/Project/Algorithm/DP/test_dp.cpp">
 			<Option target="dp"/>
 		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Recipes/thread/Atomic.h">
+			<Option target="recipes_thread"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Recipes/thread/Atomic_test.cpp">
+			<Option target="recipes_thread"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Recipes/thread/BlockingQueue.h">
+			<Option target="recipes_thread"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Recipes/thread/BoundedBlockingQueue.h">
+			<Option target="recipes_thread"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Recipes/thread/Condition.h">
+			<Option target="recipes_thread"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Recipes/thread/CountDownLatch.h">
+			<Option target="recipes_thread"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Recipes/thread/Exception.cpp">
+			<Option target="recipes_thread"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Recipes/thread/Exception.h">
+			<Option target="recipes_thread"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Recipes/thread/Mutex.h">
+			<Option target="recipes_thread"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Recipes/thread/SignalSlot.h">
+			<Option target="recipes_thread"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Recipes/thread/SignalSlotTrival.h">
+			<Option target="recipes_thread"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Recipes/thread/Singleton.h">
+			<Option target="recipes_thread"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Recipes/thread/Thread.cpp">
+			<Option target="recipes_thread"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Recipes/thread/Thread.h">
+			<Option target="recipes_thread"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Recipes/thread/ThreadLocal.h">
+			<Option target="recipes_thread"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Recipes/thread/ThreadLocalSingleton.h">
+			<Option target="recipes_thread"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Recipes/thread/ThreadPool.cpp">
+			<Option target="recipes_thread"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Recipes/thread/ThreadPool.h">
+			<Option target="recipes_thread"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Recipes/thread/WeaCallback.h">
+			<Option target="recipes_thread"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Recipes/thread/main.cpp">
+			<Option target="recipes_thread"/>
+		</Unit>
 		<Unit filename="/Users/ning/Project/Algorithm/String/KMP.cpp">
 			<Option target="string"/>
 		</Unit>
@@ -539,6 +649,12 @@
 		</Unit>
 		<Unit filename="/Users/ning/Project/Algorithm/BaseClass/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\BaseClass\"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Recipes/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\Recipes\"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Recipes/thread/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\Recipes\thread\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

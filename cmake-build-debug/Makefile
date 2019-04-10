@@ -188,6 +188,19 @@ class/fast:
 	$(MAKE) -f BaseClass/CMakeFiles/class.dir/build.make BaseClass/CMakeFiles/class.dir/build
 .PHONY : class/fast
 
+#=============================================================================
+# Target rules for targets named recipes_thread
+
+# Build rule for target.
+recipes_thread: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 recipes_thread
+.PHONY : recipes_thread
+
+# fast build rule for target.
+recipes_thread/fast:
+	$(MAKE) -f Recipes/thread/CMakeFiles/recipes_thread.dir/build.make Recipes/thread/CMakeFiles/recipes_thread.dir/build
+.PHONY : recipes_thread/fast
+
 Base.o: Base.cpp.o
 
 .PHONY : Base.o
@@ -364,6 +377,7 @@ help:
 	@echo "... string"
 	@echo "... dp"
 	@echo "... class"
+	@echo "... recipes_thread"
 	@echo "... Base.o"
 	@echo "... Base.i"
 	@echo "... Base.s"

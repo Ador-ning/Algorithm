@@ -34,6 +34,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../Campus/CMakeLists.txt"
   "../DP/CMakeLists.txt"
   "../Leetcode/CMakeLists.txt"
+  "../Recipes/CMakeLists.txt"
+  "../Recipes/thread/CMakeLists.txt"
   "../String/CMakeLists.txt"
   "CMakeFiles/3.10.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.10.3/CMakeCXXCompiler.cmake"
@@ -56,6 +58,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "String/CMakeFiles/CMakeDirectoryInformation.cmake"
   "DP/CMakeFiles/CMakeDirectoryInformation.cmake"
   "BaseClass/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "Recipes/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "Recipes/thread/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -66,4 +70,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "String/CMakeFiles/string.dir/DependInfo.cmake"
   "DP/CMakeFiles/dp.dir/DependInfo.cmake"
   "BaseClass/CMakeFiles/class.dir/DependInfo.cmake"
+  "Recipes/thread/CMakeFiles/recipes_thread.dir/DependInfo.cmake"
   )

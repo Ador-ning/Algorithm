@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/ning/Project/Algorithm/Recipes/thread/Atomic.h
+boost/noncopyable.hpp
+-
+stdint.h
+-
+
+/Users/ning/Project/Algorithm/Recipes/thread/Atomic_test.cpp
+Atomic.h
+/Users/ning/Project/Algorithm/Recipes/thread/Atomic.h
+assert.h
+-
+
+/Users/ning/Project/Algorithm/Recipes/thread/Exception.cpp
+Exception.h
+/Users/ning/Project/Algorithm/Recipes/thread/Exception.h
+cxxabi.h
+-
+execinfo.h
+-
+stdlib.h
+-
+
+/Users/ning/Project/Algorithm/Recipes/thread/Exception.h
+string
+-
+exception
+-
+
+/Users/ning/Project/Algorithm/Recipes/thread/main.cpp
+iostream
+-
+Atomic.h
+/Users/ning/Project/Algorithm/Recipes/thread/Atomic.h
+

@@ -1,7 +1,5 @@
 cmake_minimum_required(VERSION 3.1)
-
 project(Algorithm)
-
 set(CMAKE_CXX_STANDARD 17)
 
 # the problem from Campus Interview Summarys in NiuKe
@@ -18,6 +16,11 @@ add_subdirectory(String)
 add_subdirectory(DP)
 # 实现基本类
 add_subdirectory(BaseClass)
+
+# 基本实现
+add_subdirectory(Recipes)
+
+
 
 set(SRC_MAIN main.cpp
 		Base.h Base.cpp
