@@ -4,15 +4,15 @@
 CMakeFiles/main.dir/Base.cpp.o: ../Base.cpp
 CMakeFiles/main.dir/Base.cpp.o: ../Base.h
 
-CMakeFiles/main.dir/Ptr.cpp.o: ../Ptr.cpp
-CMakeFiles/main.dir/Ptr.cpp.o: ../Ptr.h
+CMakeFiles/main.dir/BaseClass/Ptr.cpp.o: ../BaseClass/Ptr.cpp
+CMakeFiles/main.dir/BaseClass/Ptr.cpp.o: ../BaseClass/Ptr.h
 
-CMakeFiles/main.dir/String.cpp.o: ../String.cpp
-CMakeFiles/main.dir/String.cpp.o: ../String.h
+CMakeFiles/main.dir/BaseClass/String.cpp.o: ../BaseClass/String.cpp
+CMakeFiles/main.dir/BaseClass/String.cpp.o: ../BaseClass/String.h
 
 CMakeFiles/main.dir/main.cpp.o: ../Base.h
-CMakeFiles/main.dir/main.cpp.o: ../Ptr.h
-CMakeFiles/main.dir/main.cpp.o: ../String.h
+CMakeFiles/main.dir/main.cpp.o: ../BaseClass/Ptr.h
+CMakeFiles/main.dir/main.cpp.o: ../BaseClass/String.h
 CMakeFiles/main.dir/main.cpp.o: ../main.cpp
 
 CMakeFiles/main.dir/poll_client.cpp.o: ../poll_client.cpp

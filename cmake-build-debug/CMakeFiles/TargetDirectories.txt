@@ -20,6 +20,9 @@
 /Users/ning/Project/Algorithm/cmake-build-debug/BaseClass/CMakeFiles/rebuild_cache.dir
 /Users/ning/Project/Algorithm/cmake-build-debug/BaseClass/CMakeFiles/edit_cache.dir
 /Users/ning/Project/Algorithm/cmake-build-debug/BaseClass/CMakeFiles/class.dir
+/Users/ning/Project/Algorithm/cmake-build-debug/ACM/CMakeFiles/rebuild_cache.dir
+/Users/ning/Project/Algorithm/cmake-build-debug/ACM/CMakeFiles/edit_cache.dir
+/Users/ning/Project/Algorithm/cmake-build-debug/ACM/CMakeFiles/acm.dir
 /Users/ning/Project/Algorithm/cmake-build-debug/Recipes/CMakeFiles/rebuild_cache.dir
 /Users/ning/Project/Algorithm/cmake-build-debug/Recipes/CMakeFiles/edit_cache.dir
 /Users/ning/Project/Algorithm/cmake-build-debug/Recipes/thread/CMakeFiles/rebuild_cache.dir

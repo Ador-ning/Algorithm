@@ -10,10 +10,11 @@
 #include <unordered_set>
 #include <unordered_map>
 #include <algorithm>
+#include <queue>
+
 #include "Base.h"
 #include "BaseClass/String.h"
 #include "BaseClass/Ptr.h"
-#include <queue>
 
 using std::cout;
 using std::endl;
@@ -237,7 +238,6 @@ vector<int> maxInWindows(const vector<int> &num, unsigned int size) {
 
 // 递归
 bool check(vector<vector<char>> &data, vector<vector<bool>> tag, int i, int j, string p) {
-
 	if (data[i][j] != p[0])
 		return false;
 
@@ -380,19 +380,12 @@ bool primeNumber(int i) {
 		if (i == t * j) // 整除
 			return false;
 	}
-
-	// C++ int convert to string
-	/*
-	 * stringstream ss;
-	 * ss << i;
-	 * string s = ss.str();
-	 * ss.str(""); // flush out the ss content
-	 * */
-
 	return true;
 }
 
-// 小根堆 -- 调整函数
+/**
+ *  Min-Heap Code
+ * */
 void HeapAdjust(vector<int> &data, int s, int k) {
 	int j;
 	for (j = 2 * s + 1; j < k; j = 2 * j + 1) {
@@ -409,7 +402,9 @@ void HeapAdjust(vector<int> &data, int s, int k) {
 	}
 }
 
-// next 数组计算
+/*
+ * KMP - next 数组计算  -- 计算方式 1
+ * */
 vector<int> getNext(string &pattern) {
 	vector<int> next(pattern.size());
 	next[0] = -1;
@@ -423,6 +418,7 @@ vector<int> getNext(string &pattern) {
 	return next;
 }
 
+// next 数组计算  -- 计算方式 2
 vector<int> next(string &str) {
 	int len = str.size();
 	vector<int> next(len); // 前缀 后缀
@@ -448,8 +444,22 @@ vector<int> next(string &str) {
 	return next;
 }
 
-int main() {
-	cout << "main test: " << endl;
+/**
+ * BFS / 按层遍历 - leet-code 	/ 访问标记问题 / 解输出
+ * */
+class WordLadder2 {
+public:
+	vector<vector<string>> findLadders(string start, string end, unordered_set<string> &dict) {
+		return res;
+	}
 
+private:
+	vector<vector<string>> res;
+	vector<string> tmp_path;
+};
+
+int main() {
+	cout << "Test main: " << endl;
+	return 0;
 }
 

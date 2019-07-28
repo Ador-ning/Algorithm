@@ -8,8 +8,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/ning/Project/Algorithm/BaseClass/Ptr.cpp" "/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles/main.dir/BaseClass/Ptr.cpp.o"
   "/Users/ning/Project/Algorithm/BaseClass/String.cpp" "/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles/main.dir/BaseClass/String.cpp.o"
   "/Users/ning/Project/Algorithm/main.cpp" "/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles/main.dir/main.cpp.o"
-  "/Users/ning/Project/Algorithm/poll_client.cpp" "/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles/main.dir/poll_client.cpp.o"
-  "/Users/ning/Project/Algorithm/poll_server.cpp" "/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles/main.dir/poll_server.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

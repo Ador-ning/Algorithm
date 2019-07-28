@@ -17,8 +17,11 @@ add_subdirectory(DP)
 # 实现基本类
 add_subdirectory(BaseClass)
 
+add_subdirectory(ACM)
+
 # 基本实现
 add_subdirectory(Recipes)
+
 
 
 
@@ -26,8 +29,7 @@ set(SRC_MAIN main.cpp
 		Base.h Base.cpp
 		BaseClass/String.h BaseClass/String.cpp
 		BaseClass/Ptr.h BaseClass/Ptr.cpp
-		poll_server.cpp
-		poll_client.cpp)
+		)
 
 # the project main
 add_executable(main ${SRC_MAIN})

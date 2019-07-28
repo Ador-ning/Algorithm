@@ -27,6 +27,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/Applications/CLion.app/Contents/bin/cmake/share/cmake-3.10/Modules/Platform/Darwin.cmake"
   "/Applications/CLion.app/Contents/bin/cmake/share/cmake-3.10/Modules/Platform/UnixPaths.cmake"
   "/Applications/CLion.app/Contents/bin/cmake/share/cmake-3.10/Modules/ProcessorCount.cmake"
+  "../ACM/CMakeLists.txt"
   "../Array/CMakeLists.txt"
   "../Base/CMakeLists.txt"
   "../BaseClass/CMakeLists.txt"
@@ -58,6 +59,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "String/CMakeFiles/CMakeDirectoryInformation.cmake"
   "DP/CMakeFiles/CMakeDirectoryInformation.cmake"
   "BaseClass/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "ACM/CMakeFiles/CMakeDirectoryInformation.cmake"
   "Recipes/CMakeFiles/CMakeDirectoryInformation.cmake"
   "Recipes/thread/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
@@ -70,5 +72,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "String/CMakeFiles/string.dir/DependInfo.cmake"
   "DP/CMakeFiles/dp.dir/DependInfo.cmake"
   "BaseClass/CMakeFiles/class.dir/DependInfo.cmake"
+  "ACM/CMakeFiles/acm.dir/DependInfo.cmake"
   "Recipes/thread/CMakeFiles/recipes_thread.dir/DependInfo.cmake"
   )

@@ -189,6 +189,19 @@ class/fast:
 .PHONY : class/fast
 
 #=============================================================================
+# Target rules for targets named acm
+
+# Build rule for target.
+acm: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 acm
+.PHONY : acm
+
+# fast build rule for target.
+acm/fast:
+	$(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/build
+.PHONY : acm/fast
+
+#=============================================================================
 # Target rules for targets named recipes_thread
 
 # Build rule for target.
@@ -309,60 +322,6 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-poll_client.o: poll_client.cpp.o
-
-.PHONY : poll_client.o
-
-# target to build an object file
-poll_client.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/poll_client.cpp.o
-.PHONY : poll_client.cpp.o
-
-poll_client.i: poll_client.cpp.i
-
-.PHONY : poll_client.i
-
-# target to preprocess a source file
-poll_client.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/poll_client.cpp.i
-.PHONY : poll_client.cpp.i
-
-poll_client.s: poll_client.cpp.s
-
-.PHONY : poll_client.s
-
-# target to generate assembly for a file
-poll_client.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/poll_client.cpp.s
-.PHONY : poll_client.cpp.s
-
-poll_server.o: poll_server.cpp.o
-
-.PHONY : poll_server.o
-
-# target to build an object file
-poll_server.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/poll_server.cpp.o
-.PHONY : poll_server.cpp.o
-
-poll_server.i: poll_server.cpp.i
-
-.PHONY : poll_server.i
-
-# target to preprocess a source file
-poll_server.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/poll_server.cpp.i
-.PHONY : poll_server.cpp.i
-
-poll_server.s: poll_server.cpp.s
-
-.PHONY : poll_server.s
-
-# target to generate assembly for a file
-poll_server.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/poll_server.cpp.s
-.PHONY : poll_server.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -377,6 +336,7 @@ help:
 	@echo "... string"
 	@echo "... dp"
 	@echo "... class"
+	@echo "... acm"
 	@echo "... recipes_thread"
 	@echo "... Base.o"
 	@echo "... Base.i"
@@ -390,12 +350,6 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... poll_client.o"
-	@echo "... poll_client.i"
-	@echo "... poll_client.s"
-	@echo "... poll_server.o"
-	@echo "... poll_server.i"
-	@echo "... poll_server.s"
 .PHONY : help
 
 
