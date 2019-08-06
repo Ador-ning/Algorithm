@@ -129,9 +129,81 @@ ACM/CMakeFiles/acm.dir/Graph.cpp.o.provides: ACM/CMakeFiles/acm.dir/Graph.cpp.o.
 ACM/CMakeFiles/acm.dir/Graph.cpp.o.provides.build: ACM/CMakeFiles/acm.dir/Graph.cpp.o
 
 
+ACM/CMakeFiles/acm.dir/UVa1572.cpp.o: ACM/CMakeFiles/acm.dir/flags.make
+ACM/CMakeFiles/acm.dir/UVa1572.cpp.o: ../ACM/UVa1572.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object ACM/CMakeFiles/acm.dir/UVa1572.cpp.o"
+	cd /Users/ning/Project/Algorithm/cmake-build-debug/ACM && /usr/local/Cellar/gcc/8.1.0/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/acm.dir/UVa1572.cpp.o -c /Users/ning/Project/Algorithm/ACM/UVa1572.cpp
+
+ACM/CMakeFiles/acm.dir/UVa1572.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/acm.dir/UVa1572.cpp.i"
+	cd /Users/ning/Project/Algorithm/cmake-build-debug/ACM && /usr/local/Cellar/gcc/8.1.0/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ning/Project/Algorithm/ACM/UVa1572.cpp > CMakeFiles/acm.dir/UVa1572.cpp.i
+
+ACM/CMakeFiles/acm.dir/UVa1572.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/acm.dir/UVa1572.cpp.s"
+	cd /Users/ning/Project/Algorithm/cmake-build-debug/ACM && /usr/local/Cellar/gcc/8.1.0/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ning/Project/Algorithm/ACM/UVa1572.cpp -o CMakeFiles/acm.dir/UVa1572.cpp.s
+
+ACM/CMakeFiles/acm.dir/UVa1572.cpp.o.requires:
+
+.PHONY : ACM/CMakeFiles/acm.dir/UVa1572.cpp.o.requires
+
+ACM/CMakeFiles/acm.dir/UVa1572.cpp.o.provides: ACM/CMakeFiles/acm.dir/UVa1572.cpp.o.requires
+	$(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/UVa1572.cpp.o.provides.build
+.PHONY : ACM/CMakeFiles/acm.dir/UVa1572.cpp.o.provides
+
+ACM/CMakeFiles/acm.dir/UVa1572.cpp.o.provides.build: ACM/CMakeFiles/acm.dir/UVa1572.cpp.o
+
+
+ACM/CMakeFiles/acm.dir/UVa1599.cpp.o: ACM/CMakeFiles/acm.dir/flags.make
+ACM/CMakeFiles/acm.dir/UVa1599.cpp.o: ../ACM/UVa1599.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object ACM/CMakeFiles/acm.dir/UVa1599.cpp.o"
+	cd /Users/ning/Project/Algorithm/cmake-build-debug/ACM && /usr/local/Cellar/gcc/8.1.0/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/acm.dir/UVa1599.cpp.o -c /Users/ning/Project/Algorithm/ACM/UVa1599.cpp
+
+ACM/CMakeFiles/acm.dir/UVa1599.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/acm.dir/UVa1599.cpp.i"
+	cd /Users/ning/Project/Algorithm/cmake-build-debug/ACM && /usr/local/Cellar/gcc/8.1.0/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ning/Project/Algorithm/ACM/UVa1599.cpp > CMakeFiles/acm.dir/UVa1599.cpp.i
+
+ACM/CMakeFiles/acm.dir/UVa1599.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/acm.dir/UVa1599.cpp.s"
+	cd /Users/ning/Project/Algorithm/cmake-build-debug/ACM && /usr/local/Cellar/gcc/8.1.0/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ning/Project/Algorithm/ACM/UVa1599.cpp -o CMakeFiles/acm.dir/UVa1599.cpp.s
+
+ACM/CMakeFiles/acm.dir/UVa1599.cpp.o.requires:
+
+.PHONY : ACM/CMakeFiles/acm.dir/UVa1599.cpp.o.requires
+
+ACM/CMakeFiles/acm.dir/UVa1599.cpp.o.provides: ACM/CMakeFiles/acm.dir/UVa1599.cpp.o.requires
+	$(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/UVa1599.cpp.o.provides.build
+.PHONY : ACM/CMakeFiles/acm.dir/UVa1599.cpp.o.provides
+
+ACM/CMakeFiles/acm.dir/UVa1599.cpp.o.provides.build: ACM/CMakeFiles/acm.dir/UVa1599.cpp.o
+
+
+ACM/CMakeFiles/acm.dir/UVa506.cpp.o: ACM/CMakeFiles/acm.dir/flags.make
+ACM/CMakeFiles/acm.dir/UVa506.cpp.o: ../ACM/UVa506.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object ACM/CMakeFiles/acm.dir/UVa506.cpp.o"
+	cd /Users/ning/Project/Algorithm/cmake-build-debug/ACM && /usr/local/Cellar/gcc/8.1.0/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/acm.dir/UVa506.cpp.o -c /Users/ning/Project/Algorithm/ACM/UVa506.cpp
+
+ACM/CMakeFiles/acm.dir/UVa506.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/acm.dir/UVa506.cpp.i"
+	cd /Users/ning/Project/Algorithm/cmake-build-debug/ACM && /usr/local/Cellar/gcc/8.1.0/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ning/Project/Algorithm/ACM/UVa506.cpp > CMakeFiles/acm.dir/UVa506.cpp.i
+
+ACM/CMakeFiles/acm.dir/UVa506.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/acm.dir/UVa506.cpp.s"
+	cd /Users/ning/Project/Algorithm/cmake-build-debug/ACM && /usr/local/Cellar/gcc/8.1.0/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ning/Project/Algorithm/ACM/UVa506.cpp -o CMakeFiles/acm.dir/UVa506.cpp.s
+
+ACM/CMakeFiles/acm.dir/UVa506.cpp.o.requires:
+
+.PHONY : ACM/CMakeFiles/acm.dir/UVa506.cpp.o.requires
+
+ACM/CMakeFiles/acm.dir/UVa506.cpp.o.provides: ACM/CMakeFiles/acm.dir/UVa506.cpp.o.requires
+	$(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/UVa506.cpp.o.provides.build
+.PHONY : ACM/CMakeFiles/acm.dir/UVa506.cpp.o.provides
+
+ACM/CMakeFiles/acm.dir/UVa506.cpp.o.provides.build: ACM/CMakeFiles/acm.dir/UVa506.cpp.o
+
+
 ACM/CMakeFiles/acm.dir/test_acm.cpp.o: ACM/CMakeFiles/acm.dir/flags.make
 ACM/CMakeFiles/acm.dir/test_acm.cpp.o: ../ACM/test_acm.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object ACM/CMakeFiles/acm.dir/test_acm.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object ACM/CMakeFiles/acm.dir/test_acm.cpp.o"
 	cd /Users/ning/Project/Algorithm/cmake-build-debug/ACM && /usr/local/Cellar/gcc/8.1.0/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/acm.dir/test_acm.cpp.o -c /Users/ning/Project/Algorithm/ACM/test_acm.cpp
 
 ACM/CMakeFiles/acm.dir/test_acm.cpp.i: cmake_force
@@ -158,6 +230,9 @@ acm_OBJECTS = \
 "CMakeFiles/acm.dir/Stack_Queue.cpp.o" \
 "CMakeFiles/acm.dir/Tree.cpp.o" \
 "CMakeFiles/acm.dir/Graph.cpp.o" \
+"CMakeFiles/acm.dir/UVa1572.cpp.o" \
+"CMakeFiles/acm.dir/UVa1599.cpp.o" \
+"CMakeFiles/acm.dir/UVa506.cpp.o" \
 "CMakeFiles/acm.dir/test_acm.cpp.o"
 
 # External object files for target acm
@@ -166,10 +241,13 @@ acm_EXTERNAL_OBJECTS =
 ACM/acm: ACM/CMakeFiles/acm.dir/Stack_Queue.cpp.o
 ACM/acm: ACM/CMakeFiles/acm.dir/Tree.cpp.o
 ACM/acm: ACM/CMakeFiles/acm.dir/Graph.cpp.o
+ACM/acm: ACM/CMakeFiles/acm.dir/UVa1572.cpp.o
+ACM/acm: ACM/CMakeFiles/acm.dir/UVa1599.cpp.o
+ACM/acm: ACM/CMakeFiles/acm.dir/UVa506.cpp.o
 ACM/acm: ACM/CMakeFiles/acm.dir/test_acm.cpp.o
 ACM/acm: ACM/CMakeFiles/acm.dir/build.make
 ACM/acm: ACM/CMakeFiles/acm.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable acm"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ning/Project/Algorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable acm"
 	cd /Users/ning/Project/Algorithm/cmake-build-debug/ACM && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/acm.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -180,6 +258,9 @@ ACM/CMakeFiles/acm.dir/build: ACM/acm
 ACM/CMakeFiles/acm.dir/requires: ACM/CMakeFiles/acm.dir/Stack_Queue.cpp.o.requires
 ACM/CMakeFiles/acm.dir/requires: ACM/CMakeFiles/acm.dir/Tree.cpp.o.requires
 ACM/CMakeFiles/acm.dir/requires: ACM/CMakeFiles/acm.dir/Graph.cpp.o.requires
+ACM/CMakeFiles/acm.dir/requires: ACM/CMakeFiles/acm.dir/UVa1572.cpp.o.requires
+ACM/CMakeFiles/acm.dir/requires: ACM/CMakeFiles/acm.dir/UVa1599.cpp.o.requires
+ACM/CMakeFiles/acm.dir/requires: ACM/CMakeFiles/acm.dir/UVa506.cpp.o.requires
 ACM/CMakeFiles/acm.dir/requires: ACM/CMakeFiles/acm.dir/test_acm.cpp.o.requires
 
 .PHONY : ACM/CMakeFiles/acm.dir/requires

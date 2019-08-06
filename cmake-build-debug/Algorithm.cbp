@@ -456,6 +456,15 @@
 		<Unit filename="/Users/ning/Project/Algorithm/ACM/Tree.h">
 			<Option target="acm"/>
 		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/ACM/UVa1572.cpp">
+			<Option target="acm"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/ACM/UVa1599.cpp">
+			<Option target="acm"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/ACM/UVa506.cpp">
+			<Option target="acm"/>
+		</Unit>
 		<Unit filename="/Users/ning/Project/Algorithm/ACM/test_acm.cpp">
 			<Option target="acm"/>
 		</Unit>

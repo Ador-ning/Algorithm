@@ -458,8 +458,73 @@ private:
 	vector<string> tmp_path;
 };
 
+
+string rev(string s) {
+	string t = "";
+	bool tag = true;
+	for (int i = 0; i < s.size(); ++i) {
+		if (s[i] == '1') {
+			if (tag)
+				continue;
+			else
+				t += "0";
+		} else {
+			t += "1";
+			tag = false;
+		}
+	}
+	return t;
+}
+
+bool help(unordered_set<string> &ss, string s) {
+	if (s == "")
+		return true;
+
+	bool tag = false;
+	for (auto item : ss) {
+		int len = item.size();
+		string sub = s.substr(0, len);
+		if (sub == item) {
+			// 考虑添加 新优秀序列进入 集合？？
+			tag = help(ss, s.substr(len));
+			if (tag)
+				return tag;
+		}
+	}
+	return tag;
+}
+
 int main() {
-	cout << "Test main: " << endl;
+	//cout << "Test main: " << endl;
+
+	int t;
+	cin >> t;
+	string s, ts;
+	while (t--) {
+		cin >> s >> ts;
+		string rev_s = rev(s);
+
+		// 分解 t
+		// s / rev_s / rev_s+s / s + rev_s -- 为优秀序列
+		unordered_set<string> ss;
+		ss.insert(s);
+		ss.insert(rev_s);
+		ss.insert(s + rev_s);
+		ss.insert(rev_s + s);
+
+		// base
+		if (ss.find(ts) != ss.end()) {
+			cout << "YES" << endl;
+			break;
+		}
+
+		// dfs -- 估计超时 / 中间有问题
+		if (help(ss, ts))
+			cout << "YES" << endl;
+		else
+			cout << "NO" << endl;
+
+	}
 	return 0;
 }
 

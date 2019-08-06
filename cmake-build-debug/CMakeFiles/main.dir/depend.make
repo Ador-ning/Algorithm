@@ -15,7 +15,3 @@ CMakeFiles/main.dir/main.cpp.o: ../BaseClass/Ptr.h
 CMakeFiles/main.dir/main.cpp.o: ../BaseClass/String.h
 CMakeFiles/main.dir/main.cpp.o: ../main.cpp
 
-CMakeFiles/main.dir/poll_client.cpp.o: ../poll_client.cpp
-
-CMakeFiles/main.dir/poll_server.cpp.o: ../poll_server.cpp
-

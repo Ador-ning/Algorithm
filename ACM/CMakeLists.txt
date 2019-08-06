@@ -10,6 +10,9 @@ set(ACM_SRC
 		Tree.cpp
 		Graph.cpp
 		Graph.h
+		UVa1572.cpp
+		UVa1599.cpp
+		UVa506.cpp
 		test_acm.cpp)
 
 add_executable(acm ${ACM_SRC})

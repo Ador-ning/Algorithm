@@ -206,6 +206,87 @@ Tree.cpp.s:
 	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/Tree.cpp.s
 .PHONY : Tree.cpp.s
 
+UVa1572.o: UVa1572.cpp.o
+
+.PHONY : UVa1572.o
+
+# target to build an object file
+UVa1572.cpp.o:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/UVa1572.cpp.o
+.PHONY : UVa1572.cpp.o
+
+UVa1572.i: UVa1572.cpp.i
+
+.PHONY : UVa1572.i
+
+# target to preprocess a source file
+UVa1572.cpp.i:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/UVa1572.cpp.i
+.PHONY : UVa1572.cpp.i
+
+UVa1572.s: UVa1572.cpp.s
+
+.PHONY : UVa1572.s
+
+# target to generate assembly for a file
+UVa1572.cpp.s:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/UVa1572.cpp.s
+.PHONY : UVa1572.cpp.s
+
+UVa1599.o: UVa1599.cpp.o
+
+.PHONY : UVa1599.o
+
+# target to build an object file
+UVa1599.cpp.o:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/UVa1599.cpp.o
+.PHONY : UVa1599.cpp.o
+
+UVa1599.i: UVa1599.cpp.i
+
+.PHONY : UVa1599.i
+
+# target to preprocess a source file
+UVa1599.cpp.i:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/UVa1599.cpp.i
+.PHONY : UVa1599.cpp.i
+
+UVa1599.s: UVa1599.cpp.s
+
+.PHONY : UVa1599.s
+
+# target to generate assembly for a file
+UVa1599.cpp.s:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/UVa1599.cpp.s
+.PHONY : UVa1599.cpp.s
+
+UVa506.o: UVa506.cpp.o
+
+.PHONY : UVa506.o
+
+# target to build an object file
+UVa506.cpp.o:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/UVa506.cpp.o
+.PHONY : UVa506.cpp.o
+
+UVa506.i: UVa506.cpp.i
+
+.PHONY : UVa506.i
+
+# target to preprocess a source file
+UVa506.cpp.i:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/UVa506.cpp.i
+.PHONY : UVa506.cpp.i
+
+UVa506.s: UVa506.cpp.s
+
+.PHONY : UVa506.s
+
+# target to generate assembly for a file
+UVa506.cpp.s:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/UVa506.cpp.s
+.PHONY : UVa506.cpp.s
+
 test_acm.o: test_acm.cpp.o
 
 .PHONY : test_acm.o
@@ -251,6 +332,15 @@ help:
 	@echo "... Tree.o"
 	@echo "... Tree.i"
 	@echo "... Tree.s"
+	@echo "... UVa1572.o"
+	@echo "... UVa1572.i"
+	@echo "... UVa1572.s"
+	@echo "... UVa1599.o"
+	@echo "... UVa1599.i"
+	@echo "... UVa1599.s"
+	@echo "... UVa506.o"
+	@echo "... UVa506.i"
+	@echo "... UVa506.s"
 	@echo "... test_acm.o"
 	@echo "... test_acm.i"
 	@echo "... test_acm.s"
