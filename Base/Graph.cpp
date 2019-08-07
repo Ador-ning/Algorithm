@@ -5,7 +5,7 @@
 #include <map>
 #include <iostream>
 #include <string>
-#include "Graph.h"
+#include "UVa572.h"
 
 namespace Algorithm {
 	template<typename T>

@@ -20,7 +20,7 @@ set(SRC_BASE
 		HashSet.cpp
 		BFS.h   # BFS
 		BFS.cpp
-		Graph.h     # Graph
+		UVa572.h     # Graph
 		Graph.cpp
 		Trie.h      # trie 前缀树
 		Trie.cpp

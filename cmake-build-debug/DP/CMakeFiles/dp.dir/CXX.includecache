@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/ning/Project/Algorithm/DP/BackTracing.cpp
+vector
+-
+string
+-
+problem.h
+/Users/ning/Project/Algorithm/DP/problem.h
+
+/Users/ning/Project/Algorithm/DP/DynamicProgramming.cpp
+iostream
+-
+cmath
+-
+
+/Users/ning/Project/Algorithm/DP/Fibonacci.cpp
+cstdio
+-
+
+/Users/ning/Project/Algorithm/DP/problem.h
+vector
+-
+string
+-
+
+/Users/ning/Project/Algorithm/DP/test_dp.cpp
+iostream
+-
+

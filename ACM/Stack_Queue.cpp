@@ -6,7 +6,7 @@
 #include <stack>
 #include <cstring>
 #include <cstdio>
-#include "Stack_Queue.h"
+
 
 using std::stack;
 using std::string;
@@ -14,13 +14,17 @@ using std::cin;
 using std::cout;
 using std::endl;
 
+struct Matrix {
+	int a, b;
+
+	Matrix(int a = 0, int b = 0) : a(a), b(b) {}
+} m[26];
 
 /*
  * 矩阵链乘
  * */
 void MatrixMulti() {
 	stack<Matrix> s;
-
 	int n;
 	cin >> n;
 	for (int i = 0; i < n; ++i) {

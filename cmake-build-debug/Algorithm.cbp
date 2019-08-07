@@ -438,22 +438,25 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/ning/Project/Algorithm/ACM/Graph.cpp">
-			<Option target="acm"/>
-		</Unit>
-		<Unit filename="/Users/ning/Project/Algorithm/ACM/Graph.h">
+		<Unit filename="/Users/ning/Project/Algorithm/ACM/11.1.cpp">
 			<Option target="acm"/>
 		</Unit>
 		<Unit filename="/Users/ning/Project/Algorithm/ACM/Stack_Queue.cpp">
 			<Option target="acm"/>
 		</Unit>
-		<Unit filename="/Users/ning/Project/Algorithm/ACM/Stack_Queue.h">
-			<Option target="acm"/>
-		</Unit>
 		<Unit filename="/Users/ning/Project/Algorithm/ACM/Tree.cpp">
 			<Option target="acm"/>
 		</Unit>
-		<Unit filename="/Users/ning/Project/Algorithm/ACM/Tree.h">
+		<Unit filename="/Users/ning/Project/Algorithm/ACM/UVa10129.cpp">
+			<Option target="acm"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/ACM/UVa10305.cpp">
+			<Option target="acm"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/ACM/UVa10562.cpp">
+			<Option target="acm"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/ACM/UVa12171.cpp">
 			<Option target="acm"/>
 		</Unit>
 		<Unit filename="/Users/ning/Project/Algorithm/ACM/UVa1572.cpp">
@@ -465,7 +468,10 @@
 		<Unit filename="/Users/ning/Project/Algorithm/ACM/UVa506.cpp">
 			<Option target="acm"/>
 		</Unit>
-		<Unit filename="/Users/ning/Project/Algorithm/ACM/test_acm.cpp">
+		<Unit filename="/Users/ning/Project/Algorithm/ACM/UVa572.cpp">
+			<Option target="acm"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/ACM/UVa816.cpp">
 			<Option target="acm"/>
 		</Unit>
 		<Unit filename="/Users/ning/Project/Algorithm/Array/DupArrayNoEdit.cpp">
@@ -537,9 +543,6 @@
 		<Unit filename="/Users/ning/Project/Algorithm/Base/Graph.cpp">
 			<Option target="base"/>
 		</Unit>
-		<Unit filename="/Users/ning/Project/Algorithm/Base/Graph.h">
-			<Option target="base"/>
-		</Unit>
 		<Unit filename="/Users/ning/Project/Algorithm/Base/HashSet.cpp">
 			<Option target="base"/>
 		</Unit>
@@ -577,6 +580,9 @@
 			<Option target="base"/>
 		</Unit>
 		<Unit filename="/Users/ning/Project/Algorithm/Base/Trie.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/Base/UVa572.h">
 			<Option target="base"/>
 		</Unit>
 		<Unit filename="/Users/ning/Project/Algorithm/Base/UnionFind.cpp">

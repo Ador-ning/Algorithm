@@ -131,3 +131,4 @@ void testIdealPath() {
 		bfs2(1); // 正向输出结果
 	}
 }
+

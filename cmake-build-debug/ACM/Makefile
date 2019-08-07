@@ -125,32 +125,32 @@ acm/fast:
 	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/build
 .PHONY : acm/fast
 
-Graph.o: Graph.cpp.o
+11.1.o: 11.1.cpp.o
 
-.PHONY : Graph.o
+.PHONY : 11.1.o
 
 # target to build an object file
-Graph.cpp.o:
-	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/Graph.cpp.o
-.PHONY : Graph.cpp.o
+11.1.cpp.o:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/11.1.cpp.o
+.PHONY : 11.1.cpp.o
 
-Graph.i: Graph.cpp.i
+11.1.i: 11.1.cpp.i
 
-.PHONY : Graph.i
+.PHONY : 11.1.i
 
 # target to preprocess a source file
-Graph.cpp.i:
-	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/Graph.cpp.i
-.PHONY : Graph.cpp.i
+11.1.cpp.i:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/11.1.cpp.i
+.PHONY : 11.1.cpp.i
 
-Graph.s: Graph.cpp.s
+11.1.s: 11.1.cpp.s
 
-.PHONY : Graph.s
+.PHONY : 11.1.s
 
 # target to generate assembly for a file
-Graph.cpp.s:
-	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/Graph.cpp.s
-.PHONY : Graph.cpp.s
+11.1.cpp.s:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/11.1.cpp.s
+.PHONY : 11.1.cpp.s
 
 Stack_Queue.o: Stack_Queue.cpp.o
 
@@ -205,6 +205,114 @@ Tree.s: Tree.cpp.s
 Tree.cpp.s:
 	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/Tree.cpp.s
 .PHONY : Tree.cpp.s
+
+UVa10129.o: UVa10129.cpp.o
+
+.PHONY : UVa10129.o
+
+# target to build an object file
+UVa10129.cpp.o:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/UVa10129.cpp.o
+.PHONY : UVa10129.cpp.o
+
+UVa10129.i: UVa10129.cpp.i
+
+.PHONY : UVa10129.i
+
+# target to preprocess a source file
+UVa10129.cpp.i:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/UVa10129.cpp.i
+.PHONY : UVa10129.cpp.i
+
+UVa10129.s: UVa10129.cpp.s
+
+.PHONY : UVa10129.s
+
+# target to generate assembly for a file
+UVa10129.cpp.s:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/UVa10129.cpp.s
+.PHONY : UVa10129.cpp.s
+
+UVa10305.o: UVa10305.cpp.o
+
+.PHONY : UVa10305.o
+
+# target to build an object file
+UVa10305.cpp.o:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/UVa10305.cpp.o
+.PHONY : UVa10305.cpp.o
+
+UVa10305.i: UVa10305.cpp.i
+
+.PHONY : UVa10305.i
+
+# target to preprocess a source file
+UVa10305.cpp.i:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/UVa10305.cpp.i
+.PHONY : UVa10305.cpp.i
+
+UVa10305.s: UVa10305.cpp.s
+
+.PHONY : UVa10305.s
+
+# target to generate assembly for a file
+UVa10305.cpp.s:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/UVa10305.cpp.s
+.PHONY : UVa10305.cpp.s
+
+UVa10562.o: UVa10562.cpp.o
+
+.PHONY : UVa10562.o
+
+# target to build an object file
+UVa10562.cpp.o:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/UVa10562.cpp.o
+.PHONY : UVa10562.cpp.o
+
+UVa10562.i: UVa10562.cpp.i
+
+.PHONY : UVa10562.i
+
+# target to preprocess a source file
+UVa10562.cpp.i:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/UVa10562.cpp.i
+.PHONY : UVa10562.cpp.i
+
+UVa10562.s: UVa10562.cpp.s
+
+.PHONY : UVa10562.s
+
+# target to generate assembly for a file
+UVa10562.cpp.s:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/UVa10562.cpp.s
+.PHONY : UVa10562.cpp.s
+
+UVa12171.o: UVa12171.cpp.o
+
+.PHONY : UVa12171.o
+
+# target to build an object file
+UVa12171.cpp.o:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/UVa12171.cpp.o
+.PHONY : UVa12171.cpp.o
+
+UVa12171.i: UVa12171.cpp.i
+
+.PHONY : UVa12171.i
+
+# target to preprocess a source file
+UVa12171.cpp.i:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/UVa12171.cpp.i
+.PHONY : UVa12171.cpp.i
+
+UVa12171.s: UVa12171.cpp.s
+
+.PHONY : UVa12171.s
+
+# target to generate assembly for a file
+UVa12171.cpp.s:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/UVa12171.cpp.s
+.PHONY : UVa12171.cpp.s
 
 UVa1572.o: UVa1572.cpp.o
 
@@ -287,32 +395,59 @@ UVa506.cpp.s:
 	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/UVa506.cpp.s
 .PHONY : UVa506.cpp.s
 
-test_acm.o: test_acm.cpp.o
+UVa572.o: UVa572.cpp.o
 
-.PHONY : test_acm.o
+.PHONY : UVa572.o
 
 # target to build an object file
-test_acm.cpp.o:
-	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/test_acm.cpp.o
-.PHONY : test_acm.cpp.o
+UVa572.cpp.o:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/UVa572.cpp.o
+.PHONY : UVa572.cpp.o
 
-test_acm.i: test_acm.cpp.i
+UVa572.i: UVa572.cpp.i
 
-.PHONY : test_acm.i
+.PHONY : UVa572.i
 
 # target to preprocess a source file
-test_acm.cpp.i:
-	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/test_acm.cpp.i
-.PHONY : test_acm.cpp.i
+UVa572.cpp.i:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/UVa572.cpp.i
+.PHONY : UVa572.cpp.i
 
-test_acm.s: test_acm.cpp.s
+UVa572.s: UVa572.cpp.s
 
-.PHONY : test_acm.s
+.PHONY : UVa572.s
 
 # target to generate assembly for a file
-test_acm.cpp.s:
-	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/test_acm.cpp.s
-.PHONY : test_acm.cpp.s
+UVa572.cpp.s:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/UVa572.cpp.s
+.PHONY : UVa572.cpp.s
+
+UVa816.o: UVa816.cpp.o
+
+.PHONY : UVa816.o
+
+# target to build an object file
+UVa816.cpp.o:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/UVa816.cpp.o
+.PHONY : UVa816.cpp.o
+
+UVa816.i: UVa816.cpp.i
+
+.PHONY : UVa816.i
+
+# target to preprocess a source file
+UVa816.cpp.i:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/UVa816.cpp.i
+.PHONY : UVa816.cpp.i
+
+UVa816.s: UVa816.cpp.s
+
+.PHONY : UVa816.s
+
+# target to generate assembly for a file
+UVa816.cpp.s:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/UVa816.cpp.s
+.PHONY : UVa816.cpp.s
 
 # Help Target
 help:
@@ -323,15 +458,27 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... acm"
-	@echo "... Graph.o"
-	@echo "... Graph.i"
-	@echo "... Graph.s"
+	@echo "... 11.1.o"
+	@echo "... 11.1.i"
+	@echo "... 11.1.s"
 	@echo "... Stack_Queue.o"
 	@echo "... Stack_Queue.i"
 	@echo "... Stack_Queue.s"
 	@echo "... Tree.o"
 	@echo "... Tree.i"
 	@echo "... Tree.s"
+	@echo "... UVa10129.o"
+	@echo "... UVa10129.i"
+	@echo "... UVa10129.s"
+	@echo "... UVa10305.o"
+	@echo "... UVa10305.i"
+	@echo "... UVa10305.s"
+	@echo "... UVa10562.o"
+	@echo "... UVa10562.i"
+	@echo "... UVa10562.s"
+	@echo "... UVa12171.o"
+	@echo "... UVa12171.i"
+	@echo "... UVa12171.s"
 	@echo "... UVa1572.o"
 	@echo "... UVa1572.i"
 	@echo "... UVa1572.s"
@@ -341,9 +488,12 @@ help:
 	@echo "... UVa506.o"
 	@echo "... UVa506.i"
 	@echo "... UVa506.s"
-	@echo "... test_acm.o"
-	@echo "... test_acm.i"
-	@echo "... test_acm.s"
+	@echo "... UVa572.o"
+	@echo "... UVa572.i"
+	@echo "... UVa572.s"
+	@echo "... UVa816.o"
+	@echo "... UVa816.i"
+	@echo "... UVa816.s"
 .PHONY : help
 
 
