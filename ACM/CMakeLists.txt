@@ -8,6 +8,9 @@ set(ACM_SRC
 		Tree.cpp
 		UVa572.cpp
 		11.1.cpp
+		11.2.cpp
+		11.3.cpp  # Kruskal 最小生成树
+		11.4.cpp  # Dijkstra 最短路径
 		UVa506.cpp
 		UVa816.cpp
 		UVa1572.cpp

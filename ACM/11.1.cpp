@@ -32,7 +32,7 @@ void dfs(vector<vector<int>> &G, vector<int> &p, int u, int fa) {
 	for (int i = 0; i < d; ++i) {
 		const int v = G[u][i];   // u -> v
 		if (v != fa)
-			dfs(G, p, v, p[v] = u);
+			dfs(G, p, v, p[v] = u);         // 感觉有问题 ？？？？`
 	}
 }
 

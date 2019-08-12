@@ -494,37 +494,61 @@ bool help(unordered_set<string> &ss, string s) {
 	return tag;
 }
 
-int main() {
-	//cout << "Test main: " << endl;
 
-	int t;
-	cin >> t;
-	string s, ts;
-	while (t--) {
-		cin >> s >> ts;
-		string rev_s = rev(s);
+void help23() {
+	string line;
+	cin >> line;
 
-		// 分解 t
-		// s / rev_s / rev_s+s / s + rev_s -- 为优秀序列
-		unordered_set<string> ss;
-		ss.insert(s);
-		ss.insert(rev_s);
-		ss.insert(s + rev_s);
-		ss.insert(rev_s + s);
-
-		// base
-		if (ss.find(ts) != ss.end()) {
-			cout << "YES" << endl;
-			break;
+	map<char, int> s;
+	bool flag = false;
+	char c;
+	for (int i = 0; i < line.size();) {
+		if (line[i] == '@') {
+			flag = true;
+			++i;
+			continue;
 		}
 
-		// dfs -- 估计超时 / 中间有问题
-		if (help(ss, ts))
-			cout << "YES" << endl;
-		else
-			cout << "NO" << endl;
-
+		// 解析
+		if (isalpha(line[i])) {
+			c = line[i];
+			i += 2;
+			// 解出数字
+			int t = 0;
+			while (isnumber(line[i])) {
+				t = t * 10 + line[i] - '0';
+				++i;
+			}
+			if (!flag)
+				s.insert({c, t});
+			else {
+				s[c] -= t;
+			}
+		} else if (line[i] == ',')
+			++i;
 	}
+
+
+	string out;
+	for (auto item : s) {
+		if (item.second <= 0)
+			continue;
+		out += item.first;
+		out += ":";
+		out += std::to_string(item.second);
+		out += ",";
+	}
+	cout << out.substr(0, out.size() - 1) << endl;
+}
+
+
+// 1|(1&0)
+// 1&0|0&1
+// !0&1|0
+// ((!0&1))|0
+int main() {
+	//cout << "Test main: " << endl;
+	cout << (1|(1&0)) << endl;
 	return 0;
 }
 
