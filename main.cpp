@@ -495,60 +495,9 @@ bool help(unordered_set<string> &ss, string s) {
 }
 
 
-void help23() {
-	string line;
-	cin >> line;
 
-	map<char, int> s;
-	bool flag = false;
-	char c;
-	for (int i = 0; i < line.size();) {
-		if (line[i] == '@') {
-			flag = true;
-			++i;
-			continue;
-		}
-
-		// 解析
-		if (isalpha(line[i])) {
-			c = line[i];
-			i += 2;
-			// 解出数字
-			int t = 0;
-			while (isnumber(line[i])) {
-				t = t * 10 + line[i] - '0';
-				++i;
-			}
-			if (!flag)
-				s.insert({c, t});
-			else {
-				s[c] -= t;
-			}
-		} else if (line[i] == ',')
-			++i;
-	}
-
-
-	string out;
-	for (auto item : s) {
-		if (item.second <= 0)
-			continue;
-		out += item.first;
-		out += ":";
-		out += std::to_string(item.second);
-		out += ",";
-	}
-	cout << out.substr(0, out.size() - 1) << endl;
-}
-
-
-// 1|(1&0)
-// 1&0|0&1
-// !0&1|0
-// ((!0&1))|0
 int main() {
-	//cout << "Test main: " << endl;
-	cout << (1|(1&0)) << endl;
+	cout << "Test main: " << endl;
+
 	return 0;
 }
-

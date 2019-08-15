@@ -1,7 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/acm.dir/Stack_Queue.cpp.o"
   "CMakeFiles/acm.dir/Tree.cpp.o"
-  "CMakeFiles/acm.dir/UVa572.cpp.o"
+  "CMakeFiles/acm.dir/9.1.cpp.o"
+  "CMakeFiles/acm.dir/9.2.cpp.o"
+  "CMakeFiles/acm.dir/9.3.cpp.o"
   "CMakeFiles/acm.dir/11.1.cpp.o"
   "CMakeFiles/acm.dir/11.2.cpp.o"
   "CMakeFiles/acm.dir/11.3.cpp.o"
@@ -9,6 +11,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/acm.dir/11.4-2.cpp.o"
   "CMakeFiles/acm.dir/11.4-3.cpp.o"
   "CMakeFiles/acm.dir/UVa506.cpp.o"
+  "CMakeFiles/acm.dir/UVa572.cpp.o"
   "CMakeFiles/acm.dir/UVa816.cpp.o"
   "CMakeFiles/acm.dir/UVa1572.cpp.o"
   "CMakeFiles/acm.dir/UVa1599.cpp.o"

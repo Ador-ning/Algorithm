@@ -6,7 +6,12 @@ set(CMAKE_CXX_STANDARD 17)
 set(ACM_SRC
 		Stack_Queue.cpp
 		Tree.cpp
-		UVa572.cpp
+		# 动态规划 第九章
+		9.1.cpp     # 数字三角形
+		9.2.cpp     # DAG 上的动态规划
+		9.3.cpp     # 背包问题
+
+		# 图论算法 第十一章
 		11.1.cpp
 		11.2.cpp
 		11.3.cpp  # Kruskal 最小生成树
@@ -14,6 +19,7 @@ set(ACM_SRC
 		11.4-2.cpp # Bellman-Ford 最短路径
 		11.4-3.cpp # Floyd 两点之间最短路径
 		UVa506.cpp
+		UVa572.cpp
 		UVa816.cpp
 		UVa1572.cpp
 		UVa1599.cpp

@@ -287,6 +287,87 @@ acm/fast:
 	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/11.4.cpp.s
 .PHONY : 11.4.cpp.s
 
+9.1.o: 9.1.cpp.o
+
+.PHONY : 9.1.o
+
+# target to build an object file
+9.1.cpp.o:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/9.1.cpp.o
+.PHONY : 9.1.cpp.o
+
+9.1.i: 9.1.cpp.i
+
+.PHONY : 9.1.i
+
+# target to preprocess a source file
+9.1.cpp.i:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/9.1.cpp.i
+.PHONY : 9.1.cpp.i
+
+9.1.s: 9.1.cpp.s
+
+.PHONY : 9.1.s
+
+# target to generate assembly for a file
+9.1.cpp.s:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/9.1.cpp.s
+.PHONY : 9.1.cpp.s
+
+9.2.o: 9.2.cpp.o
+
+.PHONY : 9.2.o
+
+# target to build an object file
+9.2.cpp.o:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/9.2.cpp.o
+.PHONY : 9.2.cpp.o
+
+9.2.i: 9.2.cpp.i
+
+.PHONY : 9.2.i
+
+# target to preprocess a source file
+9.2.cpp.i:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/9.2.cpp.i
+.PHONY : 9.2.cpp.i
+
+9.2.s: 9.2.cpp.s
+
+.PHONY : 9.2.s
+
+# target to generate assembly for a file
+9.2.cpp.s:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/9.2.cpp.s
+.PHONY : 9.2.cpp.s
+
+9.3.o: 9.3.cpp.o
+
+.PHONY : 9.3.o
+
+# target to build an object file
+9.3.cpp.o:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/9.3.cpp.o
+.PHONY : 9.3.cpp.o
+
+9.3.i: 9.3.cpp.i
+
+.PHONY : 9.3.i
+
+# target to preprocess a source file
+9.3.cpp.i:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/9.3.cpp.i
+.PHONY : 9.3.cpp.i
+
+9.3.s: 9.3.cpp.s
+
+.PHONY : 9.3.s
+
+# target to generate assembly for a file
+9.3.cpp.s:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/9.3.cpp.s
+.PHONY : 9.3.cpp.s
+
 Stack_Queue.o: Stack_Queue.cpp.o
 
 .PHONY : Stack_Queue.o
@@ -611,6 +692,15 @@ help:
 	@echo "... 11.4.o"
 	@echo "... 11.4.i"
 	@echo "... 11.4.s"
+	@echo "... 9.1.o"
+	@echo "... 9.1.i"
+	@echo "... 9.1.s"
+	@echo "... 9.2.o"
+	@echo "... 9.2.i"
+	@echo "... 9.2.s"
+	@echo "... 9.3.o"
+	@echo "... 9.3.i"
+	@echo "... 9.3.s"
 	@echo "... Stack_Queue.o"
 	@echo "... Stack_Queue.i"
 	@echo "... Stack_Queue.s"
