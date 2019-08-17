@@ -20,8 +20,8 @@ void test_package1() {
 	}
 
 	vector<int> f(C + 1, 0);
-	for (int i = 1; i <= C; ++i) {
-		for (int j = 0; j < n; ++j) {
+	for (int i = 1; i <= C; ++i) {          // 背包容量
+		for (int j = 0; j < n; ++j) {       // 物品编号
 			if (i >= v[j] && f[i - v[j]] + w[j] > f[i])
 				f[i] = f[i - v[j]] + w[j];  // 更新重量
 		}
@@ -52,3 +52,5 @@ void test_package() {
 	}
 	cout << "Result: " << dp[n][C] << endl;
 }
+
+// 滚动数组 -- 根据状态依赖情况 优化内存空间
