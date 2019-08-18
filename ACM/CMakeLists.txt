@@ -6,6 +6,13 @@ set(CMAKE_CXX_STANDARD 17)
 set(ACM_SRC
 		Stack_Queue.cpp
 		Tree.cpp
+		# 第七章 暴力求解
+		7.2.cpp     # 枚举排列
+		7.3.cpp     # 子集生成
+		7.4.cpp     # 回溯法
+		7.5.cpp     # 路径寻找问题
+
+
 		# 第八章 高效算法设计
 		8.2.cpp     # 再谈排序与检索  -- 排序 / 二分查找
 		8.4.cpp     # 贪心法
