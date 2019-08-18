@@ -287,6 +287,60 @@ acm/fast:
 	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/11.4.cpp.s
 .PHONY : 11.4.cpp.s
 
+8.2.o: 8.2.cpp.o
+
+.PHONY : 8.2.o
+
+# target to build an object file
+8.2.cpp.o:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/8.2.cpp.o
+.PHONY : 8.2.cpp.o
+
+8.2.i: 8.2.cpp.i
+
+.PHONY : 8.2.i
+
+# target to preprocess a source file
+8.2.cpp.i:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/8.2.cpp.i
+.PHONY : 8.2.cpp.i
+
+8.2.s: 8.2.cpp.s
+
+.PHONY : 8.2.s
+
+# target to generate assembly for a file
+8.2.cpp.s:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/8.2.cpp.s
+.PHONY : 8.2.cpp.s
+
+8.4.o: 8.4.cpp.o
+
+.PHONY : 8.4.o
+
+# target to build an object file
+8.4.cpp.o:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/8.4.cpp.o
+.PHONY : 8.4.cpp.o
+
+8.4.i: 8.4.cpp.i
+
+.PHONY : 8.4.i
+
+# target to preprocess a source file
+8.4.cpp.i:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/8.4.cpp.i
+.PHONY : 8.4.cpp.i
+
+8.4.s: 8.4.cpp.s
+
+.PHONY : 8.4.s
+
+# target to generate assembly for a file
+8.4.cpp.s:
+	cd /Users/ning/Project/Algorithm/cmake-build-debug && $(MAKE) -f ACM/CMakeFiles/acm.dir/build.make ACM/CMakeFiles/acm.dir/8.4.cpp.s
+.PHONY : 8.4.cpp.s
+
 9.1.o: 9.1.cpp.o
 
 .PHONY : 9.1.o
@@ -800,6 +854,12 @@ help:
 	@echo "... 11.4.o"
 	@echo "... 11.4.i"
 	@echo "... 11.4.s"
+	@echo "... 8.2.o"
+	@echo "... 8.2.i"
+	@echo "... 8.2.s"
+	@echo "... 8.4.o"
+	@echo "... 8.4.i"
+	@echo "... 8.4.s"
 	@echo "... 9.1.o"
 	@echo "... 9.1.i"
 	@echo "... 9.1.s"

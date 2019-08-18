@@ -456,6 +456,12 @@
 		<Unit filename="/Users/ning/Project/Algorithm/ACM/11.4.cpp">
 			<Option target="acm"/>
 		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/ACM/8.2.cpp">
+			<Option target="acm"/>
+		</Unit>
+		<Unit filename="/Users/ning/Project/Algorithm/ACM/8.4.cpp">
+			<Option target="acm"/>
+		</Unit>
 		<Unit filename="/Users/ning/Project/Algorithm/ACM/9.1.cpp">
 			<Option target="acm"/>
 		</Unit>

@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/acm.dir/Stack_Queue.cpp.o"
   "CMakeFiles/acm.dir/Tree.cpp.o"
+  "CMakeFiles/acm.dir/8.2.cpp.o"
+  "CMakeFiles/acm.dir/8.4.cpp.o"
   "CMakeFiles/acm.dir/9.1.cpp.o"
   "CMakeFiles/acm.dir/9.2.cpp.o"
   "CMakeFiles/acm.dir/9.3.cpp.o"

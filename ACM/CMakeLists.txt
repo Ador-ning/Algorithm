@@ -6,6 +6,10 @@ set(CMAKE_CXX_STANDARD 17)
 set(ACM_SRC
 		Stack_Queue.cpp
 		Tree.cpp
+		# 第八章 高效算法设计
+		8.2.cpp     # 再谈排序与检索  -- 排序 / 二分查找
+		8.4.cpp     # 贪心法
+
 		# 动态规划 第九章
 		9.1.cpp     # 数字三角形
 		9.2.cpp     # DAG 上的动态规划

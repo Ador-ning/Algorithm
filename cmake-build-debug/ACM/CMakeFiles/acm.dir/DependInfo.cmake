@@ -10,6 +10,8 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/ning/Project/Algorithm/ACM/11.4-2.cpp" "/Users/ning/Project/Algorithm/cmake-build-debug/ACM/CMakeFiles/acm.dir/11.4-2.cpp.o"
   "/Users/ning/Project/Algorithm/ACM/11.4-3.cpp" "/Users/ning/Project/Algorithm/cmake-build-debug/ACM/CMakeFiles/acm.dir/11.4-3.cpp.o"
   "/Users/ning/Project/Algorithm/ACM/11.4.cpp" "/Users/ning/Project/Algorithm/cmake-build-debug/ACM/CMakeFiles/acm.dir/11.4.cpp.o"
+  "/Users/ning/Project/Algorithm/ACM/8.2.cpp" "/Users/ning/Project/Algorithm/cmake-build-debug/ACM/CMakeFiles/acm.dir/8.2.cpp.o"
+  "/Users/ning/Project/Algorithm/ACM/8.4.cpp" "/Users/ning/Project/Algorithm/cmake-build-debug/ACM/CMakeFiles/acm.dir/8.4.cpp.o"
   "/Users/ning/Project/Algorithm/ACM/9.1.cpp" "/Users/ning/Project/Algorithm/cmake-build-debug/ACM/CMakeFiles/acm.dir/9.1.cpp.o"
   "/Users/ning/Project/Algorithm/ACM/9.2.cpp" "/Users/ning/Project/Algorithm/cmake-build-debug/ACM/CMakeFiles/acm.dir/9.2.cpp.o"
   "/Users/ning/Project/Algorithm/ACM/9.3.cpp" "/Users/ning/Project/Algorithm/cmake-build-debug/ACM/CMakeFiles/acm.dir/9.3.cpp.o"
