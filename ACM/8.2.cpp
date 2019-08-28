@@ -18,7 +18,7 @@ void mergeSort(vector<int> &data, vector<int> &t, int l, int r) {
 	// 边界条件
 	if (l + 1 < r) {
 		// 1. 划分
-		int m = l + (r - 1) / 2;
+		int m = l + (r - l) / 2;
 
 		// 2. 递归求解
 		mergeSort(data, t, l, m);
@@ -32,8 +32,8 @@ void mergeSort(vector<int> &data, vector<int> &t, int l, int r) {
 			else
 				t[i++] = data[q++];
 		}
-		for (int i = l; i < r; ++i)
-			data[i] = t[i];
+		for (int j = l; j < r; ++j)
+			data[j] = t[j];
 	}
 }
 

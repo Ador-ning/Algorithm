@@ -34,6 +34,7 @@ using std::sort;
 using std::min;
 using std::max;
 using std::queue;
+using std::next_permutation;
 
 /*
  *  cur -- path 的当前位置
@@ -494,10 +495,11 @@ bool help(unordered_set<string> &ss, string s) {
 	return tag;
 }
 
-
+// <bits/stdc++.h>
 
 int main() {
-	cout << "Test main: " << endl;
+	// cout << "Test main: " << endl;
+
 
 	return 0;
 }
